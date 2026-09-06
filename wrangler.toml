@@ -1,0 +1,14 @@
+name = "kell-quant-lab"
+main = "worker/v5.js"
+compatibility_date = "2026-08-28"
+workers_dev = true
+
+[triggers]
+crons = ["* * * * *"]
+
+[durable_objects]
+bindings = [{ name = "EXECUTOR_STATE", class_name = "ExecutorState" }]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ExecutorState"]

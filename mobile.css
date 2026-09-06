@@ -1,0 +1,79 @@
+/* Responsive hardening for phones and narrow tablets */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,canvas,video{max-width:100%;height:auto}
+.shell,.view,.panel,.metric,.market-card,.db-row,.stage-column,.research-day,.cycle-card,.report-block,.method-card{min-width:0;max-width:100%}
+.topbar,.brand,.brand>div:last-child,.top-actions,.hero>div,.section-intro>div,.overview-grid>*{min-width:0}
+h1,h2,h3,h4,p,strong,small,span,.hero-copy,.next-step p,.muted,.market-card p,.report-block p,.legacy-entry{overflow-wrap:anywhere;word-break:break-word}
+input,select,button{min-width:0;max-width:100%}
+.tabs{-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.pipeline{-webkit-overflow-scrolling:touch;max-width:100%}
+
+@media(max-width:760px){
+  .shell{width:100%;padding:14px 12px 28px}
+  .topbar{gap:12px;flex-wrap:wrap}
+  .brand{width:100%;gap:10px;align-items:flex-start}
+  .brand-mark{width:42px;height:42px;min-width:42px;border-radius:12px}
+  .brand h1{font-size:clamp(1.18rem,6vw,1.48rem);line-height:1.08}
+  .brand h1 span{font-size:.68rem}
+  .eyebrow{font-size:.54rem;letter-spacing:.12em}
+  .top-actions{width:100%;flex-direction:row;justify-content:space-between;align-items:center;gap:8px}
+  .status-pill{max-width:100%;white-space:normal}
+  .tabs{margin-left:-12px;margin-right:-12px;padding:0 8px;gap:0}
+  .tab{padding:10px 11px;font-size:.72rem;flex:0 0 auto}
+  .panel{padding:15px;border-radius:14px}
+  .hero{gap:14px}
+  .hero h2{font-size:clamp(1.35rem,7vw,1.75rem)}
+  .hero-side{width:100%;align-items:flex-start;text-align:left}
+  .decision-badge{max-width:100%;white-space:normal}
+  .metric-grid,.metric-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .metric{padding:12px;min-height:96px}
+  .metric strong{font-size:clamp(1.2rem,7vw,1.48rem)}
+  .overview-grid{grid-template-columns:minmax(0,1fr)}
+  .pipeline-panel{overflow:hidden}
+  .pipeline{width:100%;padding-bottom:8px}
+  .pipe{min-width:82px;padding:9px}
+  .executor-state{font-size:clamp(2rem,12vw,2.5rem)}
+  .mini-list div{align-items:flex-start;gap:10px}
+  .mini-list strong{max-width:58%}
+  .section-intro{gap:12px;align-items:flex-start}
+  .section-intro h2{font-size:clamp(1.45rem,7vw,1.85rem)}
+  .summary-chip{width:100%;text-align:left}
+  .toolbar,.toolbar.multi{grid-template-columns:minmax(0,1fr)}
+  .card-grid,.method-grid,.stage-board{grid-template-columns:minmax(0,1fr)}
+  .market-top{align-items:flex-start;flex-wrap:wrap}
+  .market-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .db-row{grid-template-columns:58px minmax(0,1fr);padding:12px;gap:9px}
+  .db-row>*{min-width:0}
+  .stage-column{min-height:auto}
+  .day-head{flex-direction:column;gap:10px;padding:13px}
+  .day-number{align-items:flex-start}
+  .day-badge{width:38px;height:38px;min-width:38px}
+  .cycle-cards{grid-template-columns:minmax(0,1fr);padding:8px}
+  .cycle-card .cycle-top{flex-wrap:wrap}
+  .report-header{gap:9px}
+  .report-grid{grid-template-columns:minmax(0,1fr)}
+  footer{gap:8px;line-height:1.5}
+}
+
+@media(max-width:430px){
+  .shell{padding-left:9px;padding-right:9px}
+  .tabs{margin-left:-9px;margin-right:-9px;padding-left:5px;padding-right:5px}
+  .metric-grid,.metric-grid.compact{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .metric{padding:10px;min-height:88px}
+  .metric small{font-size:.68rem}
+  .metric span{font-size:.6rem}
+  .panel-head{flex-wrap:wrap;row-gap:5px}
+  .market-meta{grid-template-columns:minmax(0,1fr)}
+  .activity-item{grid-template-columns:minmax(0,1fr)}
+  .db-row{grid-template-columns:minmax(0,1fr)}
+  .db-row .id{margin-bottom:2px}
+  .db-row>*:nth-child(4){display:none}
+  .status-pill{font-size:.61rem;padding:7px 9px}
+  .top-actions{justify-content:flex-start}
+}
+
+@media(max-width:340px){
+  .metric-grid,.metric-grid.compact{grid-template-columns:minmax(0,1fr)}
+  .brand-mark{width:38px;height:38px;min-width:38px}
+  .panel{padding:12px}
+}

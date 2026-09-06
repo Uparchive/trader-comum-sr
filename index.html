@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101816">
+  <meta name="description" content="Kell Quant Lab V4 — laboratório autônomo de pesquisa quantitativa em DEMO.">
+  <title>Kell Quant Lab V4</title>
+  <link rel="stylesheet" href="styles.css?v=20260903-publicticks1">
+  <style>
+    @media(max-width:760px){
+      #performance .table-wrap{overflow-x:visible}
+      #performance .table-wrap table{width:100%;min-width:0;table-layout:fixed}
+      #performance .table-wrap th,#performance .table-wrap td{padding:10px 4px;font-size:11px;overflow-wrap:anywhere}
+      #performance .table-wrap th:first-child,#performance .table-wrap td:first-child{width:42%}
+      #performance .table-wrap th:nth-child(2),#performance .table-wrap td:nth-child(2){width:22%;text-align:center}
+      #performance .table-wrap th:last-child,#performance .table-wrap td:last-child{width:36%;text-align:right;padding-right:0}
+      #performance .table-wrap td.empty{text-align:left}
+      .latest-evidence,.evidence-feature,.evidence-feature>*{min-width:0;max-width:100%}
+      .evidence-feature h3,.evidence-feature p,.evidence-feature .decision{overflow-wrap:anywhere;word-break:break-word}
+      .evidence-feature .decision{white-space:normal}
+      #evidence-dialog,#dialog-content,.dialog-section{min-width:0;max-width:100%}
+      #evidence-dialog{overflow-x:hidden}
+      .dialog-title,.dialog-section p,.dialog-section pre{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+      .dialog-section p{white-space:pre-wrap}
+      .dialog-actions{justify-content:flex-end;position:static;background:var(--surface);padding:12px 0 4px;margin-top:18px}
+      .dialog-actions a{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:10px 12px;color:var(--ink);background:var(--surface-2)}
+      #ao-vivo .live-lower>section{min-width:0;max-width:100%}
+      #ao-vivo .trade-scroll{display:block;width:100%;max-width:100%;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-gutter:stable;border-bottom:1px solid var(--line)}
+      #ao-vivo .trade-scroll table{width:max-content!important;min-width:760px!important;table-layout:auto!important}
+      #ao-vivo .trade-scroll th,#ao-vivo .trade-scroll td{white-space:nowrap;min-width:110px;padding-right:22px}
+      #ao-vivo .trade-scroll th:first-child,#ao-vivo .trade-scroll td:first-child{min-width:100px}
+      #ao-vivo .trade-scroll th:nth-child(2),#ao-vivo .trade-scroll td:nth-child(2){min-width:115px}
+      #ao-vivo .trade-scroll th:nth-child(3),#ao-vivo .trade-scroll td:nth-child(3){min-width:180px}
+      #ao-vivo .scroll-hint{display:block}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#painel" aria-label="Kell Quant Lab — Painel">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span><strong>Kell Quant Lab</strong><small>Laboratório de Pesquisa Quantitativa</small></span>
+      </a>
+      <div class="lab-status"><span class="status-dot"></span>V4 · DEMO · LABORATÓRIO ATIVO</div>
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a class="active" href="#painel">Painel</a>
+        <a href="#ao-vivo">Ao vivo</a>
+        <a href="#evidencias">Evidências</a>
+        <a href="#arquivo">Arquivo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="painel" class="page-section overview" aria-labelledby="overview-title">
+      <div class="eyebrow">Estado do laboratório</div>
+      <div class="section-heading">
+        <div><h1 id="overview-title">Pesquisa prospectiva em DEMO</h1><p>Observação operacional, evidência acumulada e controles científicos.</p></div>
+        <time id="as-of" class="as-of">Carregando estado…</time>
+      </div>
+
+      <section class="metric-sheet" aria-label="Métricas operacionais">
+        <div><span>Banca DEMO</span><strong id="balance">—</strong></div>
+        <div><span>Equity</span><strong id="equity">—</strong></div>
+        <div><span>Resultado do dia · realizado</span><strong id="pnl">—</strong></div>
+        <div><span>Drawdown realizado</span><strong id="drawdown">—</strong></div>
+        <div class="executor-metric"><span>Executor</span><strong id="executor">—</strong></div>
+      </section>
+
+      <div class="overview-grid">
+        <section class="data-panel mandate-panel" aria-labelledby="mandate-title">
+          <div class="panel-heading"><span class="eyebrow">Mandato operacional</span><h2 id="mandate-title">Instrumentação atual</h2></div>
+          <dl class="definition-list">
+            <div><dt>Estratégia</dt><dd id="strategy">—</dd></div>
+            <div><dt>Mercado</dt><dd id="market">—</dd></div>
+            <div><dt>Capital Policy</dt><dd id="capital-policy">—</dd></div>
+            <div><dt>Operação aberta</dt><dd id="open-summary">—</dd></div>
+          </dl>
+        </section>
+
+        <section class="data-panel cycle-panel" aria-labelledby="cycle-title">
+          <div class="panel-heading"><span class="eyebrow">Ciclo de pesquisa</span><h2 id="cycle-title"><span id="cycle-number">Ciclo —</span> · <span id="cycle-day">Dia — de 90</span></h2></div>
+          <div class="progress" aria-label="Progresso do ciclo"><span id="cycle-progress"></span></div>
+          <div class="cycle-meta"><span id="cycle-range">—</span><span id="cycle-remaining">—</span></div>
+          <div id="deriv-maintenance" class="maintenance">Manutenção Deriv: aguardando a data canônica do ciclo.</div>
+        </section>
+      </div>
+
+      <section class="latest-evidence" aria-labelledby="latest-title">
+        <div class="panel-heading"><span class="eyebrow">Evidência recente</span><h2 id="latest-title">Última observação materializada</h2></div>
+        <article id="latest-evidence" class="evidence-feature empty">Carregando evidências materializadas…</article>
+      </section>
+    </section>
+
+    <section id="performance" class="page-section evidence-section" aria-labelledby="performance-title">
+      <div class="section-heading"><div><div class="eyebrow">Performance operacional · DEMO</div><h1 id="performance-title">Resultado reconciliado do executor</h1><p>Somente trades encerrados, reconciliados e atribuídos ao Kell Quant Lab. O patrimônio total da conta OKX pode variar independentemente deste resultado.</p></div></div>
+      <section class="metric-sheet" aria-label="Métricas de performance operacional">
+        <div><span>Resultado hoje</span><strong id="performance-today">—</strong></div><div><span>Resultado do mês</span><strong id="performance-month">—</strong></div><div><span>Resultado acumulado</span><strong id="performance-total">—</strong></div><div><span>Trades no mês</span><strong id="performance-trades">—</strong></div><div><span>Win rate</span><strong id="performance-winrate">—</strong></div><div><span>Drawdown</span><strong id="performance-drawdown">—</strong></div>
+      </section>
+      <div class="live-lower">
+        <section aria-labelledby="performance-daily-title"><div class="panel-heading"><span class="eyebrow">Histórico diário</span><h2 id="performance-daily-title">Trades e resultado</h2></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Trades</th><th>Resultado</th></tr></thead><tbody id="performance-daily"><tr><td colspan="3" class="empty">Aguardando primeiro trade reconciliado.</td></tr></tbody></table></div></section>
+        <section aria-labelledby="performance-monthly-title"><div class="panel-heading"><span class="eyebrow">Histórico mensal</span><h2 id="performance-monthly-title">Série operacional</h2></div><div class="table-wrap"><table><thead><tr><th>Mês</th><th>Trades</th><th>Resultado</th></tr></thead><tbody id="performance-monthly"><tr><td colspan="3" class="empty">Aguardando primeiro trade reconciliado.</td></tr></tbody></table></div></section>
+      </div>
+    </section>
+
+    <section id="ao-vivo" class="page-section live-section" aria-labelledby="live-title">
+      <div class="section-heading">
+        <div><div class="eyebrow">Instrumentação ao vivo · somente leitura</div><h1 id="live-title">Mesa operacional DEMO</h1><p>O executor opera; a telemetria observa; esta tela apenas mostra.</p></div>
+        <div id="live-connection" class="connection-state">Conectando à telemetria…</div>
+      </div>
+
+      <div id="live-alert" class="operational-alert" hidden role="status"><span id="live-alert-message"></span><button id="technical-info-toggle" class="technical-info-toggle" type="button" aria-expanded="false" aria-controls="technical-info-detail" aria-label="Ver diagnóstico técnico">i</button><div id="technical-info-detail" class="technical-info-detail" hidden></div></div>
+      <div class="live-layout">
+        <section class="instrument-panel" aria-labelledby="instrument-title">
+          <div class="instrument-head"><div><span class="eyebrow">Mercado observado</span><h2 id="instrument-title">—</h2></div><div><span class="eyebrow">Estado</span><strong id="live-status">—</strong></div></div>
+          <div id="market-tabs" class="market-tabs" aria-label="Mercados autorizados"></div>
+          <div class="price-instrument" aria-live="polite">
+            <div class="level resistance"><span>Resistência</span><strong id="resistance">—</strong></div>
+            <div class="price-readout"><span>Preço do mercado observado</span><strong id="tick">—</strong><time id="tick-time">Sem tick recebido</time><small id="tick-source" class="tick-source">Conectando ao feed público somente leitura…</small></div>
+            <div class="level support"><span>Suporte validado</span><strong id="support">—</strong></div>
+          </div>
+          <p id="series-note" class="instrument-note">A série de ticks será mostrada quando a telemetria a publicar. Nenhum preço é interpolado nesta tela.</p>
+        </section>
+
+        <aside class="live-sidebar" aria-label="Contexto operacional">
+          <section class="side-block"><span class="eyebrow">Contexto</span><dl class="definition-list compact">
+            <div><dt>Estratégia</dt><dd id="live-strategy">—</dd></div><div><dt>Capital Policy</dt><dd id="live-policy">—</dd></div>
+            <div><dt>Sinal</dt><dd id="signal">—</dd></div><div><dt>Regime</dt><dd id="regime">—</dd></div>
+          </dl></section>
+          <section class="side-block"><span class="eyebrow">Operação atual</span><div id="open-contract" class="open-contract">Nenhuma operação aberta<br><small>Executor aguardando sinal.</small></div></section>
+        </aside>
+      </div>
+
+      <div class="live-lower">
+        <section aria-labelledby="events-title"><div class="panel-heading"><span class="eyebrow">Eventos operacionais</span><h2 id="events-title">Linha do tempo</h2></div><ol id="events" class="event-list"><li class="empty">Nenhum evento operacional disponível.</li></ol></section>
+        <section aria-labelledby="trades-title"><div class="panel-heading"><span class="eyebrow">Ledger DEMO</span><h2 id="trades-title">Últimas operações</h2></div><p class="scroll-hint">Deslize a tabela para ver todas as colunas.</p><div class="table-wrap trade-scroll" tabindex="0" aria-label="Tabela rolável das últimas operações"><table><thead><tr><th>Horário</th><th>Mercado</th><th>Estratégia</th><th>Stake</th><th>Resultado</th><th>PnL</th></tr></thead><tbody id="trades"><tr><td colspan="6" class="empty">Nenhuma operação disponível.</td></tr></tbody></table></div></section>
+      </div>
+    </section>
+
+    <section id="evidencias" class="page-section evidence-section" aria-labelledby="evidence-title">
+      <div class="section-heading"><div><div class="eyebrow">Caderno de laboratório</div><h1 id="evidence-title">Evidências</h1><p>Registros materializados de observação, análise e decisão.</p></div></div>
+      <div class="date-filter" role="group" aria-label="Filtrar evidências por data">
+        <div class="quick-dates"><button type="button" data-range="today">Hoje</button><button type="button" data-range="7">7 dias</button><button type="button" data-range="30">30 dias</button><button type="button" data-range="all" class="selected">Todo período</button></div>
+        <label>Data inicial <input id="date-from" type="date"></label><label>Data final <input id="date-to" type="date"></label><label class="evidence-order">Ordem <select id="evidence-order"><option value="newest">Mais recentes</option><option value="oldest">Mais antigas</option></select></label><button id="clear-dates" type="button" class="text-button">Limpar</button>
+      </div>
+      <div class="table-wrap evidence-table"><table><thead><tr><th>Data</th><th>Ciclo</th><th>Título</th><th>Mercado</th><th>Estratégia</th><th>Decisão</th></tr></thead><tbody id="evidence-list"><tr><td colspan="6" class="empty">Carregando caderno…</td></tr></tbody></table></div>
+    </section>
+
+    <section id="arquivo" class="page-section archive-section" aria-labelledby="archive-title">
+      <div class="section-heading"><div><div class="eyebrow">Arquivo científico</div><h1 id="archive-title">Histórico preservado</h1><p>O ciclo organiza a revisão; não encerra nem apaga a memória do laboratório.</p></div></div>
+      <div class="archive-note"><strong>Fonte de consulta:</strong> índice de evidências materializado. Use o filtro temporal para navegar os registros disponíveis, sem varrer o repositório no navegador.</div>
+    </section>
+  </main>
+
+  <dialog id="evidence-dialog" aria-labelledby="dialog-title"><button id="close-dialog" class="dialog-close" aria-label="Fechar">×</button><div id="dialog-content"></div></dialog>
+  <footer><span>Kell Quant Lab V4</span><span>DEMO_ONLY · interface read-only</span></footer>
+  <nav class="mobile-nav" aria-label="Navegação móvel">
+    <a href="#painel">Painel</a><a href="#ao-vivo">Ao vivo</a><a href="#evidencias">Evidências</a>
+    <details class="mobile-more"><summary aria-label="Mais opções">+</summary><div id="mobile-more-menu" class="mobile-more-menu"><div class="mobile-menu-heading"><span>Mais opções</span><button id="close-mobile-menu" type="button">Fechar</button></div><a href="#arquivo">Arquivo científico</a></div></details>
+  </nav>
+  <script src="app.js?v=20260903-publicticks1"></script>
+  <script>
+    const supportNode=document.querySelector("#support");
+    if(supportNode){
+      const clarifySupport=()=>{if(supportNode.textContent.trim()==="—")supportNode.textContent="Sem suporte validado";};
+      new MutationObserver(clarifySupport).observe(supportNode,{childList:true,characterData:true,subtree:true});
+      clarifySupport();
+    }
+  </script>
+  <script>
+    function narrativeEvidencePath(item){
+      const explicit=String(item?.report||"");
+      if(/^research\/[\w./-]+\/report\.md$/i.test(explicit))return explicit;
+      const match=String(item?.path||"").match(/^evidence\/(\d{4})\/(\d{2})\/EVD-(\d{4})(\d{2})(\d{2})-(\d{2})([ABC])\.json$/i);
+      if(!match)return null;
+      const [,year,month,y,m,d,day,cycle]=match;
+      const date=`${y}-${m}-${d}`;
+      const run=`RUN-${y}${m}${d}-${day}${cycle.toUpperCase()}-R1`;
+      return `research/${year}/${month}/${date}/cycle-${cycle.toUpperCase()}/${run}/report.md`;
+    }
+    function narrativeEvidenceGitHubUrl(item){
+      const path=narrativeEvidencePath(item);
+      if(!path)return null;
+      return `https://github.com/Uparchive/kell-quant-lab/blob/main/${path.split("/").map(encodeURIComponent).join("/")}`;
+    }
+    renderEvidenceDialog=function(item){
+      const sections=[["Contexto",item.context],["Pergunta",item.question],["Hipótese",item.hypothesis],["Metodologia",item.methodology||item.method],["Observação",item.observation||item.summary],["Evidência",item.evidence],["Resultados",item.results],["Interpretação",item.analysis],["Decisão",item.decision],["Próximo passo",item.next_step]]
+        .filter(([,value])=>value!==undefined&&value!==null&&value!=="")
+        .map(([heading,value])=>`<section class="dialog-section"><h3>${heading}</h3><p>${escapeHtml(typeof value==="string"?value:JSON.stringify(value,null,2))}</p></section>`).join("");
+      const technical=item.technical||item.provenance;
+      const github=narrativeEvidenceGitHubUrl(item);
+      const technicalDetails=technical?`<details class="dialog-technical"><summary>Detalhes técnicos</summary><pre>${escapeHtml(JSON.stringify(technical,null,2))}</pre></details>`:"";
+      const actions=github?`<div class="dialog-actions"><a href="${github}" target="_blank" rel="noopener noreferrer" aria-label="Ver evidência escrita e versionada no GitHub">Ver evidência no GitHub <span aria-hidden="true">↗</span></a></div>`:"";
+      document.querySelector("#dialog-content").innerHTML=`<div class="eyebrow">${dateText(evidenceDate(item))} · ${escapeHtml(item.cycle||"Evidência")}</div><h2 id="dialog-title" class="dialog-title">${escapeHtml(item.title||item.evidence_id||item.id||"Registro")}</h2>${sections||'<p class="empty">Detalhes ainda não foram materializados.</p>'}${technicalDetails}${actions}`;
+    };
+  </script>
+</body>
+</html>
