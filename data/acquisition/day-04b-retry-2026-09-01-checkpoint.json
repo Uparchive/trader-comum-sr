@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "cycle": "Dia 4B",
+  "cutoff_epoch": 1788282623,
+  "target_per_symbol": 100000,
+  "page_size": 1000,
+  "symbols": {}
+}

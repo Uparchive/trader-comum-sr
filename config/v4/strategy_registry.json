@@ -1,0 +1,18 @@
+{
+  "schema_version": 4,
+  "strategies": [
+    {
+      "strategy_id": "BASELINE-SR",
+      "version": "BASELINE-SR-v1",
+      "kind": "BASELINE",
+      "immutable": true,
+      "status": "OPERATIONAL_INCUMBENT",
+      "scientific_claim": "NO_EDGE_CLAIM",
+      "engine": "SUPPORT_RESISTANCE",
+      "parent_version": null,
+      "created_at": "2026-09-02T00:00:00-03:00"
+    }
+  ],
+  "champion": null,
+  "challengers": []
+}

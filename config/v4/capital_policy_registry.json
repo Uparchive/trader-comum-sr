@@ -1,0 +1,14 @@
+{
+  "schema_version": 4,
+  "policies": [
+    {
+      "capital_policy_id": "CP0001",
+      "version": "CP0001-v1",
+      "immutable": true,
+      "type": "proportional_capped",
+      "parameters": {"equity_fraction": 0.0001, "min_stake": 0.35, "max_stake": 1.0, "rounding": 0.01},
+      "loss_progression": false,
+      "notes": "Stake deriva do saldo DEMO real e permanece limitado; não alega otimização científica."
+    }
+  ]
+}

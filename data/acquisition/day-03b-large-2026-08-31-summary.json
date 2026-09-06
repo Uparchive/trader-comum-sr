@@ -1,0 +1,6844 @@
+{
+  "schema_version": 3,
+  "cycle": "Dia 3B — Validação Adversarial ampliada",
+  "acquired_at": "2026-08-31T17:43:47.218928+00:00",
+  "cutoff_epoch": 1788196316,
+  "target_per_symbol": 100000,
+  "page_size": 5000,
+  "universe": [
+    {
+      "family": "BOOM",
+      "N": 50,
+      "symbol": "BOOM50",
+      "name": " Boom 50 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 150,
+      "symbol": "BOOM150N",
+      "name": " Boom 150 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 300,
+      "symbol": "BOOM300N",
+      "name": " Boom 300 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 500,
+      "symbol": "BOOM500",
+      "name": " Boom 500 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 600,
+      "symbol": "BOOM600",
+      "name": " Boom 600 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 900,
+      "symbol": "BOOM900",
+      "name": " Boom 900 Index "
+    },
+    {
+      "family": "BOOM",
+      "N": 1000,
+      "symbol": "BOOM1000",
+      "name": " Boom 1000 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 50,
+      "symbol": "CRASH50",
+      "name": " Crash 50 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 150,
+      "symbol": "CRASH150N",
+      "name": " Crash 150 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 300,
+      "symbol": "CRASH300N",
+      "name": " Crash 300 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 500,
+      "symbol": "CRASH500",
+      "name": " Crash 500 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 600,
+      "symbol": "CRASH600",
+      "name": " Crash 600 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 900,
+      "symbol": "CRASH900",
+      "name": " Crash 900 Index "
+    },
+    {
+      "family": "CRASH",
+      "N": 1000,
+      "symbol": "CRASH1000",
+      "name": " Crash 1000 Index "
+    }
+  ],
+  "protocol": {
+    "split": "60/20/20",
+    "threshold": "1-1/N apenas calibração",
+    "event": "signed_tick_move > threshold",
+    "bins": [
+      "<0.5N",
+      "0.5N..N",
+      "N..2N",
+      ">=2N"
+    ],
+    "permutations": 10000,
+    "permutation_seed": 20260831,
+    "multiple_testing": "Holm family alpha 0.05"
+  },
+  "results": [
+    {
+      "symbol": "BOOM50",
+      "family": "BOOM",
+      "N": 50,
+      "target": 100000,
+      "count": 86255,
+      "shortfall": 13745,
+      "period_start": 1788110057,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788111312,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788110312,
+          "max_epoch": 1788111311
+        },
+        {
+          "page": 87,
+          "requested_end": 1788110311,
+          "received": 255,
+          "new_unique": 255,
+          "min_epoch": 1788110057,
+          "max_epoch": 1788110311
+        },
+        {
+          "page": 88,
+          "requested_end": 1788110056,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788195459,
+          "max_epoch": 1788196458
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.1959199999962421,
+      "calibration_events": 1036,
+      "calibration_baseline_p": 0.02002782447394354,
+      "calibration_bin_probs": [
+        0.021119088883386976,
+        0.019127243066884177,
+        0.020366510335244052,
+        0.01829973031976371
+      ],
+      "validation": {
+        "n": 17251,
+        "events": 308,
+        "baseline_logloss": 0.0896904767583406,
+        "age_model_logloss": 0.08970808984170757,
+        "logloss_improvement": -1.761308336695826e-05,
+        "ll_baseline": -1547.2504145581338,
+        "ll_age_model": -1547.5542578592972
+      },
+      "oos": {
+        "n": 17251,
+        "events": 317,
+        "baseline_logloss": 0.0917201338702127,
+        "age_model_logloss": 0.09170959628712888,
+        "logloss_improvement": 1.0537583083829156e-05,
+        "ll_baseline": -1582.2640293950394,
+        "ll_age_model": -1582.0822455492603
+      },
+      "oos_lr_stat": 0.3635676915582735,
+      "oos_permutation_p": 0.9366063393660634
+    },
+    {
+      "symbol": "BOOM150N",
+      "family": "BOOM",
+      "N": 150,
+      "target": 100000,
+      "count": 86058,
+      "shortfall": 13942,
+      "period_start": 1788110254,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788111312,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788110312,
+          "max_epoch": 1788111311
+        },
+        {
+          "page": 87,
+          "requested_end": 1788110311,
+          "received": 58,
+          "new_unique": 58,
+          "min_epoch": 1788110254,
+          "max_epoch": 1788110311
+        },
+        {
+          "page": 88,
+          "requested_end": 1788110253,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788195657,
+          "max_epoch": 1788196656
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.05942020000002162,
+      "calibration_events": 345,
+      "calibration_baseline_p": 0.0066911978309286335,
+      "calibration_bin_probs": [
+        0.0060475264431058195,
+        0.00647187949436076,
+        0.00825481891261129,
+        0.006666666666666667
+      ],
+      "validation": {
+        "n": 17211,
+        "events": 115,
+        "baseline_logloss": 0.04012421236243278,
+        "age_model_logloss": 0.040113969394566365,
+        "logloss_improvement": 1.0242967866413086e-05,
+        "ll_baseline": -690.5778189698306,
+        "ll_age_model": -690.4015272498817
+      },
+      "oos": {
+        "n": 17212,
+        "events": 94,
+        "baseline_logloss": 0.03402157275114271,
+        "age_model_logloss": 0.03401246778856598,
+        "logloss_improvement": 9.104962576729558e-06,
+        "ll_baseline": -585.5793101926683,
+        "ll_age_model": -585.4225955767977
+      },
+      "oos_lr_stat": 0.3134292317413383,
+      "oos_permutation_p": 0.9461053894610539
+    },
+    {
+      "symbol": "BOOM300N",
+      "family": "BOOM",
+      "N": 300,
+      "target": 100000,
+      "count": 80000,
+      "shortfall": 20000,
+      "period_start": 1788116312,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        }
+      ],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "SHORTFALL",
+      "threshold": 0.21222000000003402,
+      "calibration_events": 160,
+      "calibration_baseline_p": 0.00334375,
+      "calibration_bin_probs": [
+        0.003396630115004012,
+        0.004174875691903556,
+        0.002322117069751139,
+        0.0037999170927179773
+      ],
+      "validation": {
+        "n": 16000,
+        "events": 43,
+        "baseline_logloss": 0.018660881497853495,
+        "age_model_logloss": 0.018724216376609083,
+        "logloss_improvement": -6.333487875558674e-05,
+        "ll_baseline": -298.5741039656559,
+        "ll_age_model": -299.5874620257453
+      },
+      "oos": {
+        "n": 16000,
+        "events": 41,
+        "baseline_logloss": 0.01794871737354164,
+        "age_model_logloss": 0.018251722437848505,
+        "logloss_improvement": -0.0003030050643068662,
+        "ll_baseline": -287.17947797666625,
+        "ll_age_model": -292.0275590055761
+      },
+      "oos_lr_stat": -9.69616205781972,
+      "oos_permutation_p": 1.0
+    },
+    {
+      "symbol": "BOOM500",
+      "family": "BOOM",
+      "N": 500,
+      "target": 100000,
+      "count": 2000,
+      "shortfall": 98000,
+      "period_start": 1788194317,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        }
+      ],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "SHORTFALL",
+      "threshold": 0.0,
+      "calibration_events": 0,
+      "calibration_baseline_p": 0.0004166666666666667,
+      "calibration_bin_probs": [
+        0.00199203187250996,
+        0.00199203187250996,
+        0.000998003992015968,
+        0.0025
+      ],
+      "validation": {
+        "n": 400,
+        "events": 0,
+        "baseline_logloss": 0.0004167534963423683,
+        "age_model_logloss": 0.0025031302181184774,
+        "logloss_improvement": -0.002086376721776109,
+        "ll_baseline": -0.16670139853694732,
+        "ll_age_model": -1.001252087247391
+      },
+      "oos": {
+        "n": 400,
+        "events": 2,
+        "baseline_logloss": 0.039330789810540834,
+        "age_model_logloss": 0.032529574645279516,
+        "logloss_improvement": 0.006801215165261319,
+        "ll_baseline": -15.732315924216334,
+        "ll_age_model": -13.011829858111806
+      },
+      "oos_lr_stat": 5.440972132209055,
+      "oos_permutation_p": 9.999000099990002e-05
+    },
+    {
+      "symbol": "BOOM600",
+      "family": "BOOM",
+      "N": 600,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "INSUFFICIENT_ACQUISITION"
+    },
+    {
+      "symbol": "BOOM900",
+      "family": "BOOM",
+      "N": 900,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "INSUFFICIENT_ACQUISITION"
+    },
+    {
+      "symbol": "BOOM1000",
+      "family": "BOOM",
+      "N": 1000,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "INSUFFICIENT_ACQUISITION"
+    },
+    {
+      "symbol": "CRASH50",
+      "family": "CRASH",
+      "N": 50,
+      "target": 100000,
+      "count": 85399,
+      "shortfall": 14601,
+      "period_start": 1788110913,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788111312,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111311,
+          "received": 399,
+          "new_unique": 399,
+          "min_epoch": 1788110913,
+          "max_epoch": 1788111311
+        },
+        {
+          "page": 87,
+          "requested_end": 1788110912,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788196315,
+          "max_epoch": 1788197314
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.0,
+      "calibration_events": 1003,
+      "calibration_baseline_p": 0.01958469134838697,
+      "calibration_bin_probs": [
+        0.018634001484780994,
+        0.02106752931661949,
+        0.019963170670461203,
+        0.01925650557620818
+      ],
+      "validation": {
+        "n": 17080,
+        "events": 341,
+        "baseline_logloss": 0.09790610689913928,
+        "age_model_logloss": 0.09797056751628168,
+        "logloss_improvement": -6.446061714240305e-05,
+        "ll_baseline": -1672.236305837299,
+        "ll_age_model": -1673.3372931780912
+      },
+      "oos": {
+        "n": 17080,
+        "events": 343,
+        "baseline_logloss": 0.09836433032523183,
+        "age_model_logloss": 0.09839346234734289,
+        "logloss_improvement": -2.9132022111063457e-05,
+        "ll_baseline": -1680.0627619549596,
+        "ll_age_model": -1680.5603368926165
+      },
+      "oos_lr_stat": -0.9951498753139276,
+      "oos_permutation_p": 1.0
+    },
+    {
+      "symbol": "CRASH150N",
+      "family": "CRASH",
+      "N": 150,
+      "target": 100000,
+      "count": 50000,
+      "shortfall": 50000,
+      "period_start": 1788146312,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        }
+      ],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "SHORTFALL",
+      "threshold": -9.999999747378752e-06,
+      "calibration_events": 196,
+      "calibration_baseline_p": 0.00655,
+      "calibration_bin_probs": [
+        0.0064218601844668564,
+        0.0068667704941243095,
+        0.008051907442151344,
+        0.004754197855553308
+      ],
+      "validation": {
+        "n": 10000,
+        "events": 88,
+        "baseline_logloss": 0.050762669801816034,
+        "age_model_logloss": 0.05063759432578991,
+        "logloss_improvement": 0.0001250754760261202,
+        "ll_baseline": -507.6266980181603,
+        "ll_age_model": -506.3759432578991
+      },
+      "oos": {
+        "n": 10000,
+        "events": 65,
+        "baseline_logloss": 0.03921271682872657,
+        "age_model_logloss": 0.039166412237125255,
+        "logloss_improvement": 4.630459160131295e-05,
+        "ll_baseline": -392.1271682872657,
+        "ll_age_model": -391.6641223712526
+      },
+      "oos_lr_stat": 0.926091832026259,
+      "oos_permutation_p": 0.7463253674632536
+    },
+    {
+      "symbol": "CRASH300N",
+      "family": "CRASH",
+      "N": 300,
+      "target": 100000,
+      "count": 85108,
+      "shortfall": 14892,
+      "period_start": 1788111204,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788111312,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111311,
+          "received": 108,
+          "new_unique": 108,
+          "min_epoch": 1788111204,
+          "max_epoch": 1788111311
+        },
+        {
+          "page": 87,
+          "requested_end": 1788111203,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788196606,
+          "max_epoch": 1788197605
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.449370000000063,
+      "calibration_events": 171,
+      "calibration_baseline_p": 0.0033584647018505827,
+      "calibration_bin_probs": [
+        0.003636453591925589,
+        0.0033933808127356514,
+        0.002976939203354298,
+        0.0033590623213264723
+      ],
+      "validation": {
+        "n": 17021,
+        "events": 55,
+        "baseline_logloss": 0.021759622405622615,
+        "age_model_logloss": 0.021829046363020445,
+        "logloss_improvement": -6.942395739782954e-05,
+        "ll_baseline": -370.37053296610253,
+        "ll_age_model": -371.552198144971
+      },
+      "oos": {
+        "n": 17022,
+        "events": 61,
+        "baseline_logloss": 0.023765206229674717,
+        "age_model_logloss": 0.023751780189924694,
+        "logloss_improvement": 1.3426039750020056e-05,
+        "ll_baseline": -404.531340441523,
+        "ll_age_model": -404.3028023928982
+      },
+      "oos_lr_stat": 0.4570760972496828,
+      "oos_permutation_p": 0.9151084891510849
+    },
+    {
+      "symbol": "CRASH500",
+      "family": "CRASH",
+      "N": 500,
+      "target": 100000,
+      "count": 60000,
+      "shortfall": 40000,
+      "period_start": 1788136312,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        }
+      ],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "SHORTFALL",
+      "threshold": 0.45602000000013365,
+      "calibration_events": 72,
+      "calibration_baseline_p": 0.002013888888888889,
+      "calibration_bin_probs": [
+        0.0022712524334847503,
+        0.0019086176980913823,
+        0.0018547325595309322,
+        0.0020459859703819173
+      ],
+      "validation": {
+        "n": 12000,
+        "events": 17,
+        "baseline_logloss": 0.010807287782636107,
+        "age_model_logloss": 0.010797678821620376,
+        "logloss_improvement": 9.608961015731647e-06,
+        "ll_baseline": -129.68745339163328,
+        "ll_age_model": -129.5721458594445
+      },
+      "oos": {
+        "n": 12000,
+        "events": 27,
+        "baseline_logloss": 0.015978680896042582,
+        "age_model_logloss": 0.01601348138679314,
+        "logloss_improvement": -3.480049075055547e-05,
+        "ll_baseline": -191.744170752511,
+        "ll_age_model": -192.16177664151766
+      },
+      "oos_lr_stat": -0.8352117780133312,
+      "oos_permutation_p": 1.0
+    },
+    {
+      "symbol": "CRASH600",
+      "family": "CRASH",
+      "N": 600,
+      "target": 100000,
+      "count": 84810,
+      "shortfall": 15190,
+      "period_start": 1788111502,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 810,
+          "new_unique": 810,
+          "min_epoch": 1788111502,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111501,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788196904,
+          "max_epoch": 1788197903
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.07268666666588416,
+      "calibration_events": 85,
+      "calibration_baseline_p": 0.0016802263883975946,
+      "calibration_bin_probs": [
+        0.0017505581489750356,
+        0.0016823963890028723,
+        0.001375917278185457,
+        0.00221302113078241
+      ],
+      "validation": {
+        "n": 16962,
+        "events": 33,
+        "baseline_logloss": 0.014107991886749396,
+        "age_model_logloss": 0.01411962235213483,
+        "logloss_improvement": -1.1630465385433126e-05,
+        "ll_baseline": -239.29975838304327,
+        "ll_age_model": -239.49703433691099
+      },
+      "oos": {
+        "n": 16962,
+        "events": 29,
+        "baseline_logloss": 0.012601767361317231,
+        "age_model_logloss": 0.012604790462766857,
+        "logloss_improvement": -3.023101449624859e-06,
+        "ll_baseline": -213.75117798266288,
+        "ll_age_model": -213.80245582945142
+      },
+      "oos_lr_stat": -0.10255569357707373,
+      "oos_permutation_p": 0.9946005399460054
+    },
+    {
+      "symbol": "CRASH900",
+      "family": "CRASH",
+      "N": 900,
+      "target": 100000,
+      "count": 53000,
+      "shortfall": 47000,
+      "period_start": 1788143312,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        }
+      ],
+      "acquisition_error": "RuntimeError(\"<HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>\")",
+      "status": "SHORTFALL",
+      "threshold": 9.738911111111276,
+      "calibration_events": 36,
+      "calibration_baseline_p": 0.0011477987421383649,
+      "calibration_bin_probs": [
+        0.0010763863113354615,
+        0.0014770009846673232,
+        0.0012111712738671987,
+        0.001070154577883472
+      ],
+      "validation": {
+        "n": 10600,
+        "events": 6,
+        "baseline_logloss": 0.004979832033759465,
+        "age_model_logloss": 0.004985101994958714,
+        "logloss_improvement": -5.269961199249156e-06,
+        "ll_baseline": -52.78621955785033,
+        "ll_age_model": -52.84208114656237
+      },
+      "oos": {
+        "n": 10600,
+        "events": 15,
+        "baseline_logloss": 0.010726893132996254,
+        "age_model_logloss": 0.010678923618448204,
+        "logloss_improvement": 4.796951454805041e-05,
+        "ll_baseline": -113.7050672097603,
+        "ll_age_model": -113.19659035555097
+      },
+      "oos_lr_stat": 1.0169537084186686,
+      "oos_permutation_p": 0.6011398860113989
+    },
+    {
+      "symbol": "CRASH1000",
+      "family": "CRASH",
+      "N": 1000,
+      "target": 100000,
+      "count": 84493,
+      "shortfall": 15507,
+      "period_start": 1788111819,
+      "period_end": 1788196316,
+      "pages": [
+        {
+          "page": 1,
+          "requested_end": 1788196316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788195317,
+          "max_epoch": 1788196316
+        },
+        {
+          "page": 2,
+          "requested_end": 1788195316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788194317,
+          "max_epoch": 1788195316
+        },
+        {
+          "page": 3,
+          "requested_end": 1788194316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788193317,
+          "max_epoch": 1788194316
+        },
+        {
+          "page": 4,
+          "requested_end": 1788193316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788192317,
+          "max_epoch": 1788193316
+        },
+        {
+          "page": 5,
+          "requested_end": 1788192316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788191317,
+          "max_epoch": 1788192316
+        },
+        {
+          "page": 6,
+          "requested_end": 1788191316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788190317,
+          "max_epoch": 1788191316
+        },
+        {
+          "page": 7,
+          "requested_end": 1788190316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788189317,
+          "max_epoch": 1788190316
+        },
+        {
+          "page": 8,
+          "requested_end": 1788189316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788188317,
+          "max_epoch": 1788189316
+        },
+        {
+          "page": 9,
+          "requested_end": 1788188316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788187317,
+          "max_epoch": 1788188316
+        },
+        {
+          "page": 10,
+          "requested_end": 1788187316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788186317,
+          "max_epoch": 1788187316
+        },
+        {
+          "page": 11,
+          "requested_end": 1788186316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788185317,
+          "max_epoch": 1788186316
+        },
+        {
+          "page": 12,
+          "requested_end": 1788185316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788184317,
+          "max_epoch": 1788185316
+        },
+        {
+          "page": 13,
+          "requested_end": 1788184316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788183317,
+          "max_epoch": 1788184316
+        },
+        {
+          "page": 14,
+          "requested_end": 1788183316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788182317,
+          "max_epoch": 1788183316
+        },
+        {
+          "page": 15,
+          "requested_end": 1788182316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788181317,
+          "max_epoch": 1788182316
+        },
+        {
+          "page": 16,
+          "requested_end": 1788181316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788180317,
+          "max_epoch": 1788181316
+        },
+        {
+          "page": 17,
+          "requested_end": 1788180316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788179317,
+          "max_epoch": 1788180316
+        },
+        {
+          "page": 18,
+          "requested_end": 1788179316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788178317,
+          "max_epoch": 1788179316
+        },
+        {
+          "page": 19,
+          "requested_end": 1788178316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788177317,
+          "max_epoch": 1788178316
+        },
+        {
+          "page": 20,
+          "requested_end": 1788177316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788176317,
+          "max_epoch": 1788177316
+        },
+        {
+          "page": 21,
+          "requested_end": 1788176316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788175317,
+          "max_epoch": 1788176316
+        },
+        {
+          "page": 22,
+          "requested_end": 1788175316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788174317,
+          "max_epoch": 1788175316
+        },
+        {
+          "page": 23,
+          "requested_end": 1788174316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788173317,
+          "max_epoch": 1788174316
+        },
+        {
+          "page": 24,
+          "requested_end": 1788173316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788172317,
+          "max_epoch": 1788173316
+        },
+        {
+          "page": 25,
+          "requested_end": 1788172316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788171317,
+          "max_epoch": 1788172316
+        },
+        {
+          "page": 26,
+          "requested_end": 1788171316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788170317,
+          "max_epoch": 1788171316
+        },
+        {
+          "page": 27,
+          "requested_end": 1788170316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788169317,
+          "max_epoch": 1788170316
+        },
+        {
+          "page": 28,
+          "requested_end": 1788169316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788168317,
+          "max_epoch": 1788169316
+        },
+        {
+          "page": 29,
+          "requested_end": 1788168316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788167317,
+          "max_epoch": 1788168316
+        },
+        {
+          "page": 30,
+          "requested_end": 1788167316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788166317,
+          "max_epoch": 1788167316
+        },
+        {
+          "page": 31,
+          "requested_end": 1788166316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788165317,
+          "max_epoch": 1788166316
+        },
+        {
+          "page": 32,
+          "requested_end": 1788165316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788164317,
+          "max_epoch": 1788165316
+        },
+        {
+          "page": 33,
+          "requested_end": 1788164316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788163317,
+          "max_epoch": 1788164316
+        },
+        {
+          "page": 34,
+          "requested_end": 1788163316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788162317,
+          "max_epoch": 1788163316
+        },
+        {
+          "page": 35,
+          "requested_end": 1788162316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788161317,
+          "max_epoch": 1788162316
+        },
+        {
+          "page": 36,
+          "requested_end": 1788161316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788160317,
+          "max_epoch": 1788161316
+        },
+        {
+          "page": 37,
+          "requested_end": 1788160316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788159317,
+          "max_epoch": 1788160316
+        },
+        {
+          "page": 38,
+          "requested_end": 1788159316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788158317,
+          "max_epoch": 1788159316
+        },
+        {
+          "page": 39,
+          "requested_end": 1788158316,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788157312,
+          "max_epoch": 1788158316
+        },
+        {
+          "page": 40,
+          "requested_end": 1788157311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788156312,
+          "max_epoch": 1788157311
+        },
+        {
+          "page": 41,
+          "requested_end": 1788156311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788155312,
+          "max_epoch": 1788156311
+        },
+        {
+          "page": 42,
+          "requested_end": 1788155311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788154312,
+          "max_epoch": 1788155311
+        },
+        {
+          "page": 43,
+          "requested_end": 1788154311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788153312,
+          "max_epoch": 1788154311
+        },
+        {
+          "page": 44,
+          "requested_end": 1788153311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788152312,
+          "max_epoch": 1788153311
+        },
+        {
+          "page": 45,
+          "requested_end": 1788152311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788151312,
+          "max_epoch": 1788152311
+        },
+        {
+          "page": 46,
+          "requested_end": 1788151311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788150312,
+          "max_epoch": 1788151311
+        },
+        {
+          "page": 47,
+          "requested_end": 1788150311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788149312,
+          "max_epoch": 1788150311
+        },
+        {
+          "page": 48,
+          "requested_end": 1788149311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788148312,
+          "max_epoch": 1788149311
+        },
+        {
+          "page": 49,
+          "requested_end": 1788148311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788147312,
+          "max_epoch": 1788148311
+        },
+        {
+          "page": 50,
+          "requested_end": 1788147311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788146312,
+          "max_epoch": 1788147311
+        },
+        {
+          "page": 51,
+          "requested_end": 1788146311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788145312,
+          "max_epoch": 1788146311
+        },
+        {
+          "page": 52,
+          "requested_end": 1788145311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788144312,
+          "max_epoch": 1788145311
+        },
+        {
+          "page": 53,
+          "requested_end": 1788144311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788143312,
+          "max_epoch": 1788144311
+        },
+        {
+          "page": 54,
+          "requested_end": 1788143311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788142312,
+          "max_epoch": 1788143311
+        },
+        {
+          "page": 55,
+          "requested_end": 1788142311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788141312,
+          "max_epoch": 1788142311
+        },
+        {
+          "page": 56,
+          "requested_end": 1788141311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788140312,
+          "max_epoch": 1788141311
+        },
+        {
+          "page": 57,
+          "requested_end": 1788140311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788139312,
+          "max_epoch": 1788140311
+        },
+        {
+          "page": 58,
+          "requested_end": 1788139311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788138312,
+          "max_epoch": 1788139311
+        },
+        {
+          "page": 59,
+          "requested_end": 1788138311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788137312,
+          "max_epoch": 1788138311
+        },
+        {
+          "page": 60,
+          "requested_end": 1788137311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788136312,
+          "max_epoch": 1788137311
+        },
+        {
+          "page": 61,
+          "requested_end": 1788136311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788135312,
+          "max_epoch": 1788136311
+        },
+        {
+          "page": 62,
+          "requested_end": 1788135311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788134312,
+          "max_epoch": 1788135311
+        },
+        {
+          "page": 63,
+          "requested_end": 1788134311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788133312,
+          "max_epoch": 1788134311
+        },
+        {
+          "page": 64,
+          "requested_end": 1788133311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788132312,
+          "max_epoch": 1788133311
+        },
+        {
+          "page": 65,
+          "requested_end": 1788132311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788131312,
+          "max_epoch": 1788132311
+        },
+        {
+          "page": 66,
+          "requested_end": 1788131311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788130312,
+          "max_epoch": 1788131311
+        },
+        {
+          "page": 67,
+          "requested_end": 1788130311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788129312,
+          "max_epoch": 1788130311
+        },
+        {
+          "page": 68,
+          "requested_end": 1788129311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788128312,
+          "max_epoch": 1788129311
+        },
+        {
+          "page": 69,
+          "requested_end": 1788128311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788127312,
+          "max_epoch": 1788128311
+        },
+        {
+          "page": 70,
+          "requested_end": 1788127311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788126312,
+          "max_epoch": 1788127311
+        },
+        {
+          "page": 71,
+          "requested_end": 1788126311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788125312,
+          "max_epoch": 1788126311
+        },
+        {
+          "page": 72,
+          "requested_end": 1788125311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788124312,
+          "max_epoch": 1788125311
+        },
+        {
+          "page": 73,
+          "requested_end": 1788124311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788123312,
+          "max_epoch": 1788124311
+        },
+        {
+          "page": 74,
+          "requested_end": 1788123311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788122312,
+          "max_epoch": 1788123311
+        },
+        {
+          "page": 75,
+          "requested_end": 1788122311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788121312,
+          "max_epoch": 1788122311
+        },
+        {
+          "page": 76,
+          "requested_end": 1788121311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788120312,
+          "max_epoch": 1788121311
+        },
+        {
+          "page": 77,
+          "requested_end": 1788120311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788119312,
+          "max_epoch": 1788120311
+        },
+        {
+          "page": 78,
+          "requested_end": 1788119311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788118312,
+          "max_epoch": 1788119311
+        },
+        {
+          "page": 79,
+          "requested_end": 1788118311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788117312,
+          "max_epoch": 1788118311
+        },
+        {
+          "page": 80,
+          "requested_end": 1788117311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788116312,
+          "max_epoch": 1788117311
+        },
+        {
+          "page": 81,
+          "requested_end": 1788116311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788115312,
+          "max_epoch": 1788116311
+        },
+        {
+          "page": 82,
+          "requested_end": 1788115311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788114312,
+          "max_epoch": 1788115311
+        },
+        {
+          "page": 83,
+          "requested_end": 1788114311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788113312,
+          "max_epoch": 1788114311
+        },
+        {
+          "page": 84,
+          "requested_end": 1788113311,
+          "received": 1000,
+          "new_unique": 1000,
+          "min_epoch": 1788112312,
+          "max_epoch": 1788113311
+        },
+        {
+          "page": 85,
+          "requested_end": 1788112311,
+          "received": 493,
+          "new_unique": 493,
+          "min_epoch": 1788111819,
+          "max_epoch": 1788112311
+        },
+        {
+          "page": 86,
+          "requested_end": 1788111818,
+          "received": 1000,
+          "new_unique": 0,
+          "min_epoch": 1788197221,
+          "max_epoch": 1788198220
+        }
+      ],
+      "acquisition_error": "paginação sem avanço",
+      "status": "SHORTFALL",
+      "threshold": 0.0,
+      "calibration_events": 37,
+      "calibration_baseline_p": 0.0007397033296512545,
+      "calibration_bin_probs": [
+        0.0007204159619119213,
+        0.0005842696629213483,
+        0.0008745539774714895,
+        0.0009122129212277313
+      ],
+      "validation": {
+        "n": 16898,
+        "events": 12,
+        "baseline_logloss": 0.005859059573953429,
+        "age_model_logloss": 0.005864858336964809,
+        "logloss_improvement": -5.798763011380306e-06,
+        "ll_baseline": -99.00638868066504,
+        "ll_age_model": -99.10437617803134
+      },
+      "oos": {
+        "n": 16899,
+        "events": 12,
+        "baseline_logloss": 0.005858756651737393,
+        "age_model_logloss": 0.005790813457543084,
+        "logloss_improvement": 6.79431941943087e-05,
+        "ll_baseline": -99.0071286577102,
+        "ll_age_model": -97.85895661902057
+      },
+      "oos_lr_stat": 2.2963440773792456,
+      "oos_permutation_p": 0.4313568643135686
+    }
+  ],
+  "holm": [
+    {
+      "symbol": "BOOM500",
+      "p": 9.999000099990002e-05,
+      "holm_threshold": 0.004545454545454546,
+      "reject": true
+    },
+    {
+      "symbol": "CRASH1000",
+      "p": 0.4313568643135686,
+      "holm_threshold": 0.005,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH900",
+      "p": 0.6011398860113989,
+      "holm_threshold": 0.005555555555555556,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH150N",
+      "p": 0.7463253674632536,
+      "holm_threshold": 0.00625,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH300N",
+      "p": 0.9151084891510849,
+      "holm_threshold": 0.0071428571428571435,
+      "reject": false
+    },
+    {
+      "symbol": "BOOM50",
+      "p": 0.9366063393660634,
+      "holm_threshold": 0.008333333333333333,
+      "reject": false
+    },
+    {
+      "symbol": "BOOM150N",
+      "p": 0.9461053894610539,
+      "holm_threshold": 0.01,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH600",
+      "p": 0.9946005399460054,
+      "holm_threshold": 0.0125,
+      "reject": false
+    },
+    {
+      "symbol": "BOOM300N",
+      "p": 1.0,
+      "holm_threshold": 0.016666666666666666,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH50",
+      "p": 1.0,
+      "holm_threshold": 0.025,
+      "reject": false
+    },
+    {
+      "symbol": "CRASH500",
+      "p": 1.0,
+      "holm_threshold": 0.05,
+      "reject": false
+    }
+  ],
+  "aggregate": {
+    "symbols": 14,
+    "target_ticks": 1400000,
+    "actual_ticks": 757123,
+    "symbols_with_shortfall": 14,
+    "validation_events": 1018,
+    "oos_events": 1006,
+    "validation_logloss_positive_symbols": 3,
+    "oos_logloss_positive_symbols": 7,
+    "holm_rejections": 1
+  },
+  "dataset": {
+    "storage_location": "data/acquisition/day-03b-large-2026-08-31.json.gz",
+    "sha256_gzip": "c96572ab8f1e66e2de0d21244c3acf0bd95620d337fb2521e119705ae2b8a5d7",
+    "size_bytes_gzip": 3718861,
+    "sha256_uncompressed": "9768cb73e5fafc3964b1327f8d559a51eb8bbed60457253b5ad035213752dfbd",
+    "size_bytes_uncompressed": 15753665
+  }
+}

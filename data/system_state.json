@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "transaction_seq": 26,
+  "next_hypothesis_seq": 5,
+  "next_experiment_seq": 3,
+  "last_intent_digest": "d4b414d544629c78dd14da803b4a8aeb19396aa3844863cb0ec85a53e8832396",
+  "last_transaction": "T000000026"
+}

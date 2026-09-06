@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "program_start": "2026-08-29",
+  "experiments": [
+    {
+      "hypothesis_id": "H0001",
+      "stage": "HISTORICAL_VALIDATION",
+      "status": "FINAL_ACQUISITION_ATTEMPT_COMPLETED_TECHNICAL_FAILURE_PENDING_C",
+      "title": "Teste cronológico de memória do hazard em Crash/Boom",
+      "question": "O hazard do próximo spike depende do número de ticks desde o último evento além de uma baseline de hazard constante?",
+      "design": {
+        "data_source": "Deriv public WebSocket market-data API",
+        "symbol_source": "active_symbols",
+        "history_source": "ticks_history",
+        "authentication_required": false,
+        "chronological_split": "60/20/20",
+        "event_label": "usar exatamente o protocolo congelado em H0001",
+        "primary_null": "hazard constante",
+        "primary_alternative": "hazard dependente de ticks_since_last_event",
+        "controls": [
+          "baseline incondicional",
+          "permutação/embaralhamento temporal quando tecnicamente válido"
+        ],
+        "multiplicity": "Holm entre símbolos clássicos Crash/Boom",
+        "leakage_rule": "nenhum limiar ou parâmetro pode usar validação ou OOS",
+        "outcome_inspection_before_registration": false
+      },
+      "decision": "HOLD_PENDING_C_INCONCLUSIVE_CLOSURE",
+      "notes": "Dia 5B: a única tentativa final autorizada pelo 5A foi executada sem alterar o protocolo congelado. O processo concluiu com exit code 0, porém 14/14 símbolos retornaram zero ticks utilizáveis, shortfall de 100000 cada e stop_reason EMPTY_OR_MALFORMED_PAGE; agregado 0/1400000 e coverage_complete=false. Nenhuma estatística de H0001 foi calculada. Classificação: TECHNICAL_FAILURE + INSUFFICIENT_EVIDENCE. A stop rule foi atingida: não executar novos retries automáticos de E000001. Encaminhar ao 5C para encerramento inconclusivo por limitação persistente de aquisição, sem tratar a falha técnica como rejeição científica.",
+      "id": "E000001",
+      "created_at": "2026-08-30T11:04:48+00:00",
+      "updated_at": "2026-09-02T17:03:16+00:00"
+    },
+    {
+      "hypothesis_id": "H0004",
+      "stage": "HISTORICAL_VALIDATION",
+      "status": "BLOCKED_PRE_EXECUTION",
+      "title": "Teste cronológico outcome-based de H0004",
+      "protocol": {
+        "market_family": "Drift Switching",
+        "data_requirement": "chronological tick history sufficient to construct non-overlapping/evaluable 20-tick forward targets after feature warm-up",
+        "predictors": [
+          "signed_return_lag1",
+          "rolling_mean_return_20"
+        ],
+        "target": "sign of forward 20-tick return",
+        "split": "60/20/20 chronological",
+        "model": "fixed logistic regression",
+        "baseline": "train-only unconditional positive-return probability",
+        "primary_metric": "OOS log-loss",
+        "rejection": "model OOS log-loss >= baseline OOS log-loss",
+        "controls": [
+          "no shuffle",
+          "train-only scaling",
+          "single horizon",
+          "single model",
+          "no post-hoc tuning",
+          "preserve raw-data hash and manifest"
+        ]
+      },
+      "next_action": "Next A prospectively specifies and materializes Drift Switching symbol enumeration, raw dataset identity/source/period/manifest/hash, and deterministic non-overlap/embargo rules before any outcome inspection or model fitting.",
+      "id": "E000002",
+      "created_at": "2026-09-03T11:05:53+00:00",
+      "decision": "HOLD — REPEATED TECHNICAL CAPABILITY GAP; H0004 REMAINS INSUFFICIENT_EVIDENCE",
+      "notes": "Dia 7B: o protocolo congelado em 7A foi respeitado. A documentação oficial confirma active_symbols como endpoint de mercado para listar símbolos ativos e a família Drift Switching existe publicamente, porém este runtime não materializou uma resposta bruta verificável do catálogo nem datasets tick-by-tick específicos de E000002. Sem snapshot integral, símbolos exatos, arquivos brutos, contagens, períodos e SHA-256 por símbolo, identidade/completude/reprodutibilidade não podem ser auditadas. Nenhum fit, outcome, OOS, walk-forward, bootstrap ou multiple testing foi executado. Classificação: falha técnica de aquisição/materialização + evidência científica insuficiente, não rejeição de H0004.",
+      "updated_at": "2026-09-06T02:53:46+00:00",
+      "evidence": "O 8C auditou somente a evidência admissível produzida em 8A/8B. O 8B confirmou a existência conceitual do endpoint público active_symbols, mas não materializou snapshot bruto integral nem datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256. A stop rule pré-registrada foi respeitada antes de outcomes. A repetição é classificada como lacuna técnica/de capacidade e não como evidência científica contra H0004.",
+      "next_step": "No próximo ciclo A, especificar uma capacidade canônica de aquisição/materialização que produza snapshot bruto integral de active_symbols e datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256 antes de qualquer outcome. Se a capacidade canônica não existir, manter E000002 em HOLD/BLOCKED_PRE_EXECUTION sem criar fonte paralela."
+    }
+  ],
+  "shadow": [],
+  "demo": []
+}

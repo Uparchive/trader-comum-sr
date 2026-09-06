@@ -1,0 +1,9 @@
+{
+  "market_selection_id": "MS0001",
+  "version": "MS0001-v1",
+  "eligible_universe": ["R_10", "R_25", "R_50", "R_75", "R_100", "1HZ10V", "1HZ25V", "1HZ50V", "1HZ75V", "1HZ100V"],
+  "max_operational_markets": 3,
+  "min_operational_markets_when_healthy": 1,
+  "ranking_features": ["regime_fit", "volatility", "trend", "range_persistence", "structure_quality", "payout", "executability", "anomaly_penalty"],
+  "selected": ["R_100"]
+}

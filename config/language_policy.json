@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "display_language": "pt-BR",
+  "rule": "Todo conteúdo destinado ao usuário deve estar em português do Brasil; inglês é permitido somente em termos técnicos consagrados, nomes oficiais, APIs, endpoints, códigos e siglas.",
+  "technical_terms_allowed": [
+    "OOS",
+    "Walk-Forward",
+    "Shadow",
+    "DEMO",
+    "Fail-Closed",
+    "Champion",
+    "edge",
+    "backtest",
+    "drawdown",
+    "Profit Factor",
+    "multiple testing",
+    "leakage",
+    "look-ahead",
+    "bootstrap",
+    "Monte Carlo",
+    "hazard",
+    "baseline",
+    "ground truth",
+    "dataset",
+    "tick",
+    "ticks",
+    "payout",
+    "API"
+  ],
+  "machine_fields_may_remain_english": true
+}

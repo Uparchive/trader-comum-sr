@@ -1,0 +1,17 @@
+{
+  "name": "No promoted strategy",
+  "version": "2.0.0-bootstrap",
+  "status": "NO_CHAMPION",
+  "market": null,
+  "timeframe": null,
+  "signal_engine": null,
+  "contract_up": "CALL",
+  "contract_down": "PUT",
+  "currency": "USD",
+  "stake_usd": 1.0,
+  "duration": 5,
+  "duration_unit": "m",
+  "execution_enabled": false,
+  "research_approved": false,
+  "notes": "Kell Quant Lab v2 reinicia em 2026-08-29. A SMA(5,20) do piloto de 2026-08-28 foi arquivada e não é Champion da nova arquitetura. O executor permanece fail-closed até promoção científica prospectiva."
+}

@@ -1,0 +1,10 @@
+{
+  "environment": "DEMO_ONLY",
+  "real_money_allowed": false,
+  "real_endpoint_paths": [],
+  "auto_promotion_to_real": false,
+  "platform": "DERIV",
+  "platform_state": "PLATFORM_OK",
+  "rejected_blocks_execution": true,
+  "extraordinary_off_states": ["TECHNICAL_FAIL_CLOSED", "PLATFORM_REJECTED", "STATE_CORRUPTED", "CREDENTIAL_MISMATCH", "RECONCILIATION_FAILURE", "TECHNICAL_KILL_SWITCH"]
+}

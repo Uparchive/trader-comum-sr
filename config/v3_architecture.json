@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "program_version": "3.0.0",
+  "hot_window_days": 90,
+  "warm_window_days": 180,
+  "page_size": 20,
+  "raw_dataset_git_soft_limit_bytes": 50000000,
+  "scientific_evidence_auto_delete": false,
+  "source_of_truth": {
+    "mutations": "ledger/transactions/",
+    "runs": "research/YYYY/MM/YYYY-MM-DD/cycle-X/run.json",
+    "working_state": "state/current.json",
+    "legacy_projections": "data/*.json"
+  }
+}

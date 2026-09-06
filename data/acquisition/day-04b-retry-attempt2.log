@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/runner/work/kell-quant-lab/kell-quant-lab/scripts/research_4b_acquisition_retry.py", line 40, in <module>
+    active=get('/research/active-symbols')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/kell-quant-lab/kell-quant-lab/scripts/research_4b_acquisition_retry.py", line 32, in get
+    raise RuntimeError(' | '.join(errs))
+RuntimeError: <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>

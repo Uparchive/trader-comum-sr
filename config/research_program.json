@@ -1,0 +1,74 @@
+{
+  "program": "Kell Quant Lab v2",
+  "status": "READY_FOR_DAY_1",
+  "start_date": "2026-08-29",
+  "horizon_days": 90,
+  "timezone": "America/Sao_Paulo",
+  "mission": "Descobrir, testar, falsificar e acompanhar vantagens estatísticas potencialmente negociáveis em um universo de mercados, sem obrigação de encontrar edge.",
+  "pipeline": ["MARKET_DISCOVERY","HYPOTHESIS","HISTORICAL_VALIDATION","SHADOW_PROSPECTIVE","DEMO","AUDIT"],
+  "daily_cycles": {
+    "A": {"time":"08:00","role":"Discovery","objective":"Atualizar universo, caracterizar mercados, pesquisar fontes externas e registrar poucas hipóteses de alto valor."},
+    "B": {"time":"14:00","role":"Adversarial Validation","objective":"Tentar destruir as hipóteses selecionadas com OOS, walk-forward, controles, robustez e auditoria de vieses."},
+    "C": {"time":"20:00","role":"Audit","objective":"Consolidar evidência, atualizar estados, revisar shadow/demo e pré-registrar o próximo passo."}
+  },
+  "research_principles": [
+    "GitHub é a fonte única de verdade.",
+    "Código executa força bruta; IA interpreta e decide cientificamente.",
+    "Nenhuma hipótese é promovida por backtest isolado.",
+    "Resultados negativos e inconclusivos permanecem preservados.",
+    "Toda expansão do espaço de busca aumenta o ônus de prova por multiple testing.",
+    "Parâmetros são congelados antes de OOS; mudanças criam nova hipótese ou versão.",
+    "Shadow prospectivo é obrigatório antes de DEMO.",
+    "Execução real permanece proibida por arquitetura e por política do projeto."
+  ],
+  "promotion_gates": {
+    "min_oos_trades_initial": 200,
+    "net_expectancy_gt": 0,
+    "profit_factor_gt": 1.05,
+    "positive_walk_forward_windows_pct_gte": 60,
+    "confidence_interval_required": true,
+    "random_control_required": true,
+    "baseline_control_required": true,
+    "prospective_shadow_required": true
+  },
+  "search_governance": {
+    "track_markets": true,
+    "track_hypotheses": true,
+    "track_parameter_variants": true,
+    "track_external_sources": true,
+    "multiple_testing_adjustment_required_when_applicable": true,
+    "no_best_of_thousands_reporting_without_search_space": true
+  },
+  "platform_governance": {
+    "platform_agnostic": true,
+    "active_platform": "DERIV",
+    "active_environment": "DEMO",
+    "fraud_or_manipulation_requires_extraordinary_reproducible_evidence": true,
+    "separate_price_generation_from_product_expectancy_and_execution": true,
+    "reject_if_declared_mechanism_materially_contradicted_or_serious_operation_infeasible": true,
+    "on_reject": "PLATFORM_SEARCH",
+    "candidate_due_diligence": [
+      "regulatory_status_and_relevant_jurisdiction",
+      "operational_reputation_and_history",
+      "execution_and_data_transparency",
+      "official_api_and_terms",
+      "paper_or_demo_environment",
+      "available_markets",
+      "costs",
+      "automation_limits",
+      "fail_closed_executor_compatibility"
+    ],
+    "new_platform_requires_fresh_validation": true,
+    "credentials_must_be_user_supplied_and_never_invented": true,
+    "notify_user_when_api_credentials_are_required": true
+  },
+  "execution": {
+    "environment": "DEMO_OR_PAPER_ONLY",
+    "current_platform": "DERIV",
+    "current_environment": "DERIV_DEMO",
+    "real_money_allowed": false,
+    "martingale_allowed": false,
+    "executor_is_deterministic": true,
+    "research_can_directly_place_trades": false
+  }
+}

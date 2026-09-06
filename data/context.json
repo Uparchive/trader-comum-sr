@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-06T02:53:46+00:00",
+  "program": "Kell Quant Lab v2",
+  "counts": {
+    "markets": 11,
+    "hypotheses": 4,
+    "experiments": 2,
+    "active_hypotheses": 4
+  },
+  "next_ids_are_system_assigned": true,
+  "active_hypotheses": [
+    {
+      "id": "H0001",
+      "market": "Família Crash/Boom",
+      "family": "event_hazard",
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "version": "1.0.0"
+    },
+    {
+      "id": "H0002",
+      "market": "Família Volatility Switch",
+      "family": "regime_inference",
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "version": "1.0.0"
+    },
+    {
+      "id": "H0003",
+      "market": "Família Drift Switching",
+      "family": "regime_persistence",
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "version": "1.0.0"
+    },
+    {
+      "id": "H0004",
+      "market": "Família Drift Switching",
+      "family": "forward_return_predictability",
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "version": "1.0.0"
+    }
+  ],
+  "latest_cycle": {
+    "day": 8,
+    "date": "2026-09-05",
+    "subcycle": "C",
+    "title": "Auditoria do Dia 8 — repetição da lacuna técnica de materialização de E000002",
+    "decision": "HOLD — REPEATED TECHNICAL CAPABILITY GAP. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL.",
+    "next_step": "No próximo A, especificar uma capacidade canônica de aquisição/materialização que produza snapshot bruto integral e datasets versionados com manifests/hashes antes de qualquer outcome. Se essa capacidade não puder existir pelo mecanismo canônico, manter E000002 em HOLD e não criar fonte paralela."
+  },
+  "champion": {
+    "name": "No promoted strategy",
+    "status": "NO_CHAMPION",
+    "execution_enabled": false,
+    "research_approved": false
+  },
+  "write_protocol": "Read context + relevant records; write only data/write_intent.json. Never calculate IDs or dashboard counters manually."
+}

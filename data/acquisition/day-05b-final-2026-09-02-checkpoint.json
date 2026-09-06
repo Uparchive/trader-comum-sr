@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "cycle": "Dia 5B — tentativa final",
+  "cutoff_epoch": 1788368589,
+  "target_per_symbol": 100000,
+  "page_size": 1000,
+  "symbols": {},
+  "completed_at": "2026-09-02T17:03:16.182008+00:00",
+  "aggregate": {
+    "symbols": 14,
+    "target_ticks": 1400000,
+    "actual_ticks": 0,
+    "symbols_with_shortfall": 14,
+    "validation_events": 0,
+    "oos_events": 0,
+    "validation_logloss_positive_symbols": 0,
+    "oos_logloss_positive_symbols": 0,
+    "holm_rejections": 0,
+    "coverage_complete": false
+  }
+}

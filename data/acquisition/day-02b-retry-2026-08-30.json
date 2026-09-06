@@ -1,0 +1,2651 @@
+{
+  "schema_version": 1,
+  "cycle": "Dia 2B — reteste técnico-científico",
+  "acquired_at": "2026-08-30T17:48:05.228645+00:00",
+  "gateway": "https://kell-quant-lab.kesllyalbuquerque.workers.dev",
+  "connection_check": {
+    "ok": true,
+    "source": "DERIV_PUBLIC_WEBSOCKET",
+    "endpoint": "wss://api.derivws.com/trading/v1/options/ws/public",
+    "attempt": 1,
+    "active_symbols_count": 89,
+    "elapsed_ms": 385,
+    "acquired_at": "2026-08-30T17:48:05.710Z"
+  },
+  "active_symbols_snapshot": {
+    "count": 89,
+    "sha256": "5633a6b4e1fdaae82b433eee0ddadfd5e2b4e04574e04ad2ba0edc569ded2350",
+    "raw": [
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 800145,
+        "underlying_symbol": "1HZ100V",
+        "underlying_symbol_name": "Volatility 100 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 505053,
+        "underlying_symbol": "1HZ10V",
+        "underlying_symbol_name": "Volatility 10 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 117716,
+        "underlying_symbol": "1HZ15V",
+        "underlying_symbol_name": "Volatility 15 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 312490,
+        "underlying_symbol": "1HZ25V",
+        "underlying_symbol_name": "Volatility 25 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 117805,
+        "underlying_symbol": "1HZ30V",
+        "underlying_symbol_name": "Volatility 30 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 271139,
+        "underlying_symbol": "1HZ50V",
+        "underlying_symbol_name": "Volatility 50 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 276501,
+        "underlying_symbol": "1HZ75V",
+        "underlying_symbol_name": "Volatility 75 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 105379,
+        "underlying_symbol": "1HZ90V",
+        "underlying_symbol_name": "Volatility 90 (1s) Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 4396,
+        "underlying_symbol": "BOOM1000",
+        "underlying_symbol_name": "Boom 1000 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 1e-05,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 788,
+        "underlying_symbol": "BOOM150N",
+        "underlying_symbol_name": "Boom 150 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1318,
+        "underlying_symbol": "BOOM300N",
+        "underlying_symbol_name": "Boom 300 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2360,
+        "underlying_symbol": "BOOM50",
+        "underlying_symbol_name": "Boom 50 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2628,
+        "underlying_symbol": "BOOM500",
+        "underlying_symbol_name": "Boom 500 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1671,
+        "underlying_symbol": "BOOM600",
+        "underlying_symbol_name": "Boom 600 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2790,
+        "underlying_symbol": "BOOM900",
+        "underlying_symbol_name": "Boom 900 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 3654,
+        "underlying_symbol": "CRASH1000",
+        "underlying_symbol_name": "Crash 1000 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 1e-05,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1012,
+        "underlying_symbol": "CRASH150N",
+        "underlying_symbol_name": "Crash 150 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1750,
+        "underlying_symbol": "CRASH300N",
+        "underlying_symbol_name": "Crash 300 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1061,
+        "underlying_symbol": "CRASH50",
+        "underlying_symbol_name": "Crash 50 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 4043,
+        "underlying_symbol": "CRASH500",
+        "underlying_symbol_name": "Crash 500 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2113,
+        "underlying_symbol": "CRASH600",
+        "underlying_symbol_name": "Crash 600 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2002,
+        "underlying_symbol": "CRASH900",
+        "underlying_symbol_name": "Crash 900 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "jump_index",
+        "trade_count": 42864,
+        "underlying_symbol": "JD10",
+        "underlying_symbol_name": "Jump 10 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "jump_index",
+        "trade_count": 19723,
+        "underlying_symbol": "JD100",
+        "underlying_symbol_name": "Jump 100 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "jump_index",
+        "trade_count": 30208,
+        "underlying_symbol": "JD25",
+        "underlying_symbol_name": "Jump 25 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "jump_index",
+        "trade_count": 27732,
+        "underlying_symbol": "JD50",
+        "underlying_symbol_name": "Jump 50 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "jump_index",
+        "trade_count": 22509,
+        "underlying_symbol": "JD75",
+        "underlying_symbol_name": "Jump 75 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_AEX",
+        "underlying_symbol_name": "Netherlands 25",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "asia_oceania_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_AS51",
+        "underlying_symbol_name": "Australia 200",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "americas_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_DJI",
+        "underlying_symbol_name": "Wall Street 30",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_FCHI",
+        "underlying_symbol_name": "France 40",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_FTSE",
+        "underlying_symbol_name": "UK 100",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_GDAXI",
+        "underlying_symbol_name": "Germany 40",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "asia_oceania_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_HSI",
+        "underlying_symbol_name": "Hong Kong 50",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "asia_oceania_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_N225",
+        "underlying_symbol_name": "Japan 225",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "americas_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_NDX",
+        "underlying_symbol_name": "US Tech 100",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "americas_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_SPC",
+        "underlying_symbol_name": "US 500",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_SSMI",
+        "underlying_symbol_name": "Swiss 20",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "indices",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "europe_OTC",
+        "trade_count": 0,
+        "underlying_symbol": "OTC_SX5E",
+        "underlying_symbol_name": "Euro 50",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "range_index",
+        "trade_count": 37,
+        "underlying_symbol": "RB100",
+        "underlying_symbol_name": "Range Break 100 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "range_index",
+        "trade_count": 38,
+        "underlying_symbol": "RB200",
+        "underlying_symbol_name": "Range Break 200 Index",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.0001,
+        "subgroup": "synthetics",
+        "submarket": "random_daily",
+        "trade_count": 38212,
+        "underlying_symbol": "RDBEAR",
+        "underlying_symbol_name": "Bear Market Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.0001,
+        "subgroup": "synthetics",
+        "submarket": "random_daily",
+        "trade_count": 38060,
+        "underlying_symbol": "RDBULL",
+        "underlying_symbol_name": "Bull Market Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 433785,
+        "underlying_symbol": "R_10",
+        "underlying_symbol_name": "Volatility 10 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.01,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 568463,
+        "underlying_symbol": "R_100",
+        "underlying_symbol_name": "Volatility 100 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 192414,
+        "underlying_symbol": "R_25",
+        "underlying_symbol_name": "Volatility 25 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.0001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 204570,
+        "underlying_symbol": "R_50",
+        "underlying_symbol_name": "Volatility 50 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.0001,
+        "subgroup": "synthetics",
+        "submarket": "random_index",
+        "trade_count": 227094,
+        "underlying_symbol": "R_75",
+        "underlying_symbol_name": "Volatility 75 Index",
+        "underlying_symbol_type": "stockindex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "baskets",
+        "submarket": "forex_basket",
+        "trade_count": 0,
+        "underlying_symbol": "WLDAUD",
+        "underlying_symbol_name": "AUD Basket",
+        "underlying_symbol_type": "forex_basket"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "baskets",
+        "submarket": "forex_basket",
+        "trade_count": 0,
+        "underlying_symbol": "WLDEUR",
+        "underlying_symbol_name": "EUR Basket",
+        "underlying_symbol_type": "forex_basket"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "baskets",
+        "submarket": "forex_basket",
+        "trade_count": 0,
+        "underlying_symbol": "WLDGBP",
+        "underlying_symbol_name": "GBP Basket",
+        "underlying_symbol_type": "forex_basket"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "baskets",
+        "submarket": "forex_basket",
+        "trade_count": 0,
+        "underlying_symbol": "WLDUSD",
+        "underlying_symbol_name": "USD Basket",
+        "underlying_symbol_type": "forex_basket"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "baskets",
+        "submarket": "commodity_basket",
+        "trade_count": 0,
+        "underlying_symbol": "WLDXAU",
+        "underlying_symbol_name": "Gold Basket",
+        "underlying_symbol_type": "commodity_basket"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "cryptocurrency",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "non_stable_coin",
+        "trade_count": 1373,
+        "underlying_symbol": "cryBTCUSD",
+        "underlying_symbol_name": "BTC/USD",
+        "underlying_symbol_type": "cryptocurrency"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "cryptocurrency",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "non_stable_coin",
+        "trade_count": 230,
+        "underlying_symbol": "cryETHUSD",
+        "underlying_symbol_name": "ETH/USD",
+        "underlying_symbol_type": "cryptocurrency"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxAUDCAD",
+        "underlying_symbol_name": "AUD/CAD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxAUDCHF",
+        "underlying_symbol_name": "AUD/CHF",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxAUDJPY",
+        "underlying_symbol_name": "AUD/JPY",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxAUDNZD",
+        "underlying_symbol_name": "AUD/NZD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxAUDUSD",
+        "underlying_symbol_name": "AUD/USD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURAUD",
+        "underlying_symbol_name": "EUR/AUD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURCAD",
+        "underlying_symbol_name": "EUR/CAD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURCHF",
+        "underlying_symbol_name": "EUR/CHF",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURGBP",
+        "underlying_symbol_name": "EUR/GBP",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURJPY",
+        "underlying_symbol_name": "EUR/JPY",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURNZD",
+        "underlying_symbol_name": "EUR/NZD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxEURUSD",
+        "underlying_symbol_name": "EUR/USD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPAUD",
+        "underlying_symbol_name": "GBP/AUD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPCAD",
+        "underlying_symbol_name": "GBP/CAD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPCHF",
+        "underlying_symbol_name": "GBP/CHF",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPJPY",
+        "underlying_symbol_name": "GBP/JPY",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPNZD",
+        "underlying_symbol_name": "GBP/NZD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxGBPUSD",
+        "underlying_symbol_name": "GBP/USD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxNZDJPY",
+        "underlying_symbol_name": "NZD/JPY",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxNZDUSD",
+        "underlying_symbol_name": "NZD/USD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxUSDCAD",
+        "underlying_symbol_name": "USD/CAD",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 1e-05,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxUSDCHF",
+        "underlying_symbol_name": "USD/CHF",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.001,
+        "subgroup": "none",
+        "submarket": "major_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxUSDJPY",
+        "underlying_symbol_name": "USD/JPY",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.0001,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxUSDMXN",
+        "underlying_symbol_name": "USD/MXN",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "forex",
+        "pip_size": 0.0001,
+        "subgroup": "none",
+        "submarket": "minor_pairs",
+        "trade_count": 0,
+        "underlying_symbol": "frxUSDPLN",
+        "underlying_symbol_name": "USD/PLN",
+        "underlying_symbol_type": "forex"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "commodities",
+        "pip_size": 0.0001,
+        "subgroup": "none",
+        "submarket": "metals",
+        "trade_count": 0,
+        "underlying_symbol": "frxXAGUSD",
+        "underlying_symbol_name": "Silver/USD",
+        "underlying_symbol_type": "commodities"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "commodities",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "metals",
+        "trade_count": 0,
+        "underlying_symbol": "frxXAUUSD",
+        "underlying_symbol_name": "Gold/USD",
+        "underlying_symbol_type": "commodities"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "commodities",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "metals",
+        "trade_count": 0,
+        "underlying_symbol": "frxXPDUSD",
+        "underlying_symbol_name": "Palladium/USD",
+        "underlying_symbol_type": "commodities"
+      },
+      {
+        "exchange_is_open": 0,
+        "is_trading_suspended": 0,
+        "market": "commodities",
+        "pip_size": 0.01,
+        "subgroup": "none",
+        "submarket": "metals",
+        "trade_count": 0,
+        "underlying_symbol": "frxXPTUSD",
+        "underlying_symbol_name": "Platinum/USD",
+        "underlying_symbol_type": "commodities"
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "step_index",
+        "trade_count": 23472,
+        "underlying_symbol": "stpRNG",
+        "underlying_symbol_name": "Step Index 100",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "step_index",
+        "trade_count": 10368,
+        "underlying_symbol": "stpRNG2",
+        "underlying_symbol_name": "Step Index 200",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "step_index",
+        "trade_count": 42258,
+        "underlying_symbol": "stpRNG3",
+        "underlying_symbol_name": "Step Index 300",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "step_index",
+        "trade_count": 16180,
+        "underlying_symbol": "stpRNG4",
+        "underlying_symbol_name": "Step Index 400",
+        "underlying_symbol_type": ""
+      },
+      {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.1,
+        "subgroup": "synthetics",
+        "submarket": "step_index",
+        "trade_count": 16166,
+        "underlying_symbol": "stpRNG5",
+        "underlying_symbol_name": "Step Index 500",
+        "underlying_symbol_type": ""
+      }
+    ]
+  },
+  "parser_diagnostics_for_crash_boom_candidates": [
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 4396,
+        "underlying_symbol": "BOOM1000",
+        "underlying_symbol_name": "Boom 1000 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4396 underlying_symbol BOOM1000 underlying_symbol_name Boom 1000 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 1e-05,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 788,
+        "underlying_symbol": "BOOM150N",
+        "underlying_symbol_name": "Boom 150 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 788 underlying_symbol BOOM150N underlying_symbol_name Boom 150 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1318,
+        "underlying_symbol": "BOOM300N",
+        "underlying_symbol_name": "Boom 300 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1318 underlying_symbol BOOM300N underlying_symbol_name Boom 300 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2360,
+        "underlying_symbol": "BOOM50",
+        "underlying_symbol_name": "Boom 50 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2360 underlying_symbol BOOM50 underlying_symbol_name Boom 50 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2628,
+        "underlying_symbol": "BOOM500",
+        "underlying_symbol_name": "Boom 500 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2628 underlying_symbol BOOM500 underlying_symbol_name Boom 500 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1671,
+        "underlying_symbol": "BOOM600",
+        "underlying_symbol_name": "Boom 600 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1671 underlying_symbol BOOM600 underlying_symbol_name Boom 600 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2790,
+        "underlying_symbol": "BOOM900",
+        "underlying_symbol_name": "Boom 900 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2790 underlying_symbol BOOM900 underlying_symbol_name Boom 900 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 3654,
+        "underlying_symbol": "CRASH1000",
+        "underlying_symbol_name": "Crash 1000 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 3654 underlying_symbol CRASH1000 underlying_symbol_name Crash 1000 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 1e-05,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1012,
+        "underlying_symbol": "CRASH150N",
+        "underlying_symbol_name": "Crash 150 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 1012 underlying_symbol CRASH150N underlying_symbol_name Crash 150 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1750,
+        "underlying_symbol": "CRASH300N",
+        "underlying_symbol_name": "Crash 300 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1750 underlying_symbol CRASH300N underlying_symbol_name Crash 300 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 1061,
+        "underlying_symbol": "CRASH50",
+        "underlying_symbol_name": "Crash 50 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1061 underlying_symbol CRASH50 underlying_symbol_name Crash 50 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 4043,
+        "underlying_symbol": "CRASH500",
+        "underlying_symbol_name": "Crash 500 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4043 underlying_symbol CRASH500 underlying_symbol_name Crash 500 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2113,
+        "underlying_symbol": "CRASH600",
+        "underlying_symbol_name": "Crash 600 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2113 underlying_symbol CRASH600 underlying_symbol_name Crash 600 Index underlying_symbol_type "
+    },
+    {
+      "raw": {
+        "exchange_is_open": 1,
+        "is_trading_suspended": 0,
+        "market": "synthetic_index",
+        "pip_size": 0.001,
+        "subgroup": "synthetics",
+        "submarket": "crash_index",
+        "trade_count": 2002,
+        "underlying_symbol": "CRASH900",
+        "underlying_symbol_name": "Crash 900 Index",
+        "underlying_symbol_type": ""
+      },
+      "blob": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2002 underlying_symbol CRASH900 underlying_symbol_name Crash 900 Index underlying_symbol_type "
+    }
+  ],
+  "selection_rule": "Crash/Boom clássicos presentes em active_symbols; excluir Flip/Hybrid; extrair N do nome/estrutura retornada, sem seleção por outcome.",
+  "selected_symbols": [
+    {
+      "symbol": "BOOM50",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2360 underlying_symbol BOOM50 underlying_symbo",
+      "kind": "Boom",
+      "N": 50
+    },
+    {
+      "symbol": "BOOM150N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 788 underlying_symbol BOOM150N underlying_symb",
+      "kind": "Boom",
+      "N": 150
+    },
+    {
+      "symbol": "BOOM300N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1318 underlying_symbol BOOM300N underlying_sym",
+      "kind": "Boom",
+      "N": 300
+    },
+    {
+      "symbol": "BOOM500",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2628 underlying_symbol BOOM500 underlying_symb",
+      "kind": "Boom",
+      "N": 500
+    },
+    {
+      "symbol": "BOOM600",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1671 underlying_symbol BOOM600 underlying_symb",
+      "kind": "Boom",
+      "N": 600
+    },
+    {
+      "symbol": "BOOM900",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2790 underlying_symbol BOOM900 underlying_symb",
+      "kind": "Boom",
+      "N": 900
+    },
+    {
+      "symbol": "BOOM1000",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4396 underlying_symbol BOOM1000 underlying_sym",
+      "kind": "Boom",
+      "N": 1000
+    },
+    {
+      "symbol": "CRASH50",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1061 underlying_symbol CRASH50 underlying_symb",
+      "kind": "Crash",
+      "N": 50
+    },
+    {
+      "symbol": "CRASH150N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 1012 underlying_symbol CRASH150N underlying_sy",
+      "kind": "Crash",
+      "N": 150
+    },
+    {
+      "symbol": "CRASH300N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1750 underlying_symbol CRASH300N underlying_sy",
+      "kind": "Crash",
+      "N": 300
+    },
+    {
+      "symbol": "CRASH500",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4043 underlying_symbol CRASH500 underlying_sym",
+      "kind": "Crash",
+      "N": 500
+    },
+    {
+      "symbol": "CRASH600",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2113 underlying_symbol CRASH600 underlying_sym",
+      "kind": "Crash",
+      "N": 600
+    },
+    {
+      "symbol": "CRASH900",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2002 underlying_symbol CRASH900 underlying_sym",
+      "kind": "Crash",
+      "N": 900
+    },
+    {
+      "symbol": "CRASH1000",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 3654 underlying_symbol CRASH1000 underlying_sy",
+      "kind": "Crash",
+      "N": 1000
+    }
+  ],
+  "experiment": "E000001",
+  "protocol_preserved": {
+    "split": "60/20/20",
+    "threshold": "quantil empírico 1-1/N só na calibração",
+    "event": "signed move > threshold",
+    "no_posthoc_retuning": true,
+    "primary_null": "hazard constante"
+  },
+  "datasets_and_metrics": [
+    {
+      "symbol": "BOOM50",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2360 underlying_symbol BOOM50 underlying_symbo",
+      "kind": "Boom",
+      "N": 50,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111087,
+      "last_epoch": 1788112086,
+      "sha256_times_prices": "561d78a4c765372d0e757ceaea1b577f6175b64bd698c1d5db85996866ad6f74",
+      "sample_first_3": [
+        [
+          1788111087,
+          106588.814
+        ],
+        [
+          1788111088,
+          106599.426
+        ],
+        [
+          1788111089,
+          106599.233
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112084,
+          106616.86
+        ],
+        [
+          1788112085,
+          106616.688
+        ],
+        [
+          1788112086,
+          106616.67
+        ]
+      ],
+      "calibration_threshold": 2.041120000000794,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 12,
+          "event_rate": 0.02003338898163606,
+          "ll_constant": -58.80324823460556,
+          "ll_age_bins": -54.59760299971422,
+          "lr_improvement": 8.411290469782685,
+          "age_bin_hazards": [
+            0.023404255319148935,
+            0.002840909090909091,
+            0.04421768707482993,
+            0.03333333333333333
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 3,
+          "event_rate": 0.015,
+          "ll_constant": -15.576501882219274,
+          "ll_age_bins": -13.433211091973902,
+          "lr_improvement": 4.2865815804907434,
+          "age_bin_hazards": [
+            0.006024096385542169,
+            0.056451612903225805,
+            0.00980392156862745,
+            0.0625
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -7.154498918733338,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.019230769230769232,
+            0.019230769230769232,
+            0.00980392156862745,
+            0.01485148514851485
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM150N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 788 underlying_symbol BOOM150N underlying_symb",
+      "kind": "Boom",
+      "N": 150,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111091,
+      "last_epoch": 1788112090,
+      "sha256_times_prices": "3fefafbf12dd55d6e671118f07e28e1844b00557e006252132aa7f26c7a00c77",
+      "sample_first_3": [
+        [
+          1788111091,
+          9507.35085
+        ],
+        [
+          1788111092,
+          9507.34082
+        ],
+        [
+          1788111093,
+          9507.33507
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112088,
+          9506.95362
+        ],
+        [
+          1788112089,
+          9506.94615
+        ],
+        [
+          1788112090,
+          9506.94054
+        ]
+      ],
+      "calibration_threshold": -9.986666596281199e-05,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 4,
+          "event_rate": 0.00667779632721202,
+          "ll_constant": -24.022483527024875,
+          "ll_age_bins": -23.381865196920664,
+          "lr_improvement": 1.281236660208421,
+          "age_bin_hazards": [
+            0.00922509225092251,
+            0.0033112582781456954,
+            0.013888888888888888,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 3,
+          "event_rate": 0.015,
+          "ll_constant": -15.576501882219274,
+          "ll_age_bins": -15.71384458514675,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.018115942028985508,
+            0.0234375,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 5,
+          "event_rate": 0.025,
+          "ll_constant": -23.381369827506212,
+          "ll_age_bins": -20.9805004361151,
+          "lr_improvement": 4.801738782782223,
+          "age_bin_hazards": [
+            0.022613065326633167,
+            0.5,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM300N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1318 underlying_symbol BOOM300N underlying_sym",
+      "kind": "Boom",
+      "N": 300,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111092,
+      "last_epoch": 1788112091,
+      "sha256_times_prices": "9defec6ea6f2e0e1d8af2f6af1bbacabe2ebfaec794a41e47af24978d23394e0",
+      "sample_first_3": [
+        [
+          1788111092,
+          519.818
+        ],
+        [
+          1788111093,
+          519.81
+        ],
+        [
+          1788111094,
+          519.803
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112089,
+          518.931
+        ],
+        [
+          1788112090,
+          518.92
+        ],
+        [
+          1788112091,
+          518.913
+        ]
+      ],
+      "calibration_threshold": 0.009833333333324541,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 2,
+          "event_rate": 0.00333889816360601,
+          "ll_constant": -13.400886214650814,
+          "ll_age_bins": -13.345271438329885,
+          "lr_improvement": 0.11122955264185919,
+          "age_bin_hazards": [
+            0.003416856492027335,
+            0.009259259259259259,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM500",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2628 underlying_symbol BOOM500 underlying_symb",
+      "kind": "Boom",
+      "N": 500,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111092,
+      "last_epoch": 1788112091,
+      "sha256_times_prices": "b3d30d42d5b50071684cb4f35825751086429f27a69bccacb9651e03d922c451",
+      "sample_first_3": [
+        [
+          1788111092,
+          4592.52
+        ],
+        [
+          1788111093,
+          4592.503
+        ],
+        [
+          1788111094,
+          4592.496
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112089,
+          4583.293
+        ],
+        [
+          1788112090,
+          4583.268
+        ],
+        [
+          1788112091,
+          4583.258
+        ]
+      ],
+      "calibration_threshold": 0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM600",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1671 underlying_symbol BOOM600 underlying_symb",
+      "kind": "Boom",
+      "N": 600,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111093,
+      "last_epoch": 1788112092,
+      "sha256_times_prices": "c49038f1ea537330c6589fe9272d8b05c60814d4920dd18efde94b12a44cc527",
+      "sample_first_3": [
+        [
+          1788111093,
+          5163.69
+        ],
+        [
+          1788111094,
+          5163.68
+        ],
+        [
+          1788111095,
+          5163.676
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112090,
+          5160.226
+        ],
+        [
+          1788112091,
+          5160.221
+        ],
+        [
+          1788112092,
+          5160.21
+        ]
+      ],
+      "calibration_threshold": 0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -4.091539402634571,
+          "lr_improvement": 4.408547573597556,
+          "age_bin_hazards": [
+            0.0026595744680851063,
+            null,
+            0.10714285714285714,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM900",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2790 underlying_symbol BOOM900 underlying_symb",
+      "kind": "Boom",
+      "N": 900,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111093,
+      "last_epoch": 1788112092,
+      "sha256_times_prices": "c96778029bd0c4d8694e09e9f8fd1adcaa2b74f964f2bda23496f0d79bc11317",
+      "sample_first_3": [
+        [
+          1788111093,
+          9326.468
+        ],
+        [
+          1788111094,
+          9326.467
+        ],
+        [
+          1788111095,
+          9326.464
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112090,
+          9331.624
+        ],
+        [
+          1788112091,
+          9331.618
+        ],
+        [
+          1788112092,
+          9331.592
+        ]
+      ],
+      "calibration_threshold": 2.402242222222633,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 1,
+          "event_rate": 0.001669449081803005,
+          "ll_constant": -7.394426408676377,
+          "ll_age_bins": -7.488336417542936,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.0025,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -6.530828315897985,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.008333333333333333,
+            0.01056338028169014,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BOOM1000",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4396 underlying_symbol BOOM1000 underlying_sym",
+      "kind": "Boom",
+      "N": 1000,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111094,
+      "last_epoch": 1788112093,
+      "sha256_times_prices": "372ad085c977931654135688b80bd85b1b15ccedfab3c57549cdc971b6882b78",
+      "sample_first_3": [
+        [
+          1788111094,
+          14888.425
+        ],
+        [
+          1788111095,
+          14888.417
+        ],
+        [
+          1788111096,
+          14888.414
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112091,
+          14873.184
+        ],
+        [
+          1788112092,
+          14873.16
+        ],
+        [
+          1788112093,
+          14873.157
+        ]
+      ],
+      "calibration_threshold": 0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH50",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1061 underlying_symbol CRASH50 underlying_symb",
+      "kind": "Crash",
+      "N": 50,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111095,
+      "last_epoch": 1788112094,
+      "sha256_times_prices": "9e494daf1d8ef85c5497ae50441d96e5c32b4f6345effb7aa4e3c8713a1636fa",
+      "sample_first_3": [
+        [
+          1788111095,
+          99292.811
+        ],
+        [
+          1788111096,
+          99292.812
+        ],
+        [
+          1788111097,
+          99293.007
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112092,
+          99293.333
+        ],
+        [
+          1788112093,
+          99293.425
+        ],
+        [
+          1788112094,
+          99293.697
+        ]
+      ],
+      "calibration_threshold": -0.0009600000036880737,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 12,
+          "event_rate": 0.02003338898163606,
+          "ll_constant": -58.80324823460556,
+          "ll_age_bins": -57.03052661034484,
+          "lr_improvement": 3.545443248521437,
+          "age_bin_hazards": [
+            0.012280701754385965,
+            0.023076923076923078,
+            0.045081967213114756,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 6,
+          "event_rate": 0.03,
+          "ll_constant": -26.948433635953354,
+          "ll_age_bins": -25.731553130074463,
+          "lr_improvement": 2.433761011757781,
+          "age_bin_hazards": [
+            0.04205607476635514,
+            0.05555555555555555,
+            0.00980392156862745,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 2,
+          "event_rate": 0.01,
+          "ll_constant": -11.200306870969468,
+          "ll_age_bins": -11.5262678713681,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.041666666666666664,
+            0.019230769230769232,
+            0.041666666666666664,
+            0.011538461538461539
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH150N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 1e-05 subgroup synthetics submarket crash_index trade_count 1012 underlying_symbol CRASH150N underlying_sy",
+      "kind": "Crash",
+      "N": 150,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111095,
+      "last_epoch": 1788112094,
+      "sha256_times_prices": "d560fc7c6e9bdddda9d1ae5b8d9223764d611fe91912f7b96c8add9b90888922",
+      "sample_first_3": [
+        [
+          1788111095,
+          9639.39627
+        ],
+        [
+          1788111096,
+          9639.39733
+        ],
+        [
+          1788111097,
+          9639.4008
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112092,
+          9638.32123
+        ],
+        [
+          1788112093,
+          9638.32554
+        ],
+        [
+          1788112094,
+          9638.32732
+        ]
+      ],
+      "calibration_threshold": -1.9999999494757503e-05,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 3,
+          "event_rate": 0.005008347245409015,
+          "ll_constant": -18.88242283420136,
+          "ll_age_bins": -18.603867189775208,
+          "lr_improvement": 0.5571112888523047,
+          "age_bin_hazards": [
+            0.009652509652509652,
+            0.0033112582781456954,
+            0.0078125,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 3,
+          "event_rate": 0.015,
+          "ll_constant": -15.576501882219274,
+          "ll_age_bins": -14.404092807621698,
+          "lr_improvement": 2.3448181491951523,
+          "age_bin_hazards": [
+            0.011278195488721804,
+            0.045454545454545456,
+            0.019230769230769232,
+            0.125
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 2,
+          "event_rate": 0.01,
+          "ll_constant": -11.200306870969468,
+          "ll_age_bins": -11.401333802483034,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.014705882352941176,
+            0.015625,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH300N",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 1750 underlying_symbol CRASH300N underlying_sy",
+      "kind": "Crash",
+      "N": 300,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111096,
+      "last_epoch": 1788112095,
+      "sha256_times_prices": "42cf8a1da15f7243407660111e4eac4dd8d5edd100805a67d04b39a889b36679",
+      "sample_first_3": [
+        [
+          1788111096,
+          1750.948
+        ],
+        [
+          1788111097,
+          1750.96
+        ],
+        [
+          1788111098,
+          1750.983
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112093,
+          1759.29
+        ],
+        [
+          1788112094,
+          1759.293
+        ],
+        [
+          1788112095,
+          1759.297
+        ]
+      ],
+      "calibration_threshold": -0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 1,
+          "event_rate": 0.001669449081803005,
+          "ll_constant": -7.394426408676377,
+          "ll_age_bins": -7.558875657165989,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.0023584905660377358,
+            0.0033112582781456954,
+            0.006276150627615063,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -6.799814993874163,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.007894736842105263,
+            0.041666666666666664,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH500",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 4043 underlying_symbol CRASH500 underlying_sym",
+      "kind": "Crash",
+      "N": 500,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111096,
+      "last_epoch": 1788112095,
+      "sha256_times_prices": "3922b5eda4a09b465fa1bddcc5f40454b32e079d92946c37c6edd2d85e2a7f53",
+      "sample_first_3": [
+        [
+          1788111096,
+          2904.742
+        ],
+        [
+          1788111097,
+          2904.755
+        ],
+        [
+          1788111098,
+          2904.757
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112093,
+          2906.233
+        ],
+        [
+          1788112094,
+          2906.244
+        ],
+        [
+          1788112095,
+          2906.251
+        ]
+      ],
+      "calibration_threshold": 0.13346399999976455,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 2,
+          "event_rate": 0.00333889816360601,
+          "ll_constant": -13.400886214650814,
+          "ll_age_bins": -13.099957672691625,
+          "lr_improvement": 0.6018570839183788,
+          "age_bin_hazards": [
+            0.0030864197530864196,
+            0.013043478260869565,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -6.388483474053243,
+          "lr_improvement": 0.0,
+          "age_bin_hazards": [
+            0.007462686567164179,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH600",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2113 underlying_symbol CRASH600 underlying_sym",
+      "kind": "Crash",
+      "N": 600,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111097,
+      "last_epoch": 1788112096,
+      "sha256_times_prices": "e05a6881005e01edfb807fd1d02992a854d90663c97a667736a1832a63680aa9",
+      "sample_first_3": [
+        [
+          1788111097,
+          22886.954
+        ],
+        [
+          1788111098,
+          22887.0
+        ],
+        [
+          1788111099,
+          22887.026
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112094,
+          22888.128
+        ],
+        [
+          1788112095,
+          22888.145
+        ],
+        [
+          1788112096,
+          22888.192
+        ]
+      ],
+      "calibration_threshold": -0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 2,
+          "event_rate": 0.01,
+          "ll_constant": -11.200306870969468,
+          "ll_age_bins": -10.886002378583745,
+          "lr_improvement": 0.6286089847714464,
+          "age_bin_hazards": [
+            0.009202453987730062,
+            null,
+            0.038461538461538464,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH900",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 2002 underlying_symbol CRASH900 underlying_sym",
+      "kind": "Crash",
+      "N": 900,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111098,
+      "last_epoch": 1788112097,
+      "sha256_times_prices": "b2e1133c8488350d25c83e7a74f229f6bbbf1e345fed334a3664c7d9aec98daf",
+      "sample_first_3": [
+        [
+          1788111098,
+          16626.975
+        ],
+        [
+          1788111099,
+          16626.991
+        ],
+        [
+          1788111100,
+          16627.006
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112095,
+          16635.168
+        ],
+        [
+          1788112096,
+          16635.186
+        ],
+        [
+          1788112097,
+          16635.197
+        ]
+      ],
+      "calibration_threshold": -0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 1,
+          "event_rate": 0.005,
+          "ll_constant": -6.295813189433349,
+          "ll_age_bins": -5.848556447813598,
+          "lr_improvement": 0.8945134832395016,
+          "age_bin_hazards": [
+            0.008928571428571428,
+            0.004901960784313725,
+            0.03333333333333333,
+            null
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRASH1000",
+      "display_name": "exchange_is_open 1 is_trading_suspended 0 market synthetic_index pip_size 0.001 subgroup synthetics submarket crash_index trade_count 3654 underlying_symbol CRASH1000 underlying_sy",
+      "kind": "Crash",
+      "N": 1000,
+      "status": "OK",
+      "count": 1000,
+      "first_epoch": 1788111099,
+      "last_epoch": 1788112098,
+      "sha256_times_prices": "8e1f3a929b22e4f8f15e423321978dbf22a13896530b4eb576067b4991f85195",
+      "sample_first_3": [
+        [
+          1788111099,
+          5950.403
+        ],
+        [
+          1788111100,
+          5950.414
+        ],
+        [
+          1788111101,
+          5950.421
+        ]
+      ],
+      "sample_last_3": [
+        [
+          1788112096,
+          5956.246
+        ],
+        [
+          1788112097,
+          5956.248
+        ],
+        [
+          1788112098,
+          5956.253
+        ]
+      ],
+      "calibration_threshold": -0.0,
+      "split_moves": {
+        "calibration": 599,
+        "validation": 200,
+        "oos": 200
+      },
+      "segments": {
+        "calibration": {
+          "ticks": 599,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "validation": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "oos": {
+          "ticks": 200,
+          "events": 0,
+          "event_rate": 0.0,
+          "ll_constant": null,
+          "ll_age_bins": null,
+          "lr_improvement": null,
+          "age_bin_hazards": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "selected": 14,
+    "datasets_ok": 14,
+    "validation_events": 17,
+    "oos_events": 15
+  },
+  "inference_policy": "Este reteste mede aquisição e estatísticas congeladas. Não declarar edge nem PROMOTE se quantidade de eventos/OOS e inferência com multiple testing não forem suficientes; não inventar p-valores."
+}

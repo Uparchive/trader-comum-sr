@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "program_start": "2026-08-29",
+  "counters": {
+    "hypotheses": 4,
+    "parameter_variants": 4,
+    "markets_examined": 11
+  },
+  "hypotheses": [
+    {
+      "id": "H0001",
+      "created_at": "2026-08-29T08:00:00-03:00",
+      "market": "Família Crash/Boom",
+      "family": "event_hazard",
+      "description": "Testar se o timing dos eventos apresenta memória estatisticamente detectável em comparação com uma baseline de hazard constante em dados cronológicos separados.",
+      "mechanism": "O provedor documenta frequências médias de eventos; o experimento testa memória em vez de presumir que ela existe.",
+      "frozen_parameters": {
+        "predictor": "ticks_since_last_event",
+        "primary_test": "constant-hazard null versus conditional hazard",
+        "direction": "two-sided",
+        "event_label_protocol": {
+          "scope": "somente índices clássicos Crash/Boom enumerados por active_symbols; excluir Flip, Hybrid e outras famílias",
+          "signed_tick_move": "Boom: P_t-P_(t-1); Crash: -(P_t-P_(t-1))",
+          "documented_interval_N": "N extraído do nome/documentação oficial do símbolo e congelado por símbolo",
+          "chronological_split": "60% calibração / 20% validação / 20% OOS",
+          "calibration_threshold": "quantil empírico 1-1/N do signed_tick_move calculado somente nos 60% iniciais",
+          "event_definition": "evento quando signed_tick_move excede estritamente o limiar congelado; limiar nunca é reajustado usando validação/OOS",
+          "hazard_age": "número de ticks desde o último evento rotulado",
+          "age_bins_for_diagnostics": [
+            "[0,0.5N)",
+            "[0.5N,N)",
+            "[N,2N)",
+            "[2N,+inf)"
+          ],
+          "primary_comparison": "modelo de hazard constante versus modelo condicional à idade; avaliação cronológica separada",
+          "multiple_testing": "correção Holm entre símbolos da família no teste primário",
+          "no_posthoc_threshold_tuning": true
+        }
+      },
+      "origin": "Dia 1A — documentação oficial",
+      "variants": 1,
+      "tests": [
+        {
+          "cycle": "Dia 1B",
+          "type": "adversarial_design_audit",
+          "result": "INCONCLUSIVE_DATA_AND_EVENT_LABEL_NOT_READY",
+          "notes": "O provedor documenta intervalos médios de spikes definidos estatisticamente, mas isso não estabelece memória. O histórico público de ticks está disponível sem autenticação; é necessário um dataset reproduzível e um detector de eventos pré-especificado antes do teste de hazard condicional."
+        },
+        {
+          "cycle": "Dia 2B — reteste após correção de aquisição",
+          "type": "historical_validation_retry",
+          "result": "HOLD_INSUFFICIENT_EVENT_MASS",
+          "notes": "A falha DNS da primeira tentativa permanece preservada. Após criação de gateway Cloudflare, remoção do parâmetro obsoleto product_type e correção do parser para underlying_symbol/underlying_symbol_name, a conexão pública respondeu na primeira tentativa com 89 símbolos ativos. Foram selecionados prospectivamente 14 Crash/Boom clássicos e obtidos 14 datasets válidos. O protocolo 60/20/20 e o limiar 1-1/N somente na calibração foram mantidos. Houve 17 eventos na validação e 15 no OOS no agregado; a massa de eventos é insuficiente para conclusão robusta por símbolo e correção Holm, portanto nenhum p-valor ou edge foi declarado. Relatório: research/2026-08-30-day-02B-retest.md. Evidência: data/acquisition/day-02b-retry-2026-08-30.json."
+        }
+      ],
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "evidence": "Dia 3C — auditoria do teste ampliado E000001: o Dia 3B preservou o desenho congelado, mas obteve 757123 dos 1400000 ticks planejados e todos os 14 símbolos tiveram shortfall. Foram observados 1018 eventos na validação e 1006 no OOS. O modelo por idade melhorou log-loss em 3 símbolos na validação e 7 no OOS. Houve uma única rejeição após Holm, BOOM500, mas esse símbolo teve aquisição severamente incompleta, com 2000 ticks, 0 eventos na validação e 2 no OOS; portanto o achado isolado não satisfaz robustez prospectiva e não pode ser promovido post hoc. Como o próprio pré-registro do Dia 3A determinava que shortfall fosse registrado sem compensação e mantivesse HOLD, a auditoria não reclassifica ausência de confirmação como rejeição definitiva nem autoriza Shadow/DEMO. A hipótese permanece viva apenas para uma futura tentativa prospectiva que resolva a aquisição sem alterar detector, bins, split, universo ou regra Holm.",
+      "version": "1.0.0",
+      "title": "Memória do hazard de eventos Crash/Boom",
+      "status": "HOLD_AFTER_DAY3_AUDIT",
+      "updated_at": "2026-08-31T23:04:16+00:00"
+    },
+    {
+      "id": "H0002",
+      "created_at": "2026-08-29T08:00:00-03:00",
+      "market": "Família Volatility Switch",
+      "family": "regime_inference",
+      "description": "Testar se a volatilidade realizada recente identifica o regime de volatilidade documentado melhor que uma baseline incondicional em dados cronológicos separados.",
+      "mechanism": "A documentação descreve níveis alternados de volatilidade com durações médias de estado; a utilidade preditiva permanece não testada.",
+      "frozen_parameters": {
+        "feature_family": "rolling realized volatility only",
+        "model_class": "simple threshold/state classifier",
+        "baseline": "unconditional state baseline"
+      },
+      "origin": "Dia 1A — documentação oficial",
+      "variants": 1,
+      "tests": [
+        {
+          "cycle": "Dia 1B",
+          "type": "adversarial_identifiability_audit",
+          "result": "INCONCLUSIVE_LATENT_STATE_GROUND_TRUTH_MISSING",
+          "notes": "A documentação informa níveis de volatilidade e durações médias de estado; por si só ela não expõe um rótulo de regime por tick verificado nos endpoints públicos de ticks/histórico revisados."
+        }
+      ],
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "evidence": "Auditoria de desenho do Dia 1B: a hipótese ainda não pode ser pontuada diretamente porque a interface pública fornece ticks/histórico, mas nenhum rótulo verificado do estado oculto do regime foi identificado. Um classificador não pode receber crédito por identificar um regime usando um alvo inferido por ele mesmo. Antes de inspecionar dados, definir um ground truth observável ou substituir prospectivamente a pergunta por uma hipótese de outcome preditivo.",
+      "version": "1.0.0",
+      "title": "Inferência de regime no Volatility Switch",
+      "status": "OPEN",
+      "updated_at": "2026-08-29T17:04:32+00:00"
+    },
+    {
+      "id": "H0003",
+      "created_at": "2026-08-29T08:00:00-03:00",
+      "market": "Família Drift Switching",
+      "family": "regime_persistence",
+      "description": "Testar se retornos sinalizados de curto horizonte identificam estados bullish, bearish ou sideways documentados e predizem a próxima distribuição de retornos melhor que uma baseline incondicional OOS.",
+      "mechanism": "A documentação descreve regimes explícitos de drift; persistência e inferibilidade devem ser medidas de forma independente.",
+      "frozen_parameters": {
+        "feature_family": "signed returns and rolling mean only",
+        "model_class": "three-state threshold classifier",
+        "baseline": "unconditional next-return distribution"
+      },
+      "origin": "Dia 1A — documentação oficial",
+      "variants": 1,
+      "tests": [
+        {
+          "cycle": "Dia 1B",
+          "type": "adversarial_identifiability_audit",
+          "result": "INCONCLUSIVE_CIRCULAR_LABEL_RISK",
+          "notes": "Os endpoints públicos de ticks/histórico fornecem dados de mercado; nenhum ground truth independente do regime foi estabelecido neste ciclo."
+        }
+      ],
+      "stage": "OPEN",
+      "decision": "HOLD",
+      "evidence": "Auditoria de desenho do Dia 1B: o alvo declarado de identificação de estado bullish/bearish/sideways é atualmente latente. Sem um rótulo de estado observável externamente, testar a acurácia do classificador seria circular se os rótulos fossem derivados dos mesmos retornos usados como features. Preservar a hipótese e não executar pseudo-validação; definir prospectivamente um alvo observável independente ou abrir nova hipótese de previsão de retornos antes da inspeção histórica.",
+      "version": "1.0.0",
+      "title": "Persistência de regime no Drift Switching",
+      "status": "OPEN",
+      "updated_at": "2026-08-29T17:04:32+00:00"
+    },
+    {
+      "id": "H0004",
+      "created_at": "2026-09-03T11:05:53+00:00",
+      "market": "Família Drift Switching",
+      "family": "forward_return_predictability",
+      "title": "Previsibilidade prospectiva de retorno no Drift Switching",
+      "description": "Testar se informação de retornos passados de curto horizonte prediz o sinal do retorno futuro em horizonte fixo melhor que uma baseline incondicional, sem usar rótulos latentes de regime.",
+      "mechanism": "H0003 mostrou risco de circularidade porque estados bullish/bearish/sideways não possuem ground truth independente. Esta hipótese substitui a classificação de estado por um outcome diretamente observável e falsificável: retorno futuro.",
+      "frozen_parameters": {
+        "lineage": {
+          "parent_hypothesis": "H0003",
+          "relationship": "prospective_outcome_reformulation",
+          "reason": "remove_latent_regime_label_and_circularity"
+        },
+        "predictors": [
+          "signed_return_lag1",
+          "rolling_mean_return_20"
+        ],
+        "target": "sign of forward 20-tick return; zero returns counted as neutral and excluded only if exactly zero before any model fitting",
+        "primary_horizon_ticks": 20,
+        "chronological_split": "60% train / 20% validation / 20% OOS",
+        "model_class": "fixed logistic regression with intercept and standardized predictors using train-only mean/std",
+        "baseline": "train-sample unconditional probability of positive forward return",
+        "primary_metric": "OOS log-loss",
+        "primary_falsification_rule": "Reject predictive claim if model OOS log-loss is not strictly lower than baseline OOS log-loss; any validation-only improvement is insufficient.",
+        "secondary_metric": "OOS Brier score, descriptive only",
+        "multiple_testing": "one primary horizon and one frozen model only; no horizon/window search in H0004-v1",
+        "leakage_controls": [
+          "features at tick t use data available no later than t",
+          "target uses ticks t+1 through t+20 only",
+          "standardization parameters estimated on train only",
+          "chronological split with no shuffling",
+          "no threshold or feature tuning after validation/OOS inspection"
+        ],
+        "required_followups_before_promotion": [
+          "independent OOS replication",
+          "walk-forward",
+          "shadow/prospective observation",
+          "promotion gates"
+        ]
+      },
+      "origin": "Day 6A — lineage from H0003 after identifiability audit",
+      "variants": 1,
+      "tests": [],
+      "stage": "OPEN",
+      "status": "PRE_REGISTERED",
+      "decision": "HOLD",
+      "evidence": "No empirical outcome has been inspected for H0004. The design is pre-registered prospectively to make the claim directly falsifiable and avoid the latent-state circularity identified in H0003.",
+      "version": "1.0.0"
+    }
+  ]
+}

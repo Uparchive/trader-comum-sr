@@ -1,0 +1,20 @@
+{
+  "acquisition_method": "research-2b-retry GitHub Actions runner; immutable source preserved",
+  "code_commit": "4501f4b",
+  "created_at": "2026-09-02T11:03:57+00:00",
+  "dataset_id": "DS-20260830-DERIV-CRASHBOOM-2B-R2",
+  "period_end": null,
+  "period_start": null,
+  "record_count": null,
+  "retention_class": "SCIENTIFIC_PERMANENT",
+  "schema_version": 3,
+  "sha256": "8c6aa443b7d9a274a8b2aa23d8a7f8f2b5af513a2106acee85fba60736cc6e57",
+  "size_bytes": 78262,
+  "source": "Deriv public WebSocket market-data API via Cloudflare read-only research gateway",
+  "storage_location": "data/acquisition/day-02b-retry-2026-08-30.json",
+  "symbols": [],
+  "used_by_runs": [
+    "RUN-20260830-02B-R2"
+  ],
+  "validation_status": "VALIDATED_PRESENT_AND_HASHED"
+}

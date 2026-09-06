@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/research_4b_attempt3.py", line 99, in <module>
+    items,pages,stop_reason=acquire(u['symbol'])
+                            ^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/research_4b_attempt3.py", line 62, in acquire
+    r=get('/research/ticks-history?'+urllib.parse.urlencode({'symbol':symbol,'count':PAGE,'end':end}))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/research_4b_attempt3.py", line 32, in get
+    raise RuntimeError(' | '.join(errs))
+RuntimeError: <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'> | <HTTPError 502: 'Bad Gateway'>

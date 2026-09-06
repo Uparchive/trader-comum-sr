@@ -1,0 +1,10 @@
+{
+  "archive_label": "Piloto pré-arquitetura — 2026-08-28",
+  "counted_in_v2": false,
+  "reason": "O programa científico v2 reinicia prospectivamente em 2026-08-29 com universo de mercados, registro global de hipóteses, governança de busca e pipeline shadow obrigatório.",
+  "entries": [
+    {"id":"2026-08-28-1A","title":"Dia 1A — Descoberta","decision":"HOLD — INCONCLUSIVE","source":"research/2026-08-28-cycle-001.md"},
+    {"id":"2026-08-28-1B","title":"Dia 1B — Validação adversarial","decision":"HOLD — INCONCLUSIVE","source":"research/2026-08-28-day-01B-validation.md"},
+    {"id":"2026-08-28-1C","title":"Dia 1C — Auditoria e consolidação","decision":"HOLD — INCONCLUSIVE","source":"research/2026-08-28-day-01C-audit.md"}
+  ]
+}

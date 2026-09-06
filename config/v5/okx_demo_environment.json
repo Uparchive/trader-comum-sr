@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "provider": "OKX",
+  "environment": "DEMO_ONLY",
+  "operational_identity": "OKX_DEMO_2026_09_03",
+  "rest_base_url": "https://openapi.okx.com",
+  "public_ws_url": "wss://wspap.okx.com:8443/ws/v5/public",
+  "private_ws_url": "wss://wspap.okx.com:8443/ws/v5/private",
+  "demo_header": {
+    "x-simulated-trading": "1"
+  },
+  "allowed_instrument_types": [
+    "SPOT"
+  ],
+  "quote_ccy": "USDT",
+  "automatic_execution": true,
+  "validation_order_requires_explicit_env": "OKX_DEMO_TEST_ORDER_ENABLED=true",
+  "live_urls_forbidden": [
+    "https://www.okx.com",
+    "wss://ws.okx.com:8443/ws/v5/private",
+    "wss://ws.okx.com:8443/ws/v5/public"
+  ],
+  "notes": "Novo contexto operacional. A seleção e a pesquisa devem tratar evidência Deriv/R_100 como histórica, não transferível.",
+  "validation_order_enabled": false,
+  "validation_order_kind": "ONE_TIME_MINIMUM_SPOT_DEMO_OPERATIONAL_VALIDATION",
+  "validation_order_note": "A validação pontual foi concluída; qualquer estratégia, mercado e política de capital devem vir de um Active Mandate materializado no GitHub."
+}

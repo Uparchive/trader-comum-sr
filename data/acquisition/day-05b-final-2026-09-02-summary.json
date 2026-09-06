@@ -1,0 +1,314 @@
+{
+  "schema_version": 4,
+  "cycle": "Dia 5B — tentativa final pré-registrada",
+  "acquired_at": "2026-09-02T17:03:16.180857+00:00",
+  "cutoff_epoch": 1788368589,
+  "target_per_symbol": 100000,
+  "page_size": 1000,
+  "universe": [
+    {
+      "family": "BOOM",
+      "N": 50,
+      "symbol": "BOOM50",
+      "name": "Boom 50 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 150,
+      "symbol": "BOOM150N",
+      "name": "Boom 150 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 300,
+      "symbol": "BOOM300N",
+      "name": "Boom 300 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 500,
+      "symbol": "BOOM500",
+      "name": "Boom 500 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 600,
+      "symbol": "BOOM600",
+      "name": "Boom 600 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 900,
+      "symbol": "BOOM900",
+      "name": "Boom 900 Index"
+    },
+    {
+      "family": "BOOM",
+      "N": 1000,
+      "symbol": "BOOM1000",
+      "name": "Boom 1000 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 50,
+      "symbol": "CRASH50",
+      "name": "Crash 50 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 150,
+      "symbol": "CRASH150N",
+      "name": "Crash 150 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 300,
+      "symbol": "CRASH300N",
+      "name": "Crash 300 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 500,
+      "symbol": "CRASH500",
+      "name": "Crash 500 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 600,
+      "symbol": "CRASH600",
+      "name": "Crash 600 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 900,
+      "symbol": "CRASH900",
+      "name": "Crash 900 Index"
+    },
+    {
+      "family": "CRASH",
+      "N": 1000,
+      "symbol": "CRASH1000",
+      "name": "Crash 1000 Index"
+    }
+  ],
+  "protocol": {
+    "split": "60/20/20",
+    "threshold": "1-1/N apenas calibração",
+    "event": "signed_tick_move > threshold",
+    "bins": [
+      "<0.5N",
+      "0.5N..N",
+      "N..2N",
+      ">=2N"
+    ],
+    "permutations": 10000,
+    "permutation_seed": 20260831,
+    "multiple_testing": "Holm family alpha 0.05",
+    "acquisition": "1000 ticks efetivos; end=min_epoch-1; deduplicação; pacing; retry/backoff; checkpoint por símbolo",
+    "attempt_policy": "única tentativa final autorizada pelo Dia 5A"
+  },
+  "results": [
+    {
+      "symbol": "BOOM50",
+      "family": "BOOM",
+      "N": 50,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM150N",
+      "family": "BOOM",
+      "N": 150,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM300N",
+      "family": "BOOM",
+      "N": 300,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM500",
+      "family": "BOOM",
+      "N": 500,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM600",
+      "family": "BOOM",
+      "N": 600,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM900",
+      "family": "BOOM",
+      "N": 900,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "BOOM1000",
+      "family": "BOOM",
+      "N": 1000,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH50",
+      "family": "CRASH",
+      "N": 50,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH150N",
+      "family": "CRASH",
+      "N": 150,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH300N",
+      "family": "CRASH",
+      "N": 300,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH500",
+      "family": "CRASH",
+      "N": 500,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH600",
+      "family": "CRASH",
+      "N": 600,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH900",
+      "family": "CRASH",
+      "N": 900,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    },
+    {
+      "symbol": "CRASH1000",
+      "family": "CRASH",
+      "N": 1000,
+      "target": 100000,
+      "count": 0,
+      "shortfall": 100000,
+      "stop_reason": "EMPTY_OR_MALFORMED_PAGE",
+      "period_start": null,
+      "period_end": null,
+      "pages": [],
+      "status": "ACQUISITION_SHORTFALL"
+    }
+  ],
+  "holm": [],
+  "aggregate": {
+    "symbols": 14,
+    "target_ticks": 1400000,
+    "actual_ticks": 0,
+    "symbols_with_shortfall": 14,
+    "validation_events": 0,
+    "oos_events": 0,
+    "validation_logloss_positive_symbols": 0,
+    "oos_logloss_positive_symbols": 0,
+    "holm_rejections": 0,
+    "coverage_complete": false
+  },
+  "dataset": {
+    "storage_location": "data/acquisition/day-05b-final-2026-09-02.json.gz",
+    "sha256_gzip": "674828fe5060514c5380966842cde6bd419f46fe61373596555337d9afec15f6",
+    "size_bytes_gzip": 1087,
+    "sha256_uncompressed": "28aa3edd069d0d479aee1fb4bf9d30c8512673aedc2a412f979053befd840bd5",
+    "size_bytes_uncompressed": 5422
+  }
+}

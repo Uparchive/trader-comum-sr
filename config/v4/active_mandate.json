@@ -1,0 +1,49 @@
+{
+  "schema_version": 4,
+  "mandate_id": "AM-20260902-001",
+  "strategy_id": "BASELINE-SR",
+  "strategy_version": "BASELINE-SR-v1",
+  "capital_policy_id": "CP0001",
+  "capital_policy_version": "CP0001-v1",
+  "market_selection_id": "MS0001",
+  "market_selection_version": "MS0001-v1",
+  "authorized_markets": [
+    "R_100"
+  ],
+  "regimes": [
+    "RANGING",
+    "MIXED"
+  ],
+  "rules": {
+    "engine": "SUPPORT_RESISTANCE",
+    "min_touches": 2,
+    "min_quality": 0.55
+  },
+  "parameters": {
+    "lookback": 120,
+    "zigzag_pct": 0.0015,
+    "zone_width_atr": 0.35,
+    "breakout_atr": 0.55
+  },
+  "entry": {
+    "support_rejection": "CALL",
+    "resistance_rejection": "PUT"
+  },
+  "exit": {
+    "contract_duration": 5,
+    "duration_unit": "m"
+  },
+  "duration": {
+    "value": 5,
+    "unit": "m"
+  },
+  "sizing": {
+    "policy_ref": "CP0001-v1"
+  },
+  "valid_from": "2026-09-02T00:00:00-03:00",
+  "valid_until": "2026-09-09T00:00:00-03:00",
+  "authorizing_cycle": "RUN-20260901-04C-R1/V4-MIGRATION",
+  "hash": "baa6b588aa2c112b9a1479e45383db715b60a3d3b06b55bb4aad18b88bb4d67e",
+  "state": "ACTIVE",
+  "environment": "DEMO_ONLY"
+}

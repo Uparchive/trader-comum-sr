@@ -1,0 +1,10 @@
+{
+  "environment": "DEMO_ONLY",
+  "max_stake_usd": 1.0,
+  "max_trades_per_day": 3,
+  "max_daily_loss_usd": 3.0,
+  "max_open_positions": 1,
+  "cooldown_minutes": 60,
+  "real_money_allowed": false,
+  "fail_closed": true
+}

@@ -1,0 +1,109 @@
+{
+  "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+  "now_summary": "Dia 7B: E000002 bloqueado antes de outcomes por impossibilidade de materializar identidade/datasets Drift Switching verificáveis; falha técnica separada da ciência.",
+  "strategy": {
+    "name": "Nenhuma estratégia promovida",
+    "version": "—",
+    "market": "Universo em descoberta",
+    "status": "NO_CHAMPION",
+    "execution_enabled": false,
+    "research_approved": false
+  },
+  "signal": {
+    "state": "OFF",
+    "note": "Nenhuma estratégia promovida; execução permanece bloqueada.",
+    "status": "UNCONFIRMED",
+    "scientific": "8C HOLD — REPEATED TECHNICAL CAPABILITY GAP"
+  },
+  "performance": {
+    "pnl": "0.00",
+    "trades": 0,
+    "win_rate": "N/D",
+    "drawdown": "N/D"
+  },
+  "research": {
+    "date": "2026-09-05",
+    "title": "Dia 8C — Auditoria do Dia 8 — repetição da lacuna técnica de materialização de E000002",
+    "summary": "O juiz do 8C não rejeitou H0004: a repetição do bloqueio demonstra uma lacuna técnica/de capacidade, não falha científica. E000002 continua bloqueado antes de outcomes até existirem artefatos canônicos verificáveis.",
+    "decision": "HOLD — REPEATED TECHNICAL CAPABILITY GAP. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL."
+  },
+  "experiment": {
+    "cycle": "Dia 8C / 90 dias",
+    "day": 8,
+    "start_date": "2026-08-29",
+    "executor_status": "Fail-Closed — DEMO bloqueado",
+    "updated_at": "2026-09-05 20:00 America/Sao_Paulo",
+    "hypotheses_cumulative": 4,
+    "markets_examined": 11,
+    "parameter_variants": 4,
+    "shadow_candidates": 0,
+    "demo_strategies": 0
+  },
+  "pipeline": {
+    "stage": "HISTORICAL_VALIDATION",
+    "next_step": "Dia 5A: verificar prospectivamente a disponibilidade da rota de aquisição e decidir, sem alterar H0001, se E000001 recebe uma última tentativa operacional sob o protocolo congelado ou se deve ser encerrado como inconclusivo por limitação de aquisição persistente. Não repetir indefinidamente.",
+    "status": "HOLD — AGUARDANDO VERIFICAÇÃO LIMITADA DE AQUISIÇÃO"
+  },
+  "activity": [
+    {
+      "time": "2026-09-05 20:00",
+      "message": "Dia 8C: Auditoria do Dia 8 — repetição da lacuna técnica de materialização de E000002 · HOLD — REPEATED TECHNICAL CAPABILITY GAP. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL. · O juiz do 8C não rejeitou H0004: a repetição do bloqueio demonstra uma lacuna técnica/de capacidade, não falha científica. E000002 continua bloqueado antes de outcomes até existirem artefatos canônicos verificáveis.",
+      "report": "research/2026/09/2026-09-05/cycle-C/RUN-20260905-08C-R1/report.md"
+    },
+    {
+      "time": "2026-09-05 14:00",
+      "message": "Dia 8B: Validação adversarial do Dia 8 — preflight verificável de aquisição de E000002 · FAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL. · O 8B tentou destruir a prontidão de E000002 pelo primeiro gate: identidade e reprodutibilidade dos dados. O endpoint oficial existe, mas os artefatos canônicos exigidos não foram materializados; a stop rule encerrou o...",
+      "report": "research/2026/09/2026-09-05/cycle-B/RUN-20260905-08B-R1/report.md"
+    },
+    {
+      "time": "2026-09-05 08:00",
+      "message": "Dia 8A: Descoberta do Dia 8 — pré-registro da capacidade verificável de aquisição de E000002 · CONTINUE_RESEARCH — PROTOCOLO DE CAPACIDADE DE AQUISIÇÃO/MATERIALIZAÇÃO CONGELADO PARA O 8B; E000002 PERMANECE BLOCKED_PRE_EXECUTION E H0004 INSUFFICIENT_EVIDENCE; SEM SHADOW, SEM PROMOÇÃO E SEM IMPACTO OPERACIONAL. · O 8A não repetiu inferência nem tentou salvar H0004. Ele converteu o próximo passo do 7C em um preflight prospectivo e reprodutível de aquisição/materialização para o 8B, mantendo E000002 bloqueado até existir identid...",
+      "report": "research/2026/09/2026-09-05/cycle-A/RUN-20260905-08A-R1/report.md"
+    },
+    {
+      "time": "2026-09-04 20:00",
+      "message": "Dia 7C: Auditoria do Dia 7 — falha técnica preservada sem inferência científica · FAILED_TECHNICAL — MANTER E000002 BLOQUEADO PRÉ-EXECUÇÃO; H0004 PERMANECE INSUFFICIENT_EVIDENCE; SEM SHADOW, SEM PROMOÇÃO E SEM IMPACTO OPERACIONAL. · O juiz do Dia 7 confirmou que o 7B falhou tecnicamente antes de outcomes. H0004 não foi rejeitada nem confirmada; E000002 permanece bloqueado. O executor OKX Demo/BTC-USDT continua separado, BASELINE e NO_EDGE_CLAIM,...",
+      "report": "research/2026/09/2026-09-04/cycle-C/RUN-20260904-07C-R1/report.md"
+    },
+    {
+      "time": "2026-09-04 14:00",
+      "message": "Dia 7B: Validação adversarial do Dia 7 — materialização de E000002 bloqueada antes de outcomes · FAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE; H0004 INSUFFICIENT_EVIDENCE · O 7B tentou cumprir a etapa de materialização exigida pelo 7A, mas parou antes de outcomes: a existência pública de active_symbols/Drift Switching não substitui um snapshot bruto e datasets verificáveis. E000002 perma...",
+      "report": "research/2026/09/2026-09-04/cycle-B/RUN-20260904-07B-R1/report.md"
+    },
+    {
+      "time": "2026-09-04 08:00",
+      "message": "Dia 7A: Descoberta do Dia 7 — congelamento do protocolo de aquisição de E000002 · CONTINUE_RESEARCH — E000002_PREREGISTRATION_FROZEN_BUT_EXECUTION_BLOCKED · O 7A fechou graus de liberdade restantes de aquisição e overlap sem observar resultados: enumeração integral sem seleção por performance, identidade/hash por símbolo, target causal de 20 ticks, split 60/20/20 e embarg...",
+      "report": "research/2026/09/2026-09-04/cycle-A/RUN-20260904-07A-R1/report.md"
+    },
+    {
+      "time": "2026-09-03 20:00",
+      "message": "Dia 6C: Auditoria do Dia 6 — barreira pré-execução de H0004/E000002 · CONTINUE_RESEARCH — KEEP_E000002_BLOCKED_PRE_EXECUTION · 6C auditou 6A/6B e manteve E000002 bloqueado antes da execução. Nenhum outcome foi observado; H0004 permanece INSUFFICIENT_EVIDENCE. Identidade prospectiva de símbolos/dataset e regra determinística de overlap/embargo...",
+      "report": "research/2026/09/2026-09-03/cycle-C/RUN-20260903-06C-R1/report.md"
+    },
+    {
+      "time": "2026-09-03 14:00",
+      "message": "Dia 6B: Validação adversarial do Dia 6 — barreira pré-execução de H0004/E000002 · INVESTIGATE — DO_NOT_EXECUTE_E000002 · A pré-especificação científica preserva controles úteis, mas a execução foi bloqueada antes de qualquer outcome porque a Família Drift Switching não possui símbolos canonically enumerated nem dataset/manifest/hash mat...",
+      "report": "research/2026/09/2026-09-03/cycle-B/RUN-20260903-06B-R1/report.md"
+    },
+    {
+      "time": "2026-09-03 08:00",
+      "message": "Dia 6A: Descoberta do Dia 6 — reformulação outcome-based após E000001 · CONTINUE — PRÉ-REGISTRAR H0004/E000002; H0001 PERMANECE HOLD E E000001 ENCERRADO INCONCLUSIVO; H0002/H0003 NÃO SÃO PSEUDO-VALIDADAS SEM GROUND TRUTH. · A próxima melhor pergunta científica abandona a tentativa de inferir um estado latente de H0003 e testa diretamente um outcome observável: se retornos passados de curto horizonte melhoram a previsão do sinal do retorn...",
+      "report": "research/2026/09/2026-09-03/cycle-A/RUN-20260903-06A-R1/report.md"
+    },
+    {
+      "time": "2026-09-02 08:00",
+      "message": "Dia 5A: Descoberta do Dia 5 — última janela prospectiva de aquisição · CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD. · O 5A não converteu uma limitação técnica local em evidência científica. Preservou H0001 e pré-registrou uma única tentativa final no 5B, com stop rule explícita para impedir repetição indefinida.",
+      "report": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/report.md"
+    },
+    {
+      "time": "2026-09-01 20:00",
+      "message": "Dia 4C: Auditoria do Dia 4 — falha técnica separada da ciência · HOLD — AGUARDAR RECUPERAÇÃO DE AQUISIÇÃO EM TENTATIVA PROSPECTIVA LIMITADA. H0001 PERMANECE NÃO CONFIRMADA; SEM SHADOW, SEM DEMO E CHAMPION NONE. · O juiz do Dia 4 classificou o 4B como falha técnica, não como resultado científico. E000001 permanece HOLD por uma janela operacional limitada porque falhas de aquisição anteriores já foram transitórias; H0001 segue s...",
+      "report": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/report.md"
+    },
+    {
+      "time": "2026-09-01 14:00",
+      "message": "Dia 4B: Validação adversarial da aquisição corrigida de H0001 · HOLD — TECHNICAL_FAILURE DE AQUISIÇÃO; H0001 NÃO FOI REJEITADA NEM PROMOVIDA. SHADOW E DEMO PERMANECEM BLOQUEADOS. · O 4B executou o reteste de aquisição pré-registrado, mas o gateway permaneceu indisponível com HTTP 502. A falha é técnica e não altera a evidência científica de H0001.",
+      "report": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/report.md"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "pending": false,
+  "actor": "research-ai",
+  "cycle": "Day 8C",
+  "note": "Auditoria do Dia 8C: julgar a repetição da falha técnica de aquisição/materialização de H0004/E000002 sem outcomes, tuning, promoção ou alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [],
+  "processed_at": "2026-09-06T02:53:46+00:00",
+  "last_transaction": "T000000026",
+  "last_results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 8C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mode": "EVENT_SOURCED_PROJECTIONS",
+  "source_of_truth": "GitHub",
+  "ai_write_surface": "data/write_intent.json",
+  "materializer": "engine/state_core.py",
+  "append_only_ledger": "ledger/transactions/YYYY/MM/T#########.json",
+  "compact_ai_context": "data/context.json",
+  "derived_projections": [
+    "data/markets.json",
+    "data/hypotheses.json",
+    "data/experiments.json",
+    "data/research.json",
+    "data/status.json"
+  ],
+  "id_authority": {
+    "hypothesis": "system-assigned monotonic H####",
+    "experiment": "system-assigned monotonic E######",
+    "transaction": "system-assigned monotonic T#########"
+  },
+  "invariants": [
+    "AI never chooses the next permanent ID",
+    "AI never calculates dashboard counters",
+    "one intent may atomically contain multiple logical operations",
+    "every applied intent produces an immutable transaction record",
+    "duplicate intent digests are idempotent",
+    "hypothesis and experiment references must resolve",
+    "real_money_allowed must remain false",
+    "fail_closed must remain true",
+    "historical research is never silently rewritten"
+  ],
+  "scaling_policy": {
+    "operational_json": "metadata and current scientific state only",
+    "large_raw_series": "never store millions of ticks in dashboard JSON; use dedicated object/time-series storage and keep manifests/hashes in GitHub",
+    "archive_strategy": "shard cold immutable records by year/month when operational projections become large",
+    "site_strategy": "render from generated projections; add lazy archive loading when archival threshold is reached",
+    "migration_rule": "schema changes are versioned and prospective; old evidence remains addressable"
+  }
+}
