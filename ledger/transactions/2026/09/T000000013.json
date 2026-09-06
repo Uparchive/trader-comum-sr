@@ -1,0 +1,81 @@
+{
+  "id": "T000000013",
+  "applied_at": "2026-09-01T10:58:54+00:00",
+  "intent_digest": "efbc759a93c0046fe3241be1c7902e99007a9043719c3d7bfbb8425431dabe1c",
+  "actor": "research-ai",
+  "cycle": "Day 4A",
+  "note": "Descoberta do Dia 4A: diagnosticar o shortfall do 3B e pré-registrar correção operacional de aquisição sem alterar H0001.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "READY_FOR_ACQUISITION_RETRY",
+          "decision": "HOLD",
+          "notes": "Dia 4A: o shortfall do 3B foi localizado na camada de aquisição, não na regra científica. O gateway aceitava count até 5000, mas a evidência materializada mostra páginas efetivas de 1000 ticks. Para 100000 ticks por 14 símbolos, o plano correto exige paginação explícita em blocos efetivos de 1000, cursor end=min_epoch-1, deduplicação por epoch/posição, pacing abaixo dos limites oficiais da API, retry/backoff e checkpoint resumível por símbolo. Nenhum detector, limiar, split, bin, universo, seed ou regra Holm foi alterado. O próximo 4B deve validar primeiro a aquisição e somente então executar o reteste congelado; se a meta não puder ser cumprida de modo reproduzível, encerrar a tentativa como limitação de dados em vez de fazer tuning."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 4,
+        "date": "2026-09-01",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Diagnóstico prospectivo do shortfall de aquisição de H0001",
+        "question": "O shortfall do Dia 3B pode ser corrigido na aquisição sem alterar nenhuma regra científica congelada de H0001?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Recuperação progressiva V3; inspeção do resumo materializado do 3B, do gateway público de ticks e da documentação oficial vigente da Deriv. Separação explícita entre falha de aquisição e resultado científico. Pré-registro de uma correção exclusivamente operacional: paginação em blocos efetivos de 1000 ticks, cursor end=min_epoch-1, deduplicação, pacing, retry/backoff e checkpoint por símbolo. Nenhum outcome novo foi usado para modificar parâmetros científicos.",
+        "evidence": "O 3B planejou page_size=5000, porém as páginas registradas no artefato de aquisição retornaram efetivamente 1000 ticks por chamada. O gateway atual aceita count até 5000 e repassa o valor ao ticks_history, portanto seu limite local não garante o tamanho efetivo da resposta. A documentação oficial confirma ticks_history público e, em 01/09/2026, documenta orçamento WebSocket de 220 chamadas/min e 14400/h para 'todas as outras chamadas'. Assim, 100000 ticks por 14 símbolos requerem pelo menos 1400 páginas se cada resposta efetiva contiver 1000 ticks; isso cabe no orçamento horário quando devidamente espaçado. O shortfall deve ser tratado como problema operacional de paginação/resiliência, não como evidência contra ou a favor de H0001.",
+        "limitations": "Nenhum novo tick foi adquirido neste subciclo A e não foi demonstrado ainda que todos os 14 símbolos disponibilizam 100000 ticks históricos no endpoint. O limite efetivo de 1000 foi inferido da evidência do 3B, não declarado como limite contratual pela documentação consultada. A viabilidade final precisa ser testada no 4B com logs de páginas, erros e cobertura por símbolo.",
+        "decision": "HOLD — CORREÇÃO DE AQUISIÇÃO PRÉ-REGISTRADA; H0001 PERMANECE INALTERADA, SEM SHADOW E SEM DEMO.",
+        "next_step": "Dia 4B: executar validação adversarial da aquisição com paginação efetiva de 1000, pacing/retry/checkpoint; somente se a cobertura pré-registrada for atingida, repetir E000001 sem alterar parâmetros científicos. Caso contrário, registrar limitação de dados e manter/encerrar como inconclusivo conforme a evidência.",
+        "summary": "O Dia 4A isolou o problema do 3B na camada de aquisição: o plano assumia páginas de 5000, mas a evidência mostra respostas efetivas de 1000. Foi pré-registrada uma correção operacional reproduzível para o 4B sem tuning de H0001.",
+        "report": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/report.md",
+        "report_content": "# Dia 4A — Diagnóstico prospectivo do shortfall de aquisição de H0001\n\n## Pergunta\nO shortfall do Dia 3B pode ser corrigido na aquisição sem alterar nenhuma regra científica congelada de H0001?\n\n## Método\nFoi seguida a recuperação progressiva V3: estado atual, índice de H0001/E000001, evidência materializada do 3B e código do gateway. A documentação oficial vigente da Deriv foi consultada apenas para capacidade e limites operacionais. Nenhum novo outcome de mercado foi usado para tuning.\n\n## Evidência\nO artefato do 3B foi configurado com `page_size=5000`, porém as páginas registradas retornaram efetivamente 1000 ticks por chamada. O gateway aceita até 5000 e repassa `count` ao `ticks_history`, portanto o teto local não determina o tamanho real retornado. A documentação oficial confirma `ticks_history` público e limites WebSocket de 220 chamadas/min e 14.400/h para a classe geral de chamadas. Com respostas efetivas de 1000, 100.000 ticks × 14 símbolos exigem pelo menos 1.400 páginas, volume compatível com o orçamento horário se houver pacing.\n\n## Correção prospectiva pré-registrada\nNo 4B, usar blocos efetivos de 1000; avançar para trás com `end=min_epoch-1`; deduplicar; registrar cada página; aplicar pacing abaixo do limite oficial; retry/backoff; checkpoint resumível por símbolo. Não alterar detector, limiar 1-1/N, split 60/20/20, bins, universo, seed ou Holm.\n\n## Limitações\nAinda não foi provado que todos os 14 símbolos disponibilizam 100.000 ticks históricos. O tamanho efetivo de 1000 é uma observação do 3B, não um limite contratual explicitamente documentado.\n\n## Decisão\n**HOLD.** H0001 permanece não confirmada. Sem Shadow e sem DEMO.\n\n## Próximo passo\n4B deve validar a aquisição corrigida e somente repetir a inferência congelada se a cobertura pré-registrada for atingida. Se a cobertura continuar inviável, registrar limitação de dados sem tuning retrospectivo.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 4A concluído: shortfall do 3B diagnosticado como problema operacional de paginação/resiliência; correção pré-registrada para 4B sem alterar H0001.",
+        "research": {
+          "title": "Dia 4A — Diagnóstico prospectivo da aquisição",
+          "decision": "HOLD — H0001 inalterada; aquisição corrigida será validada no 4B.",
+          "next_step": "4B: validar paginação efetiva de 1000 com pacing/retry/checkpoint e só então repetir E000001 se a cobertura for completa."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "AQUISIÇÃO EM CORREÇÃO PROSPECTIVA"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION",
+          "execution_enabled": false,
+          "research_approved": false
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 4A"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

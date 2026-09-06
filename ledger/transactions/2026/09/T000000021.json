@@ -1,0 +1,72 @@
+{
+  "id": "T000000021",
+  "applied_at": "2026-09-04T11:02:11+00:00",
+  "intent_digest": "94d6f13aec566986ca00946ecba7baba0219d729e20c01406dac31d66f2d7761",
+  "actor": "research-ai",
+  "cycle": "Day 7A",
+  "note": "Descoberta prospectiva do Dia 7A: preservar H0004/E000002 bloqueado antes de outcomes e congelar o protocolo de aquisição/identidade necessário para o próximo B. Nenhuma promoção, nenhum Shadow e nenhuma alteração operacional; DEMO_ONLY preservado.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "decision": "CONTINUE_INVESTIGATE",
+          "stage": "PRE_REGISTERED_BLOCKED",
+          "notes": "Dia 7A: E000002 permanece não executado. Antes de qualquer outcome, a enumeração Drift Switching deve ser obtida deterministicamente do catálogo público do provedor e congelada integralmente, sem seleção por performance; cada símbolo incluído deve receber dataset bruto imutável com provider/origem/símbolo/período UTC/timestamps/contagem/manifest/SHA-256. Amostragem: features em t usam somente informação <=t; target é sinal do retorno agregado t+1..t+20; exemplos consecutivos com targets sobrepostos não podem atravessar fronteiras 60/20/20. Aplicar embargo mínimo de 20 ticks em cada fronteira, removendo observações cujo target toque o bloco seguinte. Split é cronológico 60/20/20 após construção válida das amostras e embargo; scaling e baseline somente no treino. Um único horizonte=20, modelo=regressão logística fixa, métrica primária=log-loss OOS; sem tuning após outcomes. Se símbolos/dataset/hash não puderem ser materializados, B deve classificar falha técnica/insufficient evidence e não executar o teste científico."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 7,
+        "date": "2026-09-04",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Descoberta do Dia 7 — congelamento do protocolo de aquisição de E000002",
+        "question": "É possível tornar E000002 executável sem seleção retrospectiva, congelando prospectivamente a enumeração completa de Drift Switching, identidade/hash do dataset e uma regra de overlap/embargo antes de observar outcomes?",
+        "markets": [
+          "Deriv / Drift Switching — universo científico histórico separado do executor OKX"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Pré-registro somente, sem execução e sem inspeção de outcomes. Enumeração canônica: snapshot integral do catálogo público do provedor no momento da aquisição, filtrado apenas pela taxonomia/nome Drift Switching declarada antes dos resultados; zero seleção por retorno. Para cada símbolo: congelar origem, símbolo, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256. Construir features causalmente em t e target de 20 ticks. Split cronológico 60/20/20; embargo mínimo de 20 ticks nas duas fronteiras e descarte de qualquer amostra cujo horizonte de target atravesse a fronteira. Scaling e baseline estimados somente no treino. Modelo, horizonte e log-loss OOS permanecem os congelados no 6A. Orçamento de busca adicional=0; nenhuma janela/feature/modelo/limiar novo após outcomes.",
+        "evidence": "Nenhum outcome novo observado neste A. A projeção canônica ainda registra Drift Switching com symbol=null e symbol_enumeration_pending; portanto a execução empírica continua bloqueada até materialização verificável de enumeração e dataset.",
+        "limitations": "Este subciclo não possui acesso materializado a um snapshot canônico do catálogo Drift Switching nem a dataset bruto específico de E000002; não inventa símbolos, hashes, contagens ou telemetria. A ausência é barreira pré-execução, não falha da hipótese.",
+        "decision": "CONTINUE_RESEARCH — E000002_PREREGISTRATION_FROZEN_BUT_EXECUTION_BLOCKED",
+        "next_step": "No 7B, tentar materializar deterministicamente a enumeração completa Drift Switching e os datasets/manifests/hashes sob este protocolo; antes de qualquer fit, auditar identidade, cronologia, duplicatas, completude e embargo de 20 ticks. Se qualquer requisito não for verificável, registrar FAILED_TECHNICAL/INSUFFICIENT_EVIDENCE e não executar outcomes.",
+        "summary": "O 7A fechou graus de liberdade restantes de aquisição e overlap sem observar resultados: enumeração integral sem seleção por performance, identidade/hash por símbolo, target causal de 20 ticks, split 60/20/20 e embargo mínimo de 20 ticks. H0004 permanece não confirmada e E000002 bloqueado até materialização verificável.",
+        "report": "research/2026/09/2026-09-04/cycle-A/RUN-20260904-07A-R1/report.md",
+        "report_content": "# RUN-20260904-07A-R1 — Descoberta do Dia 7\n\n## Continuidade\nO 6C manteve H0004/E000002 bloqueado antes da execução porque a enumeração Drift Switching, a identidade/manifest/hash do dataset e a regra determinística de overlap/embargo ainda não estavam materializadas.\n\n## Pergunta falsificável\nÉ possível tornar E000002 executável sem seleção retrospectiva, congelando antes de qualquer outcome a enumeração completa de Drift Switching, a identidade dos dados e a regra de amostragem/embargo?\n\n## Congelamento prospectivo\nA enumeração será um snapshot integral do catálogo público do provedor no momento da aquisição, filtrado somente pela taxonomia/nome Drift Switching declarada previamente; nenhum símbolo poderá ser escolhido ou removido por performance. Para cada símbolo serão preservados provider/origem, símbolo, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256. Features em t usarão apenas informação disponível até t. O target permanece o sinal do retorno agregado t+1..t+20. O split permanece cronológico 60/20/20. Em cada fronteira será aplicado embargo mínimo de 20 ticks e serão descartadas amostras cujo horizonte do target toque o bloco seguinte. Scaling e baseline serão ajustados apenas no treino. Horizonte=20, regressão logística fixa e log-loss OOS permanecem congelados. Orçamento de busca adicional: zero.\n\n## Evidência observada\nNenhum outcome foi observado neste A. A memória canônica ainda registra Drift Switching com symbol=null e symbol_enumeration_pending. Não há dataset bruto específico de E000002 materializado com manifest/hash.\n\n## Decisão\nCONTINUE_RESEARCH — E000002_PREREGISTRATION_FROZEN_BUT_EXECUTION_BLOCKED. H0004 permanece não confirmada. Nenhum Shadow, promoção ou alteração operacional.\n\n## Separação operacional\nO executor vigente é OKX Demo/BTC-USDT sob plano ACTIVE, BASELINE e NO_EDGE_CLAIM. Esta pesquisa Deriv/Drift Switching é cientificamente separada e não transfere edge, parâmetros ou evidência para OKX. DEMO_ONLY permanece absoluto.\n\n## Próximo passo\nNo 7B, tentar materializar a enumeração completa e datasets/manifests/hashes sob o protocolo congelado; auditar identidade, cronologia, duplicatas, completude e embargo antes de qualquer fit. Falha de aquisição será técnica/insufficient evidence, não resultado científico.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "now_summary": "Dia 7A: protocolo prospectivo de aquisição/embargo de H0004/E000002 congelado; execução científica continua bloqueada até enumeração e dataset/hash verificáveis.",
+        "research": {
+          "date": "2026-09-04",
+          "title": "Descoberta do Dia 7 — congelamento pré-execução de E000002",
+          "summary": "Sem outcomes. Enumeração integral, identidade/hash por símbolo, split 60/20/20 e embargo de 20 ticks foram congelados prospectivamente.",
+          "decision": "CONTINUE_RESEARCH — EXECUTION_BLOCKED"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 7A"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

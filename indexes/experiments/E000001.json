@@ -1,0 +1,89 @@
+{
+  "dataset_manifests": [
+    "DS-20260830-DERIV-CRASHBOOM-2B-R2"
+  ],
+  "experiment": {
+    "created_at": "2026-08-30T11:04:48+00:00",
+    "decision": "HOLD",
+    "design": {
+      "authentication_required": false,
+      "chronological_split": "60/20/20",
+      "controls": [
+        "baseline incondicional",
+        "permutação/embaralhamento temporal quando tecnicamente válido"
+      ],
+      "data_source": "Deriv public WebSocket market-data API",
+      "event_label": "usar exatamente o protocolo congelado em H0001",
+      "history_source": "ticks_history",
+      "leakage_rule": "nenhum limiar ou parâmetro pode usar validação ou OOS",
+      "multiplicity": "Holm entre símbolos clássicos Crash/Boom",
+      "outcome_inspection_before_registration": false,
+      "primary_alternative": "hazard dependente de ticks_since_last_event",
+      "primary_null": "hazard constante",
+      "symbol_source": "active_symbols"
+    },
+    "hypothesis_id": "H0001",
+    "id": "E000001",
+    "notes": "Dia 5A: a continuidade canônica do 4C exige uma janela operacional limitada, não repetição indefinida. A verificação prospectiva da rota neste runtime não conseguiu resolver o host do gateway; isso é limitação técnica deste ambiente e não evidência contra H0001. Fica pré-registrada para o 5B exatamente uma tentativa final de aquisição sob o protocolo científico já congelado, sem alterar detector, universo, split, bins, regra Holm, alvo de 100000 ticks por símbolo, paginação efetiva de 1000 ticks, deduplicação, cursor cronológico, pacing, retry/backoff e checkpoints. Se a rota continuar indisponível ou a aquisição não produzir dados utilizáveis, E000001 deve ser encaminhado ao 5C como INSUFFICIENT_EVIDENCE/TECHNICAL_FAILURE para encerramento inconclusivo por limitação persistente de aquisição, sem novos retries automáticos e sem transformar falha técnica em rejeição científica.",
+    "question": "O hazard do próximo spike depende do número de ticks desde o último evento além de uma baseline de hazard constante?",
+    "stage": "HISTORICAL_VALIDATION",
+    "status": "FINAL_ACQUISITION_ATTEMPT_PREREGISTERED",
+    "title": "Teste cronológico de memória do hazard em Crash/Boom",
+    "updated_at": "2026-09-02T11:03:57+00:00"
+  },
+  "runs": [
+    {
+      "canonical": true,
+      "dataset_manifest": "DS-20260830-DERIV-CRASHBOOM-2B-R2",
+      "date": "2026-08-30",
+      "day": 2,
+      "decision": "HOLD — AQUISIÇÃO RESOLVIDA; EVIDÊNCIA EMPÍRICA INICIAL INSUFICIENTE PARA REJEITAR O HAZARD CONSTANTE OU ALEGAR MEMÓRIA REPRODUZÍVEL. SEM PROMOÇÃO",
+      "experiment_ids": [
+        "E000001"
+      ],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R2/report.md",
+      "record_path": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R2/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 2,
+      "run_id": "RUN-20260830-02B-R2",
+      "subcycle": "B",
+      "summary": "Reteste oficial com dados reais: aquisição resolvida; 14 Crash/Boom processados e 32 eventos em validação + OOS. H0001 permanece HOLD por evidência empírica inicial insuficiente, não por bloqueio de aquisição.",
+      "superseded_by": null,
+      "supersedes": "RUN-20260830-02B-R1",
+      "temperature": "HOT",
+      "title": "RETESTE OFICIAL — H0001 com aquisição real após correção de infraestrutura"
+    },
+    {
+      "canonical": false,
+      "dataset_manifest": null,
+      "date": "2026-08-30",
+      "day": 2,
+      "decision": "HOLD — AQUISIÇÃO BLOQUEADA; H0001 NÃO TESTADA EMPIRICAMENTE",
+      "experiment_ids": [
+        "E000001"
+      ],
+      "failure_type": "DNS_ACQUISITION_FAILURE",
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R1/report.md",
+      "record_path": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R1/run.json",
+      "record_status": "FAILED_TECHNICAL",
+      "revision": 1,
+      "run_id": "RUN-20260830-02B-R1",
+      "subcycle": "B",
+      "summary": "Preservada para auditoria histórica; não representa o estado científico atual do subciclo 2B.",
+      "superseded_by": "RUN-20260830-02B-R2",
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Primeira tentativa — aquisição bloqueada por DNS"
+    }
+  ],
+  "schema_version": 3
+}

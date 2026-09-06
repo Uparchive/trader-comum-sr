@@ -1,0 +1,72 @@
+{
+  "id": "T000000022",
+  "applied_at": "2026-09-04T17:02:39+00:00",
+  "intent_digest": "61cd4312b12bb0b5bc600f415a3286afddf3602694ca1eb61f92655fa7752721",
+  "actor": "research-ai",
+  "cycle": "Day 7B",
+  "note": "Validação adversarial do Dia 7B: tentativa de materialização de E000002 bloqueada antes de outcomes porque este runtime não conseguiu obter um snapshot verificável do active_symbols nem datasets brutos Drift Switching com manifests/hashes. Preservar como falha técnica/insufficient evidence; nenhuma promoção, Shadow ou alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "decision": "FAILED_TECHNICAL_INSUFFICIENT_EVIDENCE",
+          "stage": "PRE_REGISTERED_BLOCKED",
+          "notes": "Dia 7B: o protocolo congelado em 7A foi respeitado. A documentação oficial confirma active_symbols como endpoint de mercado para listar símbolos ativos e a família Drift Switching existe publicamente, porém este runtime não materializou uma resposta bruta verificável do catálogo nem datasets tick-by-tick específicos de E000002. Sem snapshot integral, símbolos exatos, arquivos brutos, contagens, períodos e SHA-256 por símbolo, identidade/completude/reprodutibilidade não podem ser auditadas. Nenhum fit, outcome, OOS, walk-forward, bootstrap ou multiple testing foi executado. Classificação: falha técnica de aquisição/materialização + evidência científica insuficiente, não rejeição de H0004."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 7,
+        "date": "2026-09-04",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Validação adversarial do Dia 7 — materialização de E000002 bloqueada antes de outcomes",
+        "question": "O protocolo congelado em 7A pode ser executado com identidade, completude, cronologia e reprodutibilidade verificáveis antes de qualquer fit?",
+        "markets": [
+          "Deriv / Drift Switching — universo científico histórico separado do executor OKX"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Ataque pré-execução ao E000002 sob o pré-registro 7A. Exigir snapshot integral do catálogo active_symbols filtrado apenas pela taxonomia/nome Drift Switching previamente declarada; para cada símbolo exigir origem/provider, símbolo exato, período UTC, timestamps extremos, contagem, dataset bruto, manifest e SHA-256. Antes de qualquer fit, exigir cronologia monotônica, deduplicação exata, completude verificável, construção causal de features, target t+1..t+20, split cronológico 60/20/20 e embargo mínimo de 20 ticks nas fronteiras. Sem esses artefatos, stop rule: não calcular outcomes.",
+        "evidence": "A documentação pública oficial da Deriv confirma que active_symbols recupera a lista de símbolos atualmente ativos e que Drift Switching é uma família de índices sintéticos. Contudo, neste runtime não foi obtida/materializada uma resposta bruta verificável de active_symbols nem datasets tick-by-tick de E000002 com manifests/hashes. Portanto símbolos exatos, identidade, contagens, períodos, duplicatas, completude e embargo não puderam ser auditados de modo reproduzível. Nenhum outcome científico foi observado.",
+        "limitations": "Sem snapshot bruto canônico e datasets/hashes, não há base admissível para fit, OOS, walk-forward, sensibilidade, bootstrap/IC, multiple testing ou conclusão sobre H0004. A limitação é técnica de aquisição/materialização; não é evidência contra a hipótese. A telemetria operacional do executor não é necessária para este teste e não foi usada para inferir ciência.",
+        "decision": "FAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE; H0004 INSUFFICIENT_EVIDENCE",
+        "next_step": "No 7C, auditar a falha técnica do 7B e manter E000002 bloqueado. Se não existir até então snapshot canônico verificável do active_symbols e datasets Drift Switching com manifests/hashes, decidir CONTINUE_RESEARCH/HOLD sem executar outcomes. Próximo A deve tratar aquisição/materialização como capacidade de infraestrutura separada, sem mudar o pré-registro para salvar H0004.",
+        "summary": "O 7B tentou cumprir a etapa de materialização exigida pelo 7A, mas parou antes de outcomes: a existência pública de active_symbols/Drift Switching não substitui um snapshot bruto e datasets verificáveis. E000002 permanece bloqueado; H0004 não foi testada nem rejeitada; nenhuma mudança operacional.",
+        "report": "research/2026/09/2026-09-04/cycle-B/RUN-20260904-07B-R1/report.md",
+        "report_content": "# RUN-20260904-07B-R1 — Validação adversarial do Dia 7\n\n## Continuidade\nO 7A congelou integralmente o protocolo de aquisição, identidade, target, split e embargo de E000002 antes de outcomes. O 7B deveria materializar e auditar esses artefatos antes de qualquer fit.\n\n## Ataque adversarial\nA execução exigiu snapshot integral e verificável do catálogo `active_symbols`, filtrado somente pela taxonomia/nome Drift Switching congelada no 7A, e para cada símbolo exigiu provider/origem, símbolo exato, período UTC, timestamps extremos, contagem, dataset bruto, manifest e SHA-256. Também exigiu cronologia monotônica, deduplicação exata, completude verificável, features causais em t, target t+1..t+20, split cronológico 60/20/20 e embargo mínimo de 20 ticks nas fronteiras.\n\n## Evidência admissível\nA documentação pública oficial da Deriv confirma que `active_symbols` é o endpoint de dados de mercado para recuperar símbolos atualmente ativos e que Drift Switching existe como família de índices sintéticos. Isso, porém, não materializa a identidade experimental exigida. Neste runtime não foi obtida uma resposta bruta verificável do catálogo nem datasets tick-by-tick específicos de E000002 com manifests/hashes. Não foram inventados símbolos, contagens, períodos ou hashes.\n\n## Resultado\nStop rule acionada antes do fit. Identidade, completude, duplicatas, cronologia e embargo não puderam ser auditados reprodutivelmente. Nenhum outcome, log-loss, OOS, walk-forward, bootstrap, intervalo de confiança ou multiple testing foi calculado.\n\n## Classificação\nFAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE. Cientificamente, H0004 permanece INSUFFICIENT_EVIDENCE: falha de aquisição/materialização não é falha da hipótese.\n\n## Separação operacional\nO plano operacional vigente permanece OKX Demo/BTC-USDT, ACTIVE, BASELINE, NO_EDGE_CLAIM. A pesquisa Deriv/Drift Switching continua experimentalmente separada e não transfere edge, parâmetros ou evidência para OKX. Nenhuma alteração de mandato, Worker, estratégia operacional, Shadow ou promoção foi realizada. DEMO_ONLY permanece absoluto.\n\n## Próximo passo\nNo 7C, auditar esta falha técnica e manter E000002 bloqueado. Sem snapshot canônico verificável de `active_symbols` e datasets Drift Switching com manifests/hashes, não executar outcomes. O próximo A deve tratar aquisição/materialização como capacidade de infraestrutura separada, preservando integralmente o pré-registro de H0004.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "now_summary": "Dia 7B: E000002 bloqueado antes de outcomes por impossibilidade de materializar identidade/datasets Drift Switching verificáveis; falha técnica separada da ciência.",
+        "research": {
+          "date": "2026-09-04",
+          "title": "Validação adversarial do Dia 7 — E000002 bloqueado pré-fit",
+          "summary": "Sem outcomes. Snapshot active_symbols e datasets/manifests/hashes de Drift Switching não foram materializados de modo verificável; H0004 permanece insufficient evidence.",
+          "decision": "FAILED_TECHNICAL — EXECUTION_BLOCKED"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 7B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

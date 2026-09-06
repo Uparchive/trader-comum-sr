@@ -1,0 +1,140 @@
+{
+  "id": "T000000002",
+  "applied_at": "2026-08-29T17:04:32+00:00",
+  "intent_digest": "5c84e51fd60f6b2ea2945d9e0932e228f6f902b14d95a012a7054fde8cfb5c73",
+  "actor": "research-ai",
+  "cycle": "Day 1B",
+  "note": "Adversarially audit falsifiability and data identifiability of H0001-H0003 before any historical inspection; do not fabricate empirical metrics.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "stage": "OPEN",
+          "decision": "HOLD",
+          "evidence": "Day 1B design audit: empirical falsification is not yet admissible because no reproducible tick history has been materialized and the spike/event labeling rule is not sufficiently operationalized to prevent post-data threshold choice. Keep frozen hypothesis unchanged; define an observable event label prospectively before inspecting outcomes.",
+          "tests": [
+            {
+              "cycle": "Day 1B",
+              "type": "adversarial_design_audit",
+              "result": "INCONCLUSIVE_DATA_AND_EVENT_LABEL_NOT_READY",
+              "notes": "Provider documents statistically defined average spike intervals, but this does not establish memory. Public tick history is available without auth; a reproducible dataset and pre-specified event detector are required before conditional-hazard testing."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0002",
+        "patch": {
+          "stage": "OPEN",
+          "decision": "HOLD",
+          "evidence": "Day 1B design audit: the hypothesis is not yet directly scoreable because the public market-data interface provides ticks/history but no verified hidden regime-state label was identified. A classifier cannot be credited for regime identification against a self-inferred target. Before data inspection, define an observable ground truth or replace the scientific question prospectively with a predictive-outcome hypothesis.",
+          "tests": [
+            {
+              "cycle": "Day 1B",
+              "type": "adversarial_identifiability_audit",
+              "result": "INCONCLUSIVE_LATENT_STATE_GROUND_TRUTH_MISSING",
+              "notes": "Documentation states volatility levels and average state durations; documentation alone does not expose a verified per-tick regime label in the public tick/history endpoints reviewed."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0003",
+        "patch": {
+          "stage": "OPEN",
+          "decision": "HOLD",
+          "evidence": "Day 1B design audit: the stated bullish/bearish/sideways state-identification target is presently latent. Without an externally observable state label, testing classifier accuracy would be circular if labels are derived from the same returns used as features. Preserve the hypothesis but do not run a pseudo-validation; prospectively define an independent observable target or spawn a new predictive-return hypothesis before historical inspection.",
+          "tests": [
+            {
+              "cycle": "Day 1B",
+              "type": "adversarial_identifiability_audit",
+              "result": "INCONCLUSIVE_CIRCULAR_LABEL_RISK",
+              "notes": "Public tick/history endpoints provide market data; no independent regime truth was established in this cycle."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 1,
+        "date": "2026-08-29",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Falsifiability first: adversarial design and identifiability audit",
+        "question": "Can H0001-H0003 be validly falsified now without leakage, circular labels, post-data event definitions, or invented evidence?",
+        "markets": [
+          "Crash/Boom family",
+          "Volatility Switch family",
+          "Drift Switching family"
+        ],
+        "hypotheses": [
+          "H0001",
+          "H0002",
+          "H0003"
+        ],
+        "method": "Read frozen hypotheses before historical performance inspection; verify official public-market-data capability; challenge observability of targets, event labeling, leakage/circularity and data sufficiency. No backtest was permitted because a reproducible dataset and necessary labels were not yet available.",
+        "evidence": "Official Deriv API documentation confirms unauthenticated active_symbols and ticks_history market-data endpoints. Official synthetic-index documentation states Crash/Boom average event frequencies and Volatility Switch / Drift Switching mechanisms. These mechanism descriptions do not themselves prove predictability. H0001 lacks a prospectively operationalized event detector plus acquired dataset; H0002/H0003 currently lack independently verified hidden-state ground truth, creating circular-label risk if inferred from the same returns used to classify.",
+        "limitations": "No historical tick dataset was materialized in the repository during this cycle; no payout/contract sample was acquired; absence of a discovered regime label is not proof that none exists anywhere in provider metadata. Therefore no empirical edge metric, p-value, OOS result, PF, expectancy or drawdown is reported.",
+        "audit": "PASS on anti-fabrication and anti-leakage discipline: no performance data were inspected, no thresholds were tuned, no hypothesis parameters were changed, and no strategy was promoted. Multiple-testing burden remains 3 preregistered variants.",
+        "decision": "HOLD — INCONCLUSIVE EVIDENCE",
+        "next_step": "Before the next empirical validation, materialize a reproducible public active-symbol/tick snapshot; prospectively specify an observable Crash/Boom event label; investigate whether an independent regime-state field exists for Switch/Drift. If not, create new outcome-prediction hypotheses rather than relabel H0002/H0003 after seeing data.",
+        "report": "research/2026-08-29-day-01B-validation.md",
+        "summary": "The strongest attack was methodological, not statistical: none of H0001-H0003 is ready for a clean empirical falsification yet. H0001 needs a frozen event label and reproducible history; H0002/H0003 face latent-state identifiability/circular-label risk. No edge claim and no backtest metrics.",
+        "report_content": "# Kell Quant Lab v2 — Dia 1B — Adversarial Validation\n\n## Pergunta científica\n\nPodemos falsificar H0001, H0002 e H0003 agora de forma válida, sem leakage, rótulos circulares, definições pós-dado ou evidência inventada?\n\n## Método\n\nO ciclo começou pelas hipóteses congeladas, antes de qualquer inspeção de performance histórica. Foi feita uma auditoria adversarial de falsificabilidade, observabilidade dos alvos e suficiência do Data Layer. A documentação oficial da Deriv foi usada apenas para verificar mecanismos e disponibilidade de dados públicos; claims do provedor não foram tratados como evidência de edge.\n\nFontes oficiais consultadas em 2026-08-29:\n\n- https://developers.deriv.com/docs/data/active-symbols/\n- https://developers.deriv.com/docs/data/ticks-history/\n- https://developers.deriv.com/docs/options/ws-public/\n- https://deriv.com/markets/derived-indices/synthetic-indices\n- https://deriv.com/derived-indices/crash-boom-indices\n\n## H0001 — Crash/Boom event-hazard memory\n\nA API pública oferece histórico de ticks e a documentação descreve intervalos médios estatisticamente definidos entre spikes. Isso NÃO implica memória temporal. O teste de hazard ainda não é admissível porque: (1) o histórico reproduzível ainda não foi materializado no projeto; (2) a regra observável que identifica exatamente um evento Crash/Boom a partir dos ticks ainda não está operacionalizada de forma congelada. Escolher um limiar depois de olhar a série introduziria liberdade analítica.\n\n**Decisão B:** HOLD — evidência insuficiente. Preservar os parâmetros atuais; antes de olhar resultados, congelar o event label.\n\n## H0002 — Volatility Switch regime inference\n\nA documentação afirma níveis de volatilidade que mudam com durações médias. Porém, nos endpoints públicos de ticks/history revisados neste ciclo não foi estabelecido um rótulo independente de estado verdadeiro por tick. Se o próprio retorno/volatilidade for usado ao mesmo tempo para criar o rótulo e para prevê-lo, a validação vira circular.\n\n**Decisão B:** HOLD — problema de identificabilidade ainda não resolvido. Procurar um ground truth independente; se não existir, formular prospectivamente uma nova hipótese sobre previsão de variável observável, sem reescrever H0002.\n\n## H0003 — Drift Switching regime persistence\n\nO mesmo ataque é ainda mais importante aqui: bullish/bearish/sideways é um estado documentado, mas o ciclo não encontrou uma verdade externa por observação. Derivar os estados da mesma janela de retornos usada como feature e depois medir acurácia inflaria artificialmente a evidência.\n\n**Decisão B:** HOLD — risco de rótulo circular. Não executar pseudo-validação.\n\n## Auditoria\n\n- Nenhum backtest inventado.\n- Nenhum payout inventado.\n- Nenhum p-value, PF, expectancy, drawdown ou win rate reportado sem dados.\n- Nenhum parâmetro alterado após observar resultado.\n- Nenhuma promoção.\n- Espaço de busca continua em 3 variantes pré-registradas.\n- Champion permanece NONE e executor permanece OFF.\n\n## Limitações\n\nAinda não há dataset histórico versionado no repositório e não foi coletada amostra de propostas/payouts. Não encontrar um campo de regime nesta revisão não prova que ele inexista em toda a infraestrutura do provedor.\n\n## Próximo passo\n\nMaterializar um snapshot reproduzível de active_symbols e ticks públicos; congelar a regra de evento de H0001 antes da inspeção de resultados; procurar um estado independente para H0002/H0003. Se não houver ground truth, abrir novas hipóteses de previsão de outcomes observáveis, preservando H0002/H0003 como inconclusivas.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "Dia 1B concluído — validação adversarial bloqueou pseudo-evidência",
+        "now_summary": "H0001-H0003 sobreviveram apenas como perguntas em HOLD: ainda não há base limpa para backtest. H0001 precisa de histórico reproduzível e event label congelado; H0002/H0003 têm risco de ground truth latente/circular.",
+        "research": {
+          "date": "2026-08-29",
+          "title": "Dia 1B — Falsifiability first",
+          "summary": "Auditoria adversarial encontrou bloqueios metodológicos antes de qualquer backtest; nenhuma métrica empírica foi fabricada.",
+          "decision": "HOLD — INCONCLUSIVE EVIDENCE"
+        },
+        "pipeline": {
+          "stage": "HYPOTHESIS",
+          "next_step": "Materializar dados públicos reproduzíveis e congelar targets observáveis antes da validação empírica."
+        },
+        "signal": {
+          "state": "OFF",
+          "note": "Nenhuma hipótese está pronta para Shadow/DEMO; executor permanece fail-closed."
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0002"
+    },
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0003"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 1B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

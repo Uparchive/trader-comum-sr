@@ -1,0 +1,64 @@
+{
+  "id": "T000000001",
+  "applied_at": "2026-08-29T15:26:13+00:00",
+  "intent_digest": "fb23861d6e5d233a86f980e26b6c4f861e80a6e10db09a8696621794b3f52033",
+  "actor": "research-ai",
+  "cycle": "architecture-bootstrap",
+  "note": "Normalize current v2 state into deterministic long-horizon projections without changing scientific conclusions.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "title": "Crash/Boom event-hazard memory",
+          "status": "OPEN"
+        }
+      }
+    },
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0002",
+        "patch": {
+          "title": "Volatility Switch regime inference",
+          "status": "OPEN"
+        }
+      }
+    },
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0003",
+        "patch": {
+          "title": "Drift Switching regime persistence",
+          "status": "OPEN"
+        }
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "Dia 1A concluído — arquitetura de estado determinística ativa"
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0002"
+    },
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0003"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

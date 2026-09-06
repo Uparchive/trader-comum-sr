@@ -1,0 +1,49 @@
+{
+  "evidence_id": "EVD-20260903-06B",
+  "title": "Dia 6B — auditoria adversarial pré-execução de H0004/E000002",
+  "date": "2026-09-03",
+  "cycle": "B",
+  "run_id": "RUN-20260903-06B-R1",
+  "question": "H0004/E000002 pode ser executado sem contaminar o teste por identidade de dataset/símbolo não verificada, leakage temporal, baseline injusta ou pré-processamento pós-outcome?",
+  "inputs": {
+    "hypothesis": "H0004-v1",
+    "experiment": "E000002",
+    "preregistration_evidence": "evidence/2026/09/EVD-20260903-06A.json",
+    "markets_projection": "data/markets.json",
+    "mandate": "config/v4/active_mandate.json",
+    "strategy_registry": "config/v4/strategy_registry.json",
+    "capital_policy_registry": "config/v4/capital_policy_registry.json",
+    "market_selection": "config/v4/market_selection.json",
+    "platform_governance": "config/v4/platform_governance.json"
+  },
+  "adversarial_audit": {
+    "dataset_identity": "FAIL_PRECONDITION: data/markets.json mantém Família Drift Switching com symbol=null e data_status=symbol_enumeration_pending; nenhum dataset bruto, manifest ou hash específico de H0004/E000002 está materializado.",
+    "chronology": "DESIGN_OK_BUT_UNVERIFIED_ON_DATA: split 60/20/20 cronológico e no-shuffle estão pré-registrados, porém não há dataset identificado para provar ordenação, monotonicidade temporal ou ausência de duplicatas.",
+    "target_construction": "DESIGN_OK_WITH_REQUIRED_GUARD: target é sinal do retorno futuro de 20 ticks e deve usar somente t+1..t+20; a construção ainda não foi executada nem verificada sobre dados materializados.",
+    "overlap_leakage": "UNRESOLVED_PRE_EXECUTION: o requisito de dados menciona alvos não sobrepostos/evaluable, mas o protocolo não materializa ainda uma regra determinística de amostragem/embargo entre exemplos e fronteiras 60/20/20. Executar agora permitiria sobreposição de janelas de target entre splits ou dependência serial não controlada.",
+    "scaling": "DESIGN_OK: padronização train-only está congelada. Sem dataset não é possível provar sua aplicação, portanto nenhum fit foi executado.",
+    "baseline_fairness": "DESIGN_OK: probabilidade incondicional positiva é estimada apenas no treino e comparada no mesmo OOS por log-loss. Sem dados não houve cálculo.",
+    "multiple_testing": "PASS_DESIGN: um único horizonte de 20 ticks, dois preditores congelados, um modelo e uma métrica primária; nenhuma busca pós-hoc foi realizada.",
+    "selection_bias": "BLOCKED: a família Drift Switching ainda não possui enumeração canônica de símbolos; escolher um símbolo após observar disponibilidade/outcomes criaria risco de seleção retrospectiva. A enumeração deve ser materializada antes de outcomes.",
+    "operational_separation": "PASS: nenhuma alteração de Worker, Cron, Durable Object, WebSocket, Deriv executor, Active Mandate, Strategy, Capital Policy, Market Selection ou Champion foi feita."
+  },
+  "tests": {
+    "mandate_hash": "PASS: baa6b588aa2c112b9a1479e45383db715b60a3d3b06b55bb4aad18b88bb4d67e recalculado pelo algoritmo canônico V4",
+    "mandate_state": "PASS: ACTIVE / DEMO_ONLY / válido em 2026-09-03",
+    "baseline_registry": "PASS: BASELINE-SR-v1 permanece OPERATIONAL_INCUMBENT com NO_EDGE_CLAIM e Champion NONE",
+    "capital_policy": "PASS: CP0001-v1 corresponde ao mandato",
+    "market_selection": "PASS: MS0001-v1 corresponde ao mandato e seleciona R_100 operacionalmente; isso não identifica o universo científico Drift Switching",
+    "platform_governance": "PASS: DEMO_ONLY, real_money_allowed=false, real_endpoint_paths=[], auto_promotion_to_real=false, PLATFORM_OK"
+  },
+  "scientific_diagnosis": "INSUFFICIENT_EVIDENCE",
+  "technical_diagnosis": "TECHNICAL_LIMITATION — DATASET_IDENTITY_AND_SYMBOL_ENUMERATION_NOT_MATERIALIZED_FOR_E000002",
+  "decision": "INVESTIGATE — DO_NOT_EXECUTE_E000002. O desenho permanece pré-registrado, mas a execução é bloqueada até existir enumeração canônica prospectiva dos símbolos Drift Switching, dataset cronológico identificado com manifest/hash e regra determinística explícita contra overlap/leakage nas fronteiras de split.",
+  "limitations": "Nenhum outcome de H0004 foi inspecionado, nenhum modelo foi ajustado e nenhuma métrica foi calculada. A telemetria operacional read-only não foi observada neste runtime; nenhum saldo, equity, trade ou estado instantâneo do executor foi inferido.",
+  "next_step": "No 6C, auditar esta barreira pré-execução e decidir se E000002 permanece bloqueado para aquisição prospectivamente especificada. Não promover, não iniciar Shadow e não alterar mandato/executor. Se C autorizar continuação científica, o próximo A deve pré-especificar e materializar enumeração de símbolos, manifest/hash do dataset e regra de amostragem/embargo antes de qualquer outcome.",
+  "market": "Família Drift Switching",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": "H0004",
+  "experiment": "E000002",
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "T000000008",
+  "applied_at": "2026-08-30T17:51:41+00:00",
+  "intent_digest": "373c8d5574f684466265a4f60234df67f7abbfbed2ff6d93efee9e7a51d58558",
+  "actor": "research-ai",
+  "cycle": "Day 2B Retest",
+  "note": "Reteste do Dia 2B após correção da infraestrutura: preservar integralmente o erro DNS original, registrar gateway Cloudflare corrigido, aquisição real de 14 Crash/Boom e manter H0001 em HOLD por evidência insuficiente.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "decision": "HOLD",
+          "stage": "OPEN",
+          "tests": [
+            {
+              "cycle": "Dia 1B",
+              "type": "adversarial_design_audit",
+              "result": "INCONCLUSIVE_DATA_AND_EVENT_LABEL_NOT_READY",
+              "notes": "O provedor documenta intervalos médios de spikes definidos estatisticamente, mas isso não estabelece memória. O histórico público de ticks está disponível sem autenticação; é necessário um dataset reproduzível e um detector de eventos pré-especificado antes do teste de hazard condicional."
+            },
+            {
+              "cycle": "Dia 2B — reteste após correção de aquisição",
+              "type": "historical_validation_retry",
+              "result": "HOLD_INSUFFICIENT_EVENT_MASS",
+              "notes": "A falha DNS da primeira tentativa permanece preservada. Após criação de gateway Cloudflare, remoção do parâmetro obsoleto product_type e correção do parser para underlying_symbol/underlying_symbol_name, a conexão pública respondeu na primeira tentativa com 89 símbolos ativos. Foram selecionados prospectivamente 14 Crash/Boom clássicos e obtidos 14 datasets válidos. O protocolo 60/20/20 e o limiar 1-1/N somente na calibração foram mantidos. Houve 17 eventos na validação e 15 no OOS no agregado; a massa de eventos é insuficiente para conclusão robusta por símbolo e correção Holm, portanto nenhum p-valor ou edge foi declarado. Relatório: research/2026-08-30-day-02B-retest.md. Evidência: data/acquisition/day-02b-retry-2026-08-30.json."
+            }
+          ],
+          "evidence": "Dia 2B — primeira tentativa preservada: a aquisição empírica foi tentada sem alterar o protocolo pré-registrado, mas o runtime falhou antes de receber dados por erro de resolução DNS do host WebSocket. Isso foi registrado como falha de aquisição, não evidência a favor ou contra memória de hazard. Reteste do mesmo dia: foi criada uma rota de aquisição reproduzível via Cloudflare Worker; o teste inicial da nova rota revelou rejeição do campo legado product_type na API nova, o campo foi removido, e o connection-check passou em tentativa 1 usando wss://api.derivws.com/trading/v1/options/ws/public, com 89 símbolos ativos. O parser foi então ajustado para a estrutura atual underlying_symbol/underlying_symbol_name antes de inspeção de outcomes. O runner reproduzível selecionou 14 Crash/Boom clássicos e obteve 14 datasets válidos, mantendo split 60/20/20, limiar empírico 1-1/N apenas na calibração e proibição de tuning pós-hoc. No agregado foram observados 17 eventos na validação e 15 no OOS. A evidência é real, porém esparsa demais para inferência robusta por símbolo e multiple testing/Holm; nenhum p-valor, backtest, edge ou promoção foi declarado."
+        }
+      }
+    },
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "HISTORICAL_DATA_ACQUIRED_INSUFFICIENT_EVENTS",
+          "decision": "HOLD",
+          "notes": "Primeira tentativa preservada: o Dia 2B original não recebeu ticks porque o runtime não resolveu api.derivws.com. Correção técnica: foi criado gateway de pesquisa no Cloudflare Worker com retry/timeout; o primeiro teste confirmou conectividade mas expôs product_type como parâmetro legado inválido, que foi removido; novo connection-check retornou ok=true. A estrutura de active_symbols usa underlying_symbol e underlying_symbol_name, então o parser foi corrigido antes de qualquer leitura dos outcomes. Reteste via GitHub Actions obteve snapshot de 89 símbolos, selecionou 14 Crash/Boom clássicos e materializou 14 datasets válidos com hashes/períodos. O protocolo congelado foi executado descritivamente, produzindo 17 eventos na validação e 15 no OOS. A amostra permanece muito esparsa para inferência familiar robusta e correção Holm; H0001 continua HOLD. Artefatos: data/acquisition/day-02b-retry-2026-08-30.json e research/2026-08-30-day-02B-retest.md."
+        }
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 2B teve duas etapas preservadas: a primeira falhou por DNS e permaneceu registrada; após correção da infraestrutura, o reteste adquiriu dados reais de 14 Crash/Boom. A aquisição está funcional, mas a massa de eventos ainda é insuficiente para conclusão robusta. Nenhuma promoção ocorreu.",
+        "research": {
+          "date": "2026-08-30",
+          "title": "Dia 2B — Reteste com aquisição corrigida e dados reais",
+          "decision": "HOLD — AQUISIÇÃO RESOLVIDA; EVIDÊNCIA EMPÍRICA INICIAL INSUFICIENTE",
+          "next_step": "No ciclo C, auditar o reteste e, se E000001 continuar válido, pré-registrar antes de nova coleta um tamanho histórico fixo maior e paginação determinística, sem alterar detector ou parâmetros após observar estes outcomes."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION"
+        },
+        "signal": {
+          "status": "OFF"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

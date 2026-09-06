@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "canonical": true,
+      "decision": "HOLD — H0001 SOBREVIVE À AUDITORIA APENAS COMO HIPÓTESE NÃO CONFIRMADA. O 3B NÃO AUTORIZA SHADOW NEM DEMO; A ÚNICA REJEIÇÃO HOLM NÃO É ROBUSTA DIANTE DO SHORTFALL EXTREMO DE BOOM500.",
+      "record_path": "research/2026/08/2026-08-31/cycle-C/RUN-20260831-03C-R1/run.json",
+      "run_id": "RUN-20260831-03C-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — H0001 NÃO FOI CONFIRMADA PELO TESTE AMPLIADO; A EVIDÊNCIA É INSUFICIENTE PARA PROMOÇÃO. SEM SHADOW E SEM DEMO.",
+      "record_path": "research/2026/08/2026-08-31/cycle-B/RUN-20260831-03B-R1/run.json",
+      "run_id": "RUN-20260831-03B-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — E000001 ESTÁ PRONTO PARA A AQUISIÇÃO AMPLIADA PRÉ-REGISTRADA; H0001 CONTINUA NÃO CONFIRMADA E SEM PROMOÇÃO.",
+      "record_path": "research/2026/08/2026-08-31/cycle-A/RUN-20260831-03A-R1/run.json",
+      "run_id": "RUN-20260831-03A-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.",
+      "record_path": "research/2026/08/2026-08-30/cycle-C/RUN-20260830-02C-R1/run.json",
+      "run_id": "RUN-20260830-02C-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — AQUISIÇÃO RESOLVIDA; EVIDÊNCIA EMPÍRICA INICIAL INSUFICIENTE PARA REJEITAR O HAZARD CONSTANTE OU ALEGAR MEMÓRIA REPRODUZÍVEL. SEM PROMOÇÃO",
+      "record_path": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R2/run.json",
+      "run_id": "RUN-20260830-02B-R2"
+    },
+    {
+      "canonical": false,
+      "decision": "HOLD — AQUISIÇÃO BLOQUEADA; H0001 NÃO TESTADA EMPIRICAMENTE",
+      "record_path": "research/2026/08/2026-08-30/cycle-B/RUN-20260830-02B-R1/run.json",
+      "run_id": "RUN-20260830-02B-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+      "record_path": "research/2026/08/2026-08-30/cycle-A/RUN-20260830-02A-R1/run.json",
+      "run_id": "RUN-20260830-02A-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+      "record_path": "research/2026/08/2026-08-29/cycle-C/RUN-20260829-01C-R1/run.json",
+      "run_id": "RUN-20260829-01C-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — EVIDÊNCIA INCONCLUSIVA",
+      "record_path": "research/2026/08/2026-08-29/cycle-B/RUN-20260829-01B-R1/run.json",
+      "run_id": "RUN-20260829-01B-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD",
+      "record_path": "research/2026/08/2026-08-29/cycle-A/RUN-20260829-01A-R1/run.json",
+      "run_id": "RUN-20260829-01A-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — INCONCLUSIVE",
+      "record_path": "research/2026/08/2026-08-28/cycle-C/RUN-20260828-00C-R1/run.json",
+      "run_id": "RUN-20260828-00C-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — INCONCLUSIVE",
+      "record_path": "research/2026/08/2026-08-28/cycle-B/RUN-20260828-00B-R1/run.json",
+      "run_id": "RUN-20260828-00B-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — INCONCLUSIVE",
+      "record_path": "research/2026/08/2026-08-28/cycle-A/RUN-20260828-00A-R1/run.json",
+      "run_id": "RUN-20260828-00A-R1"
+    }
+  ],
+  "month": "2026-08",
+  "schema_version": 3
+}

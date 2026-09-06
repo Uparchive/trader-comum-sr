@@ -1,0 +1,55 @@
+{
+  "schema_version": 4,
+  "program_version": "4.0.0",
+  "v4_started_at": "2026-09-02T00:00:00-03:00",
+  "current_cycle": "C",
+  "current_day": 6,
+  "current_run_id": "RUN-20260903-06C-R1",
+  "environment": "DEMO_ONLY",
+  "balance": null,
+  "equity": null,
+  "balance_source": "TELEMETRY_NOT_OBSERVED_IN_THIS_RUN",
+  "executor_status": null,
+  "active_mandate": {
+    "mandate_id": "AM-20260902-001",
+    "path": "config/v4/active_mandate.json",
+    "hash": "baa6b588aa2c112b9a1479e45383db715b60a3d3b06b55bb4aad18b88bb4d67e"
+  },
+  "operational_strategy": {
+    "id": "BASELINE-SR",
+    "version": "BASELINE-SR-v1",
+    "scientific_claim": "NO_EDGE_CLAIM"
+  },
+  "champion": null,
+  "champion_status": "NO_CHAMPION",
+  "capital_policy": {
+    "id": "CP0001",
+    "version": "CP0001-v1"
+  },
+  "selected_markets": [
+    "R_100"
+  ],
+  "platform_state": "PLATFORM_OK",
+  "current_research": {
+    "hypotheses": [
+      "H0001",
+      "H0002",
+      "H0003",
+      "H0004"
+    ],
+    "experiments": [
+      "E000002"
+    ]
+  },
+  "latest_evidence": [
+    "evidence/2026/09/EVD-20260903-06C.json",
+    "evidence/2026/09/EVD-20260903-06B.json",
+    "evidence/2026/09/EVD-20260903-06A.json",
+    "evidence/2026/09/EVD-20260902-V4-MIGRATION.json",
+    "evidence/2026/09/EVD-20260902-05C.json"
+  ],
+  "recent_operational_summary": null,
+  "technical_diagnostic": "A telemetria operacional read-only não foi observada neste runtime. E000002 permanece bloqueado antes da execução: enumeração prospectiva dos símbolos Drift Switching, identidade/manifest/hash do dataset e regra determinística de overlap/embargo ainda não estão materializados.",
+  "decision": "CONTINUE_RESEARCH — KEEP_E000002_BLOCKED_PRE_EXECUTION. H0004 permanece não confirmada e não rejeitada por INSUFFICIENT_EVIDENCE. Champion NONE, BASELINE-SR-v1, CP0001-v1, MS0001-v1 e Active Mandate DEMO_ONLY mantidos sem alteração; nenhum Shadow ou promoção.",
+  "next_step": "Próximo A: pré-especificar e materializar, antes de qualquer outcome, a enumeração canônica dos símbolos Drift Switching, a identidade/origem/período/manifest/hash do dataset e a regra determinística de amostragem/embargo para target de 20 ticks e fronteiras 60/20/20."
+}

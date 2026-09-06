@@ -1,0 +1,162 @@
+{
+  "id": "T000000006",
+  "applied_at": "2026-08-30T11:04:48+00:00",
+  "intent_digest": "8a6e656cfd2eb099dd7a9df639ca932002e38899624da306e57cb19ff73c18d7",
+  "actor": "research-ai",
+  "cycle": "Day 2A",
+  "note": "Descoberta do Dia 2: protocolo público de aquisição verificado e rótulo prospectivo da H0001 pré-registrado antes de inspecionar outcomes.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "frozen_parameters": {
+            "predictor": "ticks_since_last_event",
+            "primary_test": "constant-hazard null versus conditional hazard",
+            "direction": "two-sided",
+            "event_label_protocol": {
+              "scope": "somente índices clássicos Crash/Boom enumerados por active_symbols; excluir Flip, Hybrid e outras famílias",
+              "signed_tick_move": "Boom: P_t-P_(t-1); Crash: -(P_t-P_(t-1))",
+              "documented_interval_N": "N extraído do nome/documentação oficial do símbolo e congelado por símbolo",
+              "chronological_split": "60% calibração / 20% validação / 20% OOS",
+              "calibration_threshold": "quantil empírico 1-1/N do signed_tick_move calculado somente nos 60% iniciais",
+              "event_definition": "evento quando signed_tick_move excede estritamente o limiar congelado; limiar nunca é reajustado usando validação/OOS",
+              "hazard_age": "número de ticks desde o último evento rotulado",
+              "age_bins_for_diagnostics": [
+                "[0,0.5N)",
+                "[0.5N,N)",
+                "[N,2N)",
+                "[2N,+inf)"
+              ],
+              "primary_comparison": "modelo de hazard constante versus modelo condicional à idade; avaliação cronológica separada",
+              "multiple_testing": "correção Holm entre símbolos da família no teste primário",
+              "no_posthoc_threshold_tuning": true
+            }
+          },
+          "evidence": "Dia 2A: documentação oficial vigente confirma que Crash/Boom é definido por intervalos médios de ticks entre spikes, não por contagem regressiva determinística. active_symbols e ticks_history são públicos e sem autenticação. Antes de inspecionar outcomes históricos, foi congelado um protocolo de rotulagem baseado exclusivamente na direção documentada, no N documentado e em limiar calibrado apenas no primeiro segmento cronológico. Nenhum resultado de hazard foi observado neste ciclo.",
+          "decision": "HOLD",
+          "stage": "OPEN",
+          "status": "OPEN"
+        }
+      }
+    },
+    {
+      "op": "add_experiment",
+      "payload": {
+        "hypothesis_id": "H0001",
+        "stage": "HISTORICAL_VALIDATION",
+        "status": "PRE_REGISTERED_AWAITING_DATA",
+        "title": "Teste cronológico de memória do hazard em Crash/Boom",
+        "question": "O hazard do próximo spike depende do número de ticks desde o último evento além de uma baseline de hazard constante?",
+        "design": {
+          "data_source": "Deriv public WebSocket market-data API",
+          "symbol_source": "active_symbols",
+          "history_source": "ticks_history",
+          "authentication_required": false,
+          "chronological_split": "60/20/20",
+          "event_label": "usar exatamente o protocolo congelado em H0001",
+          "primary_null": "hazard constante",
+          "primary_alternative": "hazard dependente de ticks_since_last_event",
+          "controls": [
+            "baseline incondicional",
+            "permutação/embaralhamento temporal quando tecnicamente válido"
+          ],
+          "multiplicity": "Holm entre símbolos clássicos Crash/Boom",
+          "leakage_rule": "nenhum limiar ou parâmetro pode usar validação ou OOS",
+          "outcome_inspection_before_registration": false
+        },
+        "decision": "PENDING_DATA",
+        "notes": "Experimento apenas pré-registrado no Dia 2A; nenhuma métrica empírica calculada."
+      }
+    },
+    {
+      "op": "upsert_market",
+      "payload": {
+        "name": "Família Crash/Boom",
+        "provider": "Deriv",
+        "asset_class": "Synthetic Index",
+        "family": "Crash/Boom",
+        "state": "DISCOVERED",
+        "research_priority": "high",
+        "data_status": "public_api_verified_acquisition_pending",
+        "evidence_score": null,
+        "hypotheses": 1,
+        "note": "Dia 2A: active_symbols e ticks_history verificados como endpoints públicos sem autenticação. O rótulo prospectivo de evento de H0001 foi congelado antes da inspeção dos outcomes; aquisição reproduzível ainda pendente."
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 2,
+        "date": "2026-08-30",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Pré-registro do detector de eventos Crash/Boom antes dos dados",
+        "question": "É possível tornar H0001 empiricamente testável sem escolher o detector de spikes depois de observar o histórico?",
+        "markets": [
+          "Família Crash/Boom",
+          "Família Volatility Switch",
+          "Família Drift Switching"
+        ],
+        "hypotheses": [
+          "H0001",
+          "H0002",
+          "H0003"
+        ],
+        "method": "Revisão da documentação oficial vigente da Deriv, verificação dos endpoints públicos active_symbols/ticks_history e pré-registro prospectivo do rótulo de evento e do desenho cronológico de H0001 antes de qualquer inspeção de outcomes históricos.",
+        "evidence": "A API oficial classifica active_symbols e ticks_history como dados de mercado públicos sem autenticação. A documentação atual de Crash/Boom afirma que o número do índice representa o intervalo médio de ticks entre spikes e que os eventos podem ocorrer de forma não determinística. Para Volatility Switch e Drift Switching, a documentação confirma regimes e durações médias, mas neste ciclo não foi identificado ground truth público independente por tick; H0002/H0003 continuam sem teste admissível de classificação de estado.",
+        "limitations": "Nenhum snapshot de active_symbols nem série histórica de ticks foi materializado neste ciclo, portanto não há métricas, backtest ou evidência de edge. O detector pré-registrado é uma operacionalização e pode falhar em corresponder perfeitamente ao evento interno do provedor; essa limitação deve ser quantificada sem ajuste pós-hoc no OOS. A documentação do provedor descreve o mecanismo declarado, não valida sua implementação empírica.",
+        "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+        "next_step": "No Dia 2B, obter snapshot reproduzível de active_symbols e histórico público de ticks dos símbolos clássicos Crash/Boom, registrar metadados/hashes, aplicar exatamente o detector congelado e tentar falsificar H0001 com separação cronológica, controles e correção Holm. Não promover nada sem evidência OOS. Para H0002/H0003, continuar procurando ground truth independente; se inexistente, não validar circularmente.",
+        "report": "research/2026-08-30-day-02A-discovery.md",
+        "report_content": "# Kell Quant Lab v2 — Dia 2A — Descoberta\n\n## Pergunta\nÉ possível tornar H0001 empiricamente testável sem escolher o detector de spikes depois de observar o histórico?\n\n## Método\nFoi revisada a documentação oficial vigente da Deriv para Crash/Boom e para os endpoints públicos de dados de mercado. Antes de inspecionar qualquer outcome histórico, foi pré-registrado um rótulo operacional de evento para H0001 e um split cronológico 60%/20%/20%. O limiar de evento será calibrado somente no primeiro segmento com base no intervalo médio N documentado do símbolo e depois congelado para validação e OOS.\n\n## Evidência\nA documentação oficial de `active_symbols` e `ticks_history` informa que ambos são endpoints de dados de mercado sem autenticação. A página atual de Crash/Boom declara que cada índice possui um número médio definido de ticks entre spikes; esse número é média de longo prazo, não uma contagem regressiva determinística. Isso torna admissível testar memória do hazard, mas não permite presumir que ela exista. Para Volatility Switch e Drift Switching, a documentação pública confirma regimes e durações médias; nenhum ground truth independente por tick foi identificado neste ciclo, portanto H0002/H0003 não serão pontuadas por rótulos circulares.\n\nFontes oficiais consultadas:\n- https://developers.deriv.com/docs/data/active-symbols/\n- https://developers.deriv.com/docs/data/ticks-history/\n- https://deriv.com/derived-indices/crash-boom-indices\n- https://deriv.com/markets/derived-indices/synthetic-indices\n\n## Pré-registro H0001\nPara cada símbolo clássico Crash/Boom enumerado por `active_symbols`, a direção do movimento será normalizada: Boom usa `P_t-P_(t-1)` e Crash usa `-(P_t-P_(t-1))`. O N será extraído do nome/documentação oficial do símbolo. Nos primeiros 60% cronológicos, o limiar será o quantil empírico `1-1/N` do movimento assinado. Evento = movimento assinado estritamente acima desse limiar. O limiar fica congelado para os 20% de validação e 20% OOS. O preditor primário permanece `ticks_since_last_event`; o nulo é hazard constante e a alternativa é hazard dependente da idade. Diagnósticos usarão faixas `[0,0.5N)`, `[0.5N,N)`, `[N,2N)` e `[2N,+inf)`. Comparações entre símbolos usarão correção Holm. Nenhum limiar poderá ser reajustado após observar validação/OOS.\n\n## Limitações\nAinda não há snapshot materializado de `active_symbols` nem série histórica reproduzível de ticks neste estado canônico, portanto nenhuma métrica, backtest ou alegação de edge é admissível. O rótulo operacional pode não coincidir perfeitamente com o evento interno do provedor; essa possível diferença deverá aparecer como limitação empírica, e não ser corrigida pós-hoc para melhorar resultado. A documentação descreve o mecanismo declarado e não substitui teste empírico.\n\n## Decisão\n**HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS.**\n\n## Próximo passo\nNo Dia 2B, adquirir `active_symbols` e histórico público de ticks dos símbolos clássicos Crash/Boom de forma reproduzível, registrar metadados e hashes, aplicar exatamente o detector congelado e tentar falsificar H0001 com separação cronológica, controles e correção Holm. Não haverá promoção sem evidência OOS.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 2A concluiu o pré-registro de H0001 antes da inspeção histórica. Nenhuma evidência de edge foi produzida; o próximo passo é aquisição reproduzível e falsificação adversarial.",
+        "research": {
+          "date": "2026-08-30",
+          "title": "Dia 2A — Pré-registro do detector de eventos Crash/Boom",
+          "decision": "HOLD — PRÉ-REGISTRO CONCLUÍDO; DADOS EMPÍRICOS PENDENTES"
+        },
+        "pipeline": {
+          "stage": "HYPOTHESIS"
+        },
+        "signal": {
+          "state": "OFF",
+          "note": "Nenhuma estratégia promovida; execução permanece bloqueada."
+        },
+        "strategy": {
+          "status": "NO_CHAMPION"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "add_experiment",
+      "assigned_id": "E000001"
+    },
+    {
+      "op": "upsert_market",
+      "market": "Família Crash/Boom",
+      "action": "updated"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 2A"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

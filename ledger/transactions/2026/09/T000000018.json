@@ -1,0 +1,130 @@
+{
+  "id": "T000000018",
+  "applied_at": "2026-09-03T11:05:53+00:00",
+  "intent_digest": "4289038c1725969b2d5671ce89347a947d789e66eb1d02439668cf08723cb9b7",
+  "actor": "research-ai",
+  "cycle": "Day 6A",
+  "note": "Descoberta do Dia 6A: após o encerramento inconclusivo de E000001, priorizar uma pergunta outcome-based derivada de H0003 para eliminar o risco de rótulo circular de regime. Pré-registrar H0004 e E000002 sem inspecionar outcomes.",
+  "operations": [
+    {
+      "op": "add_hypothesis",
+      "payload": {
+        "market": "Família Drift Switching",
+        "family": "forward_return_predictability",
+        "title": "Previsibilidade prospectiva de retorno no Drift Switching",
+        "description": "Testar se informação de retornos passados de curto horizonte prediz o sinal do retorno futuro em horizonte fixo melhor que uma baseline incondicional, sem usar rótulos latentes de regime.",
+        "mechanism": "H0003 mostrou risco de circularidade porque estados bullish/bearish/sideways não possuem ground truth independente. Esta hipótese substitui a classificação de estado por um outcome diretamente observável e falsificável: retorno futuro.",
+        "frozen_parameters": {
+          "lineage": {
+            "parent_hypothesis": "H0003",
+            "relationship": "prospective_outcome_reformulation",
+            "reason": "remove_latent_regime_label_and_circularity"
+          },
+          "predictors": [
+            "signed_return_lag1",
+            "rolling_mean_return_20"
+          ],
+          "target": "sign of forward 20-tick return; zero returns counted as neutral and excluded only if exactly zero before any model fitting",
+          "primary_horizon_ticks": 20,
+          "chronological_split": "60% train / 20% validation / 20% OOS",
+          "model_class": "fixed logistic regression with intercept and standardized predictors using train-only mean/std",
+          "baseline": "train-sample unconditional probability of positive forward return",
+          "primary_metric": "OOS log-loss",
+          "primary_falsification_rule": "Reject predictive claim if model OOS log-loss is not strictly lower than baseline OOS log-loss; any validation-only improvement is insufficient.",
+          "secondary_metric": "OOS Brier score, descriptive only",
+          "multiple_testing": "one primary horizon and one frozen model only; no horizon/window search in H0004-v1",
+          "leakage_controls": [
+            "features at tick t use data available no later than t",
+            "target uses ticks t+1 through t+20 only",
+            "standardization parameters estimated on train only",
+            "chronological split with no shuffling",
+            "no threshold or feature tuning after validation/OOS inspection"
+          ],
+          "required_followups_before_promotion": [
+            "independent OOS replication",
+            "walk-forward",
+            "shadow/prospective observation",
+            "promotion gates"
+          ]
+        },
+        "origin": "Day 6A — lineage from H0003 after identifiability audit",
+        "variants": 1,
+        "stage": "OPEN",
+        "status": "PRE_REGISTERED",
+        "decision": "HOLD",
+        "evidence": "No empirical outcome has been inspected for H0004. The design is pre-registered prospectively to make the claim directly falsifiable and avoid the latent-state circularity identified in H0003.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "op": "add_experiment",
+      "payload": {
+        "hypothesis_id": "H0004",
+        "stage": "HISTORICAL_VALIDATION",
+        "status": "PRE_REGISTERED_NOT_EXECUTED",
+        "title": "Teste cronológico outcome-based de H0004",
+        "protocol": {
+          "market_family": "Drift Switching",
+          "data_requirement": "chronological tick history sufficient to construct non-overlapping/evaluable 20-tick forward targets after feature warm-up",
+          "predictors": [
+            "signed_return_lag1",
+            "rolling_mean_return_20"
+          ],
+          "target": "sign of forward 20-tick return",
+          "split": "60/20/20 chronological",
+          "model": "fixed logistic regression",
+          "baseline": "train-only unconditional positive-return probability",
+          "primary_metric": "OOS log-loss",
+          "rejection": "model OOS log-loss >= baseline OOS log-loss",
+          "controls": [
+            "no shuffle",
+            "train-only scaling",
+            "single horizon",
+            "single model",
+            "no post-hoc tuning",
+            "preserve raw-data hash and manifest"
+          ]
+        },
+        "next_action": "Day 6B adversarially audit the preregistration and only execute if dataset identity, chronology, target construction and leakage controls can be verified deterministically."
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 6,
+        "date": "2026-09-03",
+        "time": "08:00",
+        "subcycle": "A",
+        "title": "Descoberta do Dia 6 — reformulação outcome-based após E000001",
+        "decision": "CONTINUE — PRÉ-REGISTRAR H0004/E000002; H0001 PERMANECE HOLD E E000001 ENCERRADO INCONCLUSIVO; H0002/H0003 NÃO SÃO PSEUDO-VALIDADAS SEM GROUND TRUTH.",
+        "summary": "A próxima melhor pergunta científica abandona a tentativa de inferir um estado latente de H0003 e testa diretamente um outcome observável: se retornos passados de curto horizonte melhoram a previsão do sinal do retorno futuro de 20 ticks contra baseline incondicional OOS.",
+        "hypotheses": [
+          "H0001",
+          "H0002",
+          "H0003",
+          "H0004"
+        ],
+        "experiment": "E000002",
+        "scientific_diagnosis": "INSUFFICIENT_EVIDENCE — NEW_PREREGISTRATION",
+        "technical_diagnosis": "OPERATIONAL_TELEMETRY_NOT_OBSERVED_IN_THIS_RUNTIME; E000001 acquisition failure remains a separate closed technical limitation.",
+        "next_step": "Day 6B: attack H0004/E000002 before execution. Verify dataset/symbol identity, target construction, chronology, train-only scaling, overlap/leakage risk, baseline fairness and whether a deterministic acquisition path exists. If any prerequisite is unverifiable, mark INSUFFICIENT_EVIDENCE/TECHNICAL_FAILURE rather than running a contaminated test.",
+        "report": "research/2026/09/2026-09-03/cycle-A/RUN-20260903-06A-R1/report.md",
+        "report_content": "# RUN-20260903-06A-R1 — Descoberta do Dia 6\n\n## Continuidade\nO Dia 5C encerrou E000001 como inconclusivo após a stop rule de aquisição. H0001 permanece HOLD/INSUFFICIENT_EVIDENCE. H0002 e H0003 continuam abertas, mas ambas têm um bloqueio de identificabilidade: não existe ground truth independente de regime nos dados públicos já auditados.\n\n## Pergunta escolhida\nEm vez de pseudo-validar H0003 com rótulos de regime derivados dos próprios retornos, testar diretamente um outcome observável: informação de retornos passados de curto horizonte melhora a previsão do sinal do retorno futuro de 20 ticks contra uma baseline incondicional?\n\n## Hipótese e experimento pré-registrados\nH0004 é uma reformulação prospectiva com lineage explícita de H0003, não uma renomeação de hipótese rejeitada. E000002 congela um único horizonte de 20 ticks, dois preditores simples, regressão logística fixa, split cronológico 60/20/20, scaling apenas no treino e log-loss OOS como métrica primária.\n\n## Falsificação\nA alegação preditiva falha se a log-loss OOS do modelo não for estritamente menor que a log-loss OOS da baseline treinada apenas na fração de treino. Melhora somente em validação não conta como evidência positiva. Nenhum tuning de janela, horizonte, features ou limiar é permitido após inspeção de validação/OOS.\n\n## Controles\nSem shuffle; features em t usam somente informação disponível até t; target usa t+1..t+20; scaling e baseline estimados somente no treino; um horizonte e um modelo; hashes/manifests preservados; OOS, Walk-Forward e Shadow continuam obrigatórios antes de qualquer promoção.\n\n## Separação técnica\nA falha de aquisição de E000001 permanece técnica e encerrada por stop rule. O endpoint operacional read-only não pôde ser observado neste runtime; nenhum saldo, equity, trade ou estado do executor foi inferido.\n\n## Decisão\nCONTINUE. H0004/E000002 ficam pré-registrados e não executados. Active Mandate, Baseline, Capital Policy, Market Selection e Champion não são alterados neste ciclo.\n\n## Próximo passo para B\nAuditar adversarialmente H0004/E000002 antes de qualquer execução: identidade do dataset/símbolo, construção do target, cronologia, overlap/leakage, scaling train-only, baseline justa e disponibilidade determinística da aquisição. Se algum requisito não puder ser provado, registrar INSUFFICIENT_EVIDENCE/TECHNICAL_FAILURE em vez de executar teste contaminado.\n"
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "add_hypothesis",
+      "assigned_id": "H0004"
+    },
+    {
+      "op": "add_experiment",
+      "assigned_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 6A"
+    }
+  ]
+}

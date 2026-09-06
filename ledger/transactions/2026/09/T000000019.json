@@ -1,0 +1,63 @@
+{
+  "id": "T000000019",
+  "applied_at": "2026-09-03T17:04:36+00:00",
+  "intent_digest": "a54e587e11345fce95953444a53d8e4f1cd8d288dfe65a4796664fbc95c8347d",
+  "actor": "research-ai",
+  "cycle": "Day 6B",
+  "note": "Validação adversarial do Dia 6B: bloquear a execução de H0004/E000002 até que identidade prospectiva de símbolos/dataset e controles determinísticos de overlap/leakage estejam materializados; nenhuma métrica foi calculada e nenhuma mudança operacional foi feita.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "status": "BLOCKED_PRE_EXECUTION_DATASET_IDENTITY_UNVERIFIED",
+          "decision": "INVESTIGATE",
+          "notes": "Dia 6B: auditoria adversarial pré-execução encontrou que a Família Drift Switching permanece com symbol=null e data_status=symbol_enumeration_pending em data/markets.json; não existe dataset bruto específico de E000002 com manifest/hash materializado. O desenho 60/20/20, scaling train-only, baseline train-only, horizonte único e modelo fixo é preservado, porém a cronologia não pode ser verificada sobre dados inexistentes e a regra determinística de amostragem/embargo para evitar overlap entre targets de 20 ticks e fronteiras de split ainda não está materializada. Nenhum outcome foi inspecionado, nenhum fit foi executado e nenhuma estatística foi calculada. Classificação científica: INSUFFICIENT_EVIDENCE. Limitação técnica: DATASET_IDENTITY_AND_SYMBOL_ENUMERATION_NOT_MATERIALIZED. Não executar E000002 até correção prospectiva desses pré-requisitos; não promover, não iniciar Shadow e não alterar mandato/executor.",
+          "next_action": "Day 6C audits the pre-execution barrier. If scientific continuation is retained, prospectively materialize Drift Switching symbol enumeration, raw dataset identity/manifest/hash and an explicit non-overlap/embargo rule before any outcomes are inspected or model fitting occurs."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 6,
+        "date": "2026-09-03",
+        "time": "14:00",
+        "subcycle": "B",
+        "title": "Validação adversarial do Dia 6 — barreira pré-execução de H0004/E000002",
+        "decision": "INVESTIGATE — DO_NOT_EXECUTE_E000002",
+        "summary": "A pré-especificação científica preserva controles úteis, mas a execução foi bloqueada antes de qualquer outcome porque a Família Drift Switching não possui símbolos canonically enumerated nem dataset/manifest/hash materializado; overlap/leakage entre targets e fronteiras de split também exige regra determinística explícita antes do fit.",
+        "hypotheses": [
+          "H0004"
+        ],
+        "experiment": "E000002",
+        "scientific_diagnosis": "INSUFFICIENT_EVIDENCE",
+        "technical_diagnosis": "TECHNICAL_LIMITATION — DATASET_IDENTITY_AND_SYMBOL_ENUMERATION_NOT_MATERIALIZED_FOR_E000002",
+        "attacks": [
+          "dataset identity",
+          "symbol selection bias",
+          "chronology",
+          "target construction",
+          "overlap/leakage",
+          "train-only scaling",
+          "baseline fairness",
+          "multiple testing"
+        ],
+        "limitations": "Nenhum outcome foi inspecionado, nenhum modelo foi ajustado e nenhuma métrica foi calculada. Telemetria operacional read-only não observada neste runtime.",
+        "next_step": "Day 6C: audit this pre-execution block. Do not execute E000002 without prospectively materialized Drift Switching symbol enumeration, raw dataset manifest/hash and explicit non-overlap/embargo logic. No Shadow, promotion or mandate/executor change.",
+        "report": "research/2026/09/2026-09-03/cycle-B/RUN-20260903-06B-R1/report.md"
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 6B"
+    }
+  ]
+}

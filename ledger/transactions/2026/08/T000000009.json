@@ -1,0 +1,83 @@
+{
+  "id": "T000000009",
+  "applied_at": "2026-08-30T23:01:35+00:00",
+  "intent_digest": "29588bcc84d6369fde6e6e7721da47f18f7bc1d2c30d25ee4f0d2f04038038e7",
+  "actor": "research-ai",
+  "cycle": "Day 2C",
+  "note": "Auditoria do Dia 2: reconhecer o reteste 2B como canônico, manter H0001 em HOLD, auditar insuficiência estatística e reprodutibilidade V3, e pré-registrar aquisição histórica maior sem alterar o detector.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "HISTORICAL_VALIDATION_CONTINUES_PREREGISTERED_SCALEUP",
+          "decision": "HOLD",
+          "notes": "Auditoria Dia 2C: o run canônico RUN-20260830-02B-R2 permanece cientificamente admissível como evidência empírica inicial e substitui apenas como resultado vigente a tentativa técnica RUN-20260830-02B-R1, que continua preservada. O reteste manteve o detector, split 60/20/20, limiar 1-1/N apenas na calibração e proibição de tuning pós-hoc; processou 14 Crash/Boom e observou 17 eventos em validação e 15 em OOS. Isso é insuficiente para inferência familiar robusta e Holm, portanto nenhum p-valor, edge ou promoção é admissível. Auditoria V3 adicional: o manifesto DS-20260830-DERIV-CRASHBOOM-2B-R2 está presente e hashed, mas seus campos symbols, record_count e período estão incompletos; os ticks integrais não foram preservados como dataset bruto imutável, somente hashes/amostras/métricas e metadados por símbolo no artefato de aquisição. Isso limita reprodutibilidade de longo prazo e deve ser corrigido prospectivamente, sem reescrever R2. Próxima aquisição pré-registrada: mesmos 14 símbolos clássicos canonizados em R2; alvo fixo de 100000 ticks únicos por símbolo; paginação determinística em páginas de até 5000 ticks, com um cutoff temporal congelado no início da aquisição e continuidade para trás usando o epoch anterior ao tick mais antigo da página; remover somente duplicatas exatas de paginação, nunca filtrar por outcome; não substituir símbolo nem aumentar/diminuir amostra após olhar resultados; registrar por símbolo count, first_epoch, last_epoch e SHA-256 do dataset integral; preservar o dataset bruto em armazenamento durável conforme V3 e manter no GitHub apenas manifesto/hash quando o tamanho exigir; aplicar exatamente o detector já congelado e só então executar inferência primária e Holm. Se algum símbolo não atingir 100000 ticks por indisponibilidade da fonte, registrar shortfall e manter HOLD, sem compensar com outro símbolo."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 2,
+        "date": "2026-08-30",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 2 — H0001 sobrevive, mas permanece sem confirmação",
+        "question": "A evidência canônica acumulada no Dia 2 justifica rejeitar H0001, promovê-la ou mantê-la em investigação, e E000001 está suficientemente íntegro para continuar sem tuning retrospectivo?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Auditoria somente dos artefatos canônicos V3 relevantes: estado atual, índice de E000001/H0001, pré-registro do Dia 2A, run canônico RUN-20260830-02B-R2 e manifesto DS-20260830-DERIV-CRASHBOOM-2B-R2. A tentativa RUN-20260830-02B-R1 foi tratada apenas como falha técnica preservada. Foram verificados aderência ao pré-registro, leakage/look-ahead, tuning pós-hoc, massa de eventos, multiple testing/Holm, reprodutibilidade do dataset e invariantes Fail-Closed. Nenhum novo dado de mercado foi inspecionado e nenhuma métrica de performance foi criada.",
+        "evidence": "O run oficial 2B-R2 preservou o protocolo congelado e adquiriu dados reais para 14 Crash/Boom. Foram observados 17 eventos na validação e 15 no OOS, 32 no agregado fora da calibração. O próprio reteste não declarou p-valores porque vários símbolos/segmentos têm zero ou poucos eventos; melhorias descritivas isoladas de log-likelihood não constituem evidência familiar reproduzível. Não existe base para rejeitar o hazard constante, mas também não existe evidência para rejeitar H0001 como hipótese de pesquisa. A aquisição técnica está resolvida. A auditoria V3 encontrou uma limitação de reprodutibilidade: o manifesto canônico possui hash e localização, porém symbols, record_count e período estão vazios, e os ticks integrais não foram materializados como dataset bruto imutável; o artefato disponível preserva hashes, amostras e métricas por símbolo. Isso deve ser corrigido prospectivamente na próxima aquisição, sem alterar ou apagar R2.",
+        "limitations": "A amostra atual é subdimensionada para inferência por símbolo e correção Holm. Não há p-valor familiar defensável, Walk-Forward, Shadow ou evidência econômica de payout/custos. A ausência de rejeição do hazard constante não confirma memória. A incompletude de metadados do manifesto e a não preservação integral dos ticks reduzem a reprodutibilidade de longo prazo do R2, embora os hashes e períodos por símbolo permitam auditoria parcial. Nenhuma conclusão sobre manipulação da plataforma é suportada.",
+        "audit": "PASS científico com ressalva de reprodutibilidade: nenhuma regra do detector foi alterada após outcomes; R1 continua imutável e não canônico; R2 é o resultado oficial; nenhuma promoção ocorreu; Champion permanece NONE; executor continua DEMO_ONLY, execution_enabled=false e fail_closed=true. Ressalva: a próxima aquisição precisa materializar metadados completos e preservação durável do dataset bruto ou referência imutável equivalente.",
+        "decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.",
+        "next_step": "Na próxima validação de H0001, usar os mesmos 14 símbolos clássicos de R2 e adquirir exatamente 100000 ticks únicos por símbolo por paginação determinística de até 5000 ticks, congelando cutoff temporal antes da aquisição. Não alterar detector, bins, split 60/20/20, limiar 1-1/N, universo ou regras após observar outcomes. Preservar dataset bruto de forma durável, preencher manifesto V3 com símbolos/count/períodos/hashes e então executar a inferência primária e Holm. Se a massa ainda for insuficiente, manter HOLD; não fazer tuning para salvar a hipótese.",
+        "summary": "O juiz do Dia 2 não absolveu nem condenou H0001: ela permanece HOLD. O reteste real foi metodologicamente limpo, mas 32 eventos fora da calibração não sustentam conclusão robusta. E000001 pode seguir para uma amostra pré-registrada maior, agora com exigência explícita de reprodutibilidade V3.",
+        "report": "research/2026-08-30-day-02C-audit.md",
+        "report_content": "# Kell Quant Lab v3 — Dia 2C — Auditoria & Decisão\n\n## Pergunta\nA evidência canônica acumulada no Dia 2 justifica rejeitar H0001, promovê-la ou mantê-la em investigação, e E000001 está suficientemente íntegro para continuar sem tuning retrospectivo?\n\n## Método\nA auditoria consultou apenas o contexto V3 necessário: `state/current.json`, os índices de `H0001` e `E000001`, o pré-registro do Dia 2A, o run canônico `RUN-20260830-02B-R2` e o manifesto `DS-20260830-DERIV-CRASHBOOM-2B-R2`. A primeira tentativa `RUN-20260830-02B-R1` permaneceu preservada como falha técnica e não foi tratada como resultado científico vigente. Foram auditados aderência ao pré-registro, leakage/look-ahead, tuning pós-hoc, suficiência de eventos, multiple testing/Holm, reprodutibilidade de dados e segurança Fail-Closed. Nenhum novo outcome de mercado foi usado.\n\n## Evidência\nO reteste 2B-R2 manteve o detector e o desenho 60/20/20 congelados e processou 14 Crash/Boom reais. Houve 17 eventos na validação e 15 no OOS, totalizando 32 eventos fora da calibração. A massa é esparsa por símbolo; melhorias descritivas isoladas não bastam para inferência familiar, e o próprio runner corretamente não inventou p-valores nem significância. Portanto, a evidência não rejeita de forma defensável o hazard constante. Ao mesmo tempo, isso não falsifica H0001: a hipótese permanece aberta porque o teste está subdimensionado.\n\n## Auditoria de integridade V3\nA cadeia de reteste está correta: R1 é `FAILED_TECHNICAL`, não canônico e aponta para R2; R2 é `OFFICIAL`, canônico e aponta para R1 por `supersedes`. O manifesto do dataset existe e possui SHA-256, mas apresenta `symbols`, `record_count`, `period_start` e `period_end` incompletos. Além disso, os ticks integrais não estão preservados no repositório como dataset bruto imutável; o artefato de aquisição guarda hashes, amostras, períodos e métricas por símbolo. Isso não apaga o valor exploratório de R2, mas limita sua reprodutibilidade científica de longo prazo. A correção será prospectiva: R2 não será reescrito.\n\n## Segurança\nChampion permanece `NONE`. O executor continua `DEMO_ONLY`, `execution_enabled=false`, `research_approved=false` e `fail_closed=true`. Nenhuma operação foi autorizada ou enviada por esta auditoria.\n\n## Decisão\n**HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.**\n\nA ausência de rejeição do hazard constante não deve ser interpretada como evidência de memória. H0001 apenas sobreviveu ao teste atual porque a evidência não é forte o suficiente para uma conclusão em nenhuma direção.\n\n## Pré-registro da próxima aquisição\nAntes de novo outcome, fica congelado para a próxima validação de E000001:\n\n- mesmos 14 símbolos clássicos canonizados no reteste R2;\n- exatamente **100.000 ticks únicos por símbolo** como alvo;\n- páginas de no máximo 5.000 ticks;\n- um cutoff temporal congelado no início da aquisição;\n- paginação para trás usando o epoch imediatamente anterior ao tick mais antigo já recebido;\n- remover somente duplicatas exatas geradas por paginação;\n- nenhum símbolo será substituído com base em outcome;\n- se a fonte entregar menos de 100.000 ticks para um símbolo, registrar o shortfall sem compensação;\n- preservar por símbolo contagem, primeiro/último epoch e SHA-256 do dataset integral;\n- preservar o dataset bruto em armazenamento durável conforme a V3, mantendo no GitHub manifesto/hash quando o volume exigir;\n- detector, bins, split 60/20/20, limiar `1-1/N`, baseline e Holm permanecem inalterados.\n\nSomente após essa aquisição será admissível executar a inferência primária e a correção Holm. Se a massa de eventos continuar insuficiente, a decisão permanece HOLD.\n\n## Limitações\nNão existe ainda p-valor familiar defensável, Walk-Forward, Shadow, validação econômica de payout/custos ou qualquer evidência que autorize DEMO. Não há evidência de manipulação da Deriv.\n\n## Próximo passo\nExecutar a aquisição pré-registrada maior em uma futura validação, com preservação durável dos dados e manifesto V3 completo, e tentar novamente falsificar H0001 sem mudar suas regras.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 2C auditou o reteste oficial da H0001. A hipótese permanece HOLD: não foi confirmada nem rejeitada. E000001 pode continuar com aquisição maior pré-registrada e exigência reforçada de reprodutibilidade V3.",
+        "research": {
+          "date": "2026-08-30",
+          "title": "Dia 2C — Auditoria: H0001 continua viva, mas não confirmada",
+          "decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER"
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "next_step": "Adquirir prospectivamente 100000 ticks por cada um dos mesmos 14 símbolos de R2, com paginação congelada, dataset durável e manifesto V3 completo; depois executar inferência primária e Holm sem tuning."
+        },
+        "signal": {
+          "status": "OFF"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 2C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

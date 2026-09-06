@@ -1,0 +1,24 @@
+{
+  "id": "T000000003",
+  "applied_at": "2026-08-29T17:14:23+00:00",
+  "intent_digest": "cf75455884a6ebb65a074babb34bdc7097ba41c5c8e5a45b00ecde15b5f49ee6",
+  "actor": "research-ai",
+  "cycle": "Day 1B",
+  "note": "Repair dashboard projection metadata so the visible cycle and timestamp are derived from the latest canonical research entry rather than stale values.",
+  "operations": [
+    {
+      "op": "set_status",
+      "payload": {
+        "research": {
+          "decision": "HOLD — INCONCLUSIVE EVIDENCE"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

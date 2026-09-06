@@ -1,0 +1,39 @@
+{
+  "evidence_id": "EVD-20260903-06A",
+  "title": "Dia 6A — pré-registro outcome-based de H0004/E000002",
+  "date": "2026-09-03",
+  "cycle": "A",
+  "run_id": "RUN-20260903-06A-R1",
+  "question": "Após o encerramento inconclusivo de E000001 e o bloqueio de identificabilidade de H0002/H0003, qual é a próxima pergunta científica falsificável que evita rótulos latentes e circularidade?",
+  "observation": "E000001 foi encerrado inconclusivamente por stop rule de aquisição no Dia 5C. H0002 e H0003 permanecem abertas, porém sem ground truth independente de regime. O materializador determinístico atribuiu H0004 e E000002 a uma reformulação prospectiva de H0003 baseada em outcome observável, sem inspeção empírica de outcomes neste ciclo.",
+  "methodology_planned": "H0004 testa se signed_return_lag1 e rolling_mean_return_20 melhoram a previsão do sinal do retorno futuro de 20 ticks contra a probabilidade incondicional estimada somente no treino. E000002 congela split cronológico 60/20/20, regressão logística fixa, scaling train-only e OOS log-loss como métrica primária.",
+  "falsification": "A alegação preditiva de H0004-v1 é rejeitada se a OOS log-loss do modelo não for estritamente menor que a OOS log-loss da baseline. Melhora apenas em validação não conta. Nenhuma busca pós-hoc de horizonte, janela, feature, modelo ou threshold é permitida.",
+  "controls": {
+    "look_ahead": "features em t usam somente informação disponível até t; target usa t+1..t+20",
+    "leakage": "standardization e baseline estimadas somente no treino; split cronológico sem shuffle",
+    "selection_bias": "um único horizonte e um único modelo congelados antes dos outcomes",
+    "multiple_testing": "nenhuma grade de horizontes/janelas em H0004-v1; qualquer alteração material exige nova versão/hipótese com lineage",
+    "promotion": "independent OOS replication, Walk-Forward, Shadow/prospectivo e gates canônicos permanecem obrigatórios"
+  },
+  "scientific_diagnosis": "INSUFFICIENT_EVIDENCE — NEW_PREREGISTRATION",
+  "technical_diagnosis": "O endpoint operacional read-only não pôde ser observado neste runtime. A falha de aquisição de E000001 permanece uma limitação técnica encerrada e separada da ciência de H0004.",
+  "decision": "CONTINUE — H0004/E000002 PRE_REGISTERED_NOT_EXECUTED. H0001 permanece HOLD; H0002/H0003 não são pseudo-validadas sem ground truth. Nenhuma promoção, Shadow ou mudança operacional.",
+  "limitations": "Nenhum dataset de H0004 foi adquirido ou inspecionado neste ciclo. Nenhum saldo, equity, trade ou estado instantâneo do executor foi inferido. A existência de um outcome observável torna a pergunta falsificável, mas não constitui evidência de edge.",
+  "next_step": "No 6B, auditar adversarialmente H0004/E000002 antes de executar: identidade do símbolo/dataset, cronologia, target, overlap entre amostras, leakage nos splits, scaling train-only, justiça da baseline e disponibilidade determinística de aquisição. Se qualquer pré-requisito for unverificável, registrar INSUFFICIENT_EVIDENCE/TECHNICAL_FAILURE em vez de executar teste contaminado.",
+  "market": "Família Drift Switching",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": "H0004",
+  "experiment": "E000002",
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV",
+  "technical": {
+    "demo_only_preserved": true,
+    "active_mandate_changed": false,
+    "strategy_registry_changed": false,
+    "capital_policy_changed": false,
+    "market_selection_changed": false,
+    "champion_changed": false,
+    "executor_changed": false,
+    "outcomes_inspected": false
+  }
+}

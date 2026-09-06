@@ -1,0 +1,87 @@
+{
+  "id": "T000000010",
+  "applied_at": "2026-08-31T12:06:52+00:00",
+  "intent_digest": "583e048d7f74c35c28691ac874a5f215419e302727ce8ab05c0a096cdfd3e19f",
+  "actor": "research-ai",
+  "cycle": "Day 3A",
+  "note": "Descoberta do Dia 3: operacionalizar prospectivamente a aquisição ampliada já pré-registrada para H0001/E000001, sem observar novos outcomes e sem alterar detector, universo, split ou regras de inferência.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "READY_FOR_PREREGISTERED_LARGE_ACQUISITION",
+          "decision": "HOLD",
+          "notes": "Dia 3A: nenhuma nova evidência de mercado foi observada. A auditoria 2C já congelou prospectivamente a próxima aquisição de H0001: os mesmos 14 Crash/Boom canônicos do reteste R2, alvo de 100000 ticks únicos por símbolo, páginas de até 5000 ticks, cutoff temporal congelado no início, paginação determinística para trás, remoção somente de duplicatas exatas de paginação, nenhum replacement de símbolo por outcome, registro de shortfall quando a fonte não atingir o alvo, preservação durável do dataset integral ou referência imutável equivalente e manifesto V3 completo com símbolos, contagem, períodos e SHA-256. O Dia 3A apenas transforma esse desenho já aprovado em prontidão operacional para o próximo subciclo de Validação Adversarial. Permanecem congelados detector, signed_tick_move, limiar empírico 1-1/N calculado apenas na calibração, bins de idade, split cronológico 60/20/20, baseline de hazard constante, alternativa condicional à idade, controles e correção Holm. Nenhum resultado, p-value, significância, backtest, payout, edge ou promoção foi calculado neste subciclo."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 3,
+        "date": "2026-08-31",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Preparação prospectiva da aquisição ampliada de H0001",
+        "question": "O desenho já pré-registrado para ampliar E000001 pode ser executado no próximo subciclo sem introduzir graus de liberdade novos, leakage, tuning retrospectivo ou perda de reprodutibilidade V3?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Recuperação progressiva V3 a partir de state/current.json e dos índices de H0001/E000001, seguida de revisão somente do run canônico Dia 2C e da interface de persistência. Nenhum dataset bruto foi aberto e nenhum novo outcome de mercado foi consultado. O subciclo verificou se o protocolo ampliado previamente congelado contém regras suficientes para aquisição determinística e reprodutível: universo fixo, alvo de amostra, paginação, cutoff temporal, deduplicação, tratamento de shortfall, hashes e manifesto. Não houve alteração de parâmetros científicos.",
+        "evidence": "O estado V3 vigente mantém H0001 em HOLD e E000001 em HISTORICAL_VALIDATION, com NO_CHAMPION e executor Fail-Closed. O Dia 2C já pré-registrou exatamente 100000 ticks únicos para cada um dos mesmos 14 Crash/Boom do R2, páginas de até 5000 ticks, cutoff temporal congelado antes da aquisição, paginação determinística para trás, deduplicação apenas exata, proibição de substituição de símbolos baseada em outcome, shortfall explícito e manifesto V3 completo. Essas regras são suficientes para autorizar uma tentativa de aquisição no próximo subciclo sem tuning pós-hoc. A interface canônica continua sendo data/write_intent.json -> engine/state_core.py -> materialização V3.",
+        "limitations": "Nenhum novo tick foi adquirido neste subciclo, portanto não existe nova evidência a favor ou contra memória de hazard. A capacidade efetiva da fonte de fornecer 100000 ticks únicos por cada símbolo ainda precisa ser demonstrada na aquisição. Não há p-value familiar defensável, Walk-Forward, Shadow, validação econômica ou autorização DEMO.",
+        "audit": "PASS de pré-execução: nenhuma tentativa anterior foi reescrita; nenhum ID foi escolhido manualmente; nenhuma projeção/site foi tratada como banco da verdade; nenhum parâmetro de H0001 foi ajustado; Champion permanece NONE; executor permanece DEMO_ONLY, execution_enabled=false e fail_closed=true.",
+        "decision": "HOLD — E000001 ESTÁ PRONTO PARA A AQUISIÇÃO AMPLIADA PRÉ-REGISTRADA; H0001 CONTINUA NÃO CONFIRMADA E SEM PROMOÇÃO.",
+        "next_step": "No subciclo B de Validação Adversarial, executar a aquisição pré-registrada para os mesmos 14 Crash/Boom com alvo de 100000 ticks únicos por símbolo e paginação determinística. Preservar integralmente os artefatos de aquisição/manifestos e somente depois aplicar o detector congelado, inferência primária, controles e Holm. Se houver shortfall ou falha técnica, registrar sem compensação e manter HOLD.",
+        "summary": "Dia 3A não testou H0001 novamente; deixou E000001 operacionalmente pronto para a aquisição ampliada já congelada, sem adicionar graus de liberdade científicos nem observar novos outcomes.",
+        "report": "research/2026-08-31-day-03A-discovery.md",
+        "report_content": "# Kell Quant Lab v3 — Dia 3A — Descoberta\n\n## Pergunta\nO desenho já pré-registrado para ampliar E000001 pode ser executado no próximo subciclo sem introduzir graus de liberdade novos, leakage, tuning retrospectivo ou perda de reprodutibilidade V3?\n\n## Método\nFoi seguido o protocolo de contexto V3: `state/current.json` primeiro, depois os índices focais de `H0001` e `E000001` e o registro canônico mais recente necessário. Nenhum dataset bruto e nenhum novo outcome de mercado foram consultados.\n\nA missão deste subciclo foi operacionalizar, sem modificar, o pré-registro deixado pela auditoria 2C. Permanecem congelados os mesmos 14 Crash/Boom canonizados em R2, alvo de 100.000 ticks únicos por símbolo, páginas de até 5.000 ticks, cutoff temporal congelado antes da aquisição, paginação determinística para trás, deduplicação apenas de duplicatas exatas de paginação e shortfall explícito quando a fonte não atingir o alvo.\n\n## Evidência\nO estado V3 mantém H0001 em `HOLD`, E000001 em `HISTORICAL_VALIDATION`, Champion `NONE` e executor `DEMO_ONLY` com `fail_closed=true`. O pré-registro do Dia 2C contém regras suficientes para uma tentativa de aquisição ampliada sem introduzir tuning pós-hoc.\n\n## Limitações\nNenhum novo tick foi adquirido e nenhuma estatística de outcome foi calculada neste subciclo. Portanto o Dia 3A não aumenta nem reduz a evidência empírica sobre memória do hazard. A disponibilidade efetiva de 100.000 ticks únicos por símbolo ainda precisa ser verificada no subciclo B.\n\n## Auditoria\nPASS de pré-execução. Nenhuma tentativa anterior foi sobrescrita, nenhum parâmetro científico foi alterado e nenhuma promoção foi realizada. O site continua sendo projeção automática.\n\n## Decisão\n**HOLD — E000001 ESTÁ PRONTO PARA A AQUISIÇÃO AMPLIADA PRÉ-REGISTRADA; H0001 CONTINUA NÃO CONFIRMADA E SEM PROMOÇÃO.**\n\n## Próximo passo\nNo subciclo B de Validação Adversarial, executar a aquisição pré-registrada para os mesmos 14 Crash/Boom. Preservar dataset/manifestos de forma V3 e, somente após aquisição íntegra, executar detector congelado, inferência primária, controles e Holm. Falha técnica ou shortfall não autoriza alterar o protocolo nem substituir símbolos.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 3A preparou E000001 para a aquisição ampliada já pré-registrada da H0001. Nenhum novo outcome foi observado; H0001 permanece HOLD e sem promoção.",
+        "research": {
+          "date": "2026-08-31",
+          "title": "Dia 3A — Preparação prospectiva da aquisição ampliada de H0001",
+          "decision": "HOLD — E000001 ESTÁ PRONTO PARA A AQUISIÇÃO AMPLIADA PRÉ-REGISTRADA; H0001 CONTINUA NÃO CONFIRMADA"
+        },
+        "experiment": {
+          "day": 3,
+          "updated_at": "2026-08-31 08:00 America/Sao_Paulo"
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "next_step": "No Dia 3B, executar a aquisição pré-registrada de 100000 ticks únicos por cada um dos mesmos 14 Crash/Boom, preservar dataset/manifesto V3 e então aplicar inferência primária, controles e Holm sem tuning."
+        },
+        "signal": {
+          "status": "OFF"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 3A"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

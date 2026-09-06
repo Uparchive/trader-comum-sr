@@ -1,0 +1,40 @@
+{
+  "evidence_id": "EVD-20260902-05C",
+  "title": "Dia 5C — auditoria e decisão formal sobre E000001",
+  "date": "2026-09-02",
+  "cycle": "C",
+  "run_id": "RUN-20260902-05C-R1",
+  "question": "A evidência de 5A/5B permite uma decisão científica ou operacional, e qual deve ser a disposição formal de E000001 após a stop rule de aquisição?",
+  "observation": "5A pré-registrou exatamente uma tentativa final sem tuning. 5B executou essa tentativa sob o protocolo congelado e obteve 0 de 1400000 ticks utilizáveis em 14/14 símbolos, com EMPTY_OR_MALFORMED_PAGE e coverage_complete=false. Nenhum threshold, teste primário, OOS, Walk-Forward, permutação, Holm ou Shadow pôde avançar nesta tentativa.",
+  "audit": "A cadeia A→B é coerente com a stop rule pré-registrada e não contém evidência nova que autorize promoção ou rejeição de H0001. A falha de aquisição é técnica e separada da ciência. O Active Mandate permanece válido, ACTIVE e DEMO_ONLY; BASELINE-SR-v1 continua incumbente sem alegação de edge; Champion permanece NONE; CP0001-v1 e MS0001-v1 permanecem congelados.",
+  "scientific_diagnosis": "INSUFFICIENT_EVIDENCE",
+  "technical_diagnosis": "TECHNICAL_FAILURE na rota de aquisição científica de E000001; telemetria operacional read-only não observada neste runtime e não inferida.",
+  "decision": "CLOSE_E000001_INCONCLUSIVE — STOP RULE SATISFIED. H0001 permanece HOLD/INSUFFICIENT_EVIDENCE, não confirmada e não falsificada. Nenhum novo retry automático de E000001. Nenhum Shadow, Challenger ou Champion. Baseline e Active Mandate mantidos sem alteração.",
+  "gates": {
+    "preregistration": "SATISFIED_FOR_E000001",
+    "historical_validation": "INCOMPLETE_FOR_PROMOTION",
+    "controls": "PRESERVED",
+    "oos": "INSUFFICIENT_FOR_PROMOTION",
+    "walk_forward": "NOT_SATISFIED",
+    "multiple_testing": "PRE_REGISTERED_BUT_NOT_EXECUTABLE_IN_FINAL_ATTEMPT",
+    "shadow_prospective": "NOT_SATISFIED",
+    "promotion": "BLOCKED"
+  },
+  "limitations": "A tentativa final não produziu amostra utilizável. O endpoint operacional read-only não foi acessível neste runtime; saldo, equity, estado instantâneo e trades não foram inventados. A decisão não altera a governança operacional.",
+  "next_step": "No próximo A, tratar E000001 como encerrado inconclusivamente e selecionar a próxima melhor pergunta científica a partir de H0001/H0002/H0003 e dos índices canônicos. Reabrir a mesma pergunta somente por nova hipótese/experimento versionado com lineage explícita e justificativa metodológica; não repetir E000001 automaticamente.",
+  "market": "Família Crash/Boom",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": "H0001",
+  "experiment": "E000001",
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV",
+  "technical": {
+    "demo_only_preserved": true,
+    "active_mandate_changed": false,
+    "strategy_registry_changed": false,
+    "capital_policy_changed": false,
+    "market_selection_changed": false,
+    "champion_changed": false,
+    "executor_changed": false
+  }
+}

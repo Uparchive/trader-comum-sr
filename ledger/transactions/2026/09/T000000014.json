@@ -1,0 +1,81 @@
+{
+  "id": "T000000014",
+  "applied_at": "2026-09-01T17:12:45+00:00",
+  "intent_digest": "eae696de7adf2e34ba7d1c899db7e7644a667a4d3d0c5aee1a1b5114fe9b0acd",
+  "actor": "research-ai",
+  "cycle": "Day 4B",
+  "note": "Validação Adversarial do Dia 4B: tentativa de aquisição corrigida executada; gateway retornou HTTP 502 de forma persistente, portanto não houve nova inferência científica.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "ACQUISITION_TECHNICAL_FAILURE",
+          "decision": "HOLD",
+          "notes": "Dia 4B: o protocolo de aquisição prospectivamente corrigido foi tentado com PAGE=1000, cursor end=min_epoch-1, deduplicação, pacing, retry/backoff e checkpoint. A tentativa 2 falhou em /research/active-symbols após seis HTTP 502 consecutivos. A tentativa 3 eliminou essa dependência usando exatamente o universo de 14 símbolos já congelado no 3B, mas /research/ticks-history também retornou seis HTTP 502 consecutivos antes de qualquer amostra utilizável. Nenhuma regra científica de H0001 foi alterada e nenhuma inferência foi produzida."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 4,
+        "date": "2026-09-01",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Validação adversarial da aquisição corrigida de H0001",
+        "question": "A aquisição pré-registrada no 4A consegue obter a cobertura necessária para repetir E000001 sem alterar o protocolo científico?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Executar o runner 4B com páginas efetivas de 1000 ticks, cursor end=min_epoch-1, deduplicação, pacing de 0,30 s, retry/backoff e checkpoint. Após falha técnica em active_symbols, uma nova tentativa reutilizou exclusivamente o universo de 14 símbolos já congelado no 3B, sem qualquer seleção baseada em outcome. Detector, limiar 1-1/N, split 60/20/20, bins, seed, permutações e Holm permaneceram inalterados.",
+        "evidence": "Tentativa 2: exitcode 1; seis respostas HTTP 502 consecutivas em /research/active-symbols. Tentativa 3: exitcode 1; após remover apenas essa dependência redundante e usar o universo congelado, seis respostas HTTP 502 consecutivas em /research/ticks-history. Nenhum dataset 4B completo foi materializado e nenhuma estatística nova válida foi produzida.",
+        "limitations": "A indisponibilidade do gateway impediu testar se os 14 símbolos oferecem 100000 ticks históricos. Como não houve aquisição utilizável, este subciclo não informa a validade de H0001 nem a suficiência da amostra planejada.",
+        "decision": "HOLD — TECHNICAL_FAILURE DE AQUISIÇÃO; H0001 NÃO FOI REJEITADA NEM PROMOVIDA. SHADOW E DEMO PERMANECEM BLOQUEADOS.",
+        "next_step": "Dia 4C: auditar a falha técnica do 4B separadamente da hipótese científica e decidir se E000001 deve aguardar recuperação do gateway ou ser encerrado como inconclusivo por limitação operacional, sem tuning retrospectivo.",
+        "summary": "O 4B executou o reteste de aquisição pré-registrado, mas o gateway permaneceu indisponível com HTTP 502. A falha é técnica e não altera a evidência científica de H0001.",
+        "report": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/report.md",
+        "report_content": "# Dia 4B — Validação adversarial da aquisição corrigida de H0001\n\n## Pergunta\nA aquisição pré-registrada no 4A consegue obter a cobertura necessária para repetir E000001 sem alterar o protocolo científico?\n\n## Método\nFoi executado o runner 4B com PAGE=1000, cursor `end=min_epoch-1`, deduplicação, pacing, retry/backoff e checkpoint. Após falha técnica em `active_symbols`, a tentativa seguinte reutilizou exatamente o universo de 14 símbolos já congelado no 3B, sem seleção por outcome. Nenhum parâmetro científico foi alterado.\n\n## Evidência\nA tentativa 2 terminou com exitcode 1 após seis HTTP 502 consecutivos em `/research/active-symbols`. A tentativa 3 também terminou com exitcode 1: o universo congelado permitiu avançar além dessa etapa, porém `/research/ticks-history` retornou seis HTTP 502 consecutivos antes de gerar amostra utilizável.\n\n## Limitações\nNão houve dataset 4B completo nem nova inferência. Portanto o resultado não informa se H0001 é válida ou inválida e não testa a suficiência de 100000 ticks por símbolo.\n\n## Decisão\n**HOLD — TECHNICAL_FAILURE.** H0001 permanece inalterada. Sem Shadow, sem DEMO e Champion NONE.\n\n## Próximo passo\nNo 4C, auditar a falha técnica separadamente da ciência e decidir prospectivamente se E000001 aguarda recuperação do gateway ou se é encerrado como inconclusivo por limitação operacional.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 4B concluído como TECHNICAL_FAILURE: gateway retornou HTTP 502 persistente; nenhuma nova inferência foi produzida.",
+        "research": {
+          "title": "Dia 4B — Validação adversarial da aquisição",
+          "decision": "HOLD — falha técnica de aquisição; H0001 inalterada.",
+          "next_step": "4C: auditar a falha técnica e decidir o destino prospectivo de E000001 sem tuning."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "BLOQUEADO POR FALHA TÉCNICA DE AQUISIÇÃO"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION",
+          "execution_enabled": false,
+          "research_approved": false
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 4B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

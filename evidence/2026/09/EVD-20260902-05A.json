@@ -1,0 +1,29 @@
+{
+  "evidence_id": "EVD-20260902-05A",
+  "title": "Dia 5A — última janela prospectiva de aquisição",
+  "date": "2026-09-02",
+  "cycle": "A",
+  "run_id": "RUN-20260902-05A-R1",
+  "question": "A rota de aquisição está disponível para uma última tentativa operacional congelada de E000001 sem alterar H0001, ou a limitação técnica deve encerrar o experimento como inconclusivo?",
+  "observation": "O 4C autorizou uma espera operacional limitada. Neste runtime, o host do gateway de pesquisa não pôde ser resolvido, portanto não houve resposta HTTP que permita afirmar recuperação ou falha persistente do serviço.",
+  "analysis": "A falha de resolução observada é limitação técnica desta execução e não evidência científica contra H0001. Para evitar repetição indefinida, fica pré-registrada exatamente uma tentativa final de aquisição no 5B sob o protocolo científico já congelado.",
+  "method": "Preservar integralmente detector, universo, split cronológico 60/20/20, limiar calibrado somente na calibração, bins, correção Holm, alvo de 100000 ticks por símbolo, paginação efetiva de 1000 ticks, deduplicação, cursor cronológico, pacing, retry/backoff e checkpoints. Nenhum tuning ou interpretação de outcomes no 5A.",
+  "falsification": "Se o 5B obtiver dados válidos, aplicar somente os testes pré-registrados e procurar evidência contrária à memória de hazard. Se a aquisição falhar novamente, classificar TECHNICAL_FAILURE/INSUFFICIENT_EVIDENCE e encaminhar E000001 ao 5C para encerramento inconclusivo por limitação persistente, sem novos retries automáticos.",
+  "limitations": "Nenhum novo tick foi adquirido e nenhuma estatística científica foi calculada no 5A. O endpoint operacional read-only também não foi usado como memória científica e nenhuma telemetria não observada foi inventada.",
+  "decision": "CONTINUE — UMA ÚNICA TENTATIVA FINAL NO 5B; H0001 NÃO CONFIRMADA; E000001 HOLD.",
+  "next_step": "Dia 5B executa exatamente uma tentativa final de aquisição/validação de E000001 sob protocolo congelado; falha repetida encerra retries e vai ao 5C como limitação técnica persistente.",
+  "market": "Família Crash/Boom",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": "H0001",
+  "experiment": "E000001",
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV",
+  "technical": {
+    "classification": "TECHNICAL_LIMITATION_LOCAL_RUNTIME",
+    "new_market_data": false,
+    "new_statistics": false,
+    "scientific_parameters_changed": false,
+    "operational_mandate_changed": false,
+    "demo_only_preserved": true
+  }
+}

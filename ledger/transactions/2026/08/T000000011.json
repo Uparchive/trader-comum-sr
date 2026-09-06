@@ -1,0 +1,86 @@
+{
+  "id": "T000000011",
+  "applied_at": "2026-08-31T17:52:02+00:00",
+  "intent_digest": "81cc0dae3db9b956006c000954960757e88720f4fe73bf5314f25e1636731a61",
+  "actor": "research-ai",
+  "cycle": "Day 3B",
+  "note": "Concluir o Dia 3B usando somente a evidência materializada pelo workflow Research 3B Resilient, preservando o protocolo congelado e mantendo Fail-Closed.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "HOLD_AFTER_LARGE_VALIDATION",
+          "decision": "HOLD",
+          "notes": "Dia 3B: aquisição ampliada executada sem tuning. Foram materializados 757123 ticks únicos dos 1400000 planejados; os 14 símbolos tiveram shortfall. Houve 1018 eventos em validação e 1006 em OOS. O modelo por idade melhorou log-loss em 3 símbolos na validação e 7 no OOS. Houve 1 rejeição após Holm, em BOOM500, mas esse símbolo teve aquisição severamente incompleta (2000 ticks no log operacional, 0 eventos de validação e 2 em OOS), portanto esse resultado isolado não satisfaz o critério prospectivo de robustez nem autoriza promoção. A evidência ampliada não estabelece memória reproduzível de hazard na família. H0001 permanece viva, mas não confirmada; nenhuma promoção para Shadow/DEMO. Dataset bruto comprimido preservado em data/acquisition/day-03b-large-2026-08-31.json.gz, resumo em data/acquisition/day-03b-large-2026-08-31-summary.json, SHA-256 gzip c96572ab8f1e66e2de0d21244c3acf0bd95620d337fb2521e119705ae2b8a5d7."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 3,
+        "date": "2026-08-31",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Validação adversarial ampliada de H0001",
+        "question": "A dependência entre idade desde o último spike e o próximo spike sobrevive ao teste ampliado pré-registrado de H0001?",
+        "markets": [
+          "14 índices clássicos Crash/Boom congelados no reteste 2B"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Aquisição histórica com cutoff congelado, paginação determinística para trás, deduplicação, detector e bins congelados, split cronológico 60/20/20, baseline de hazard constante, modelo condicionado à idade, 10000 permutações e correção Holm entre símbolos; sem tuning retrospectivo.",
+        "evidence": "Workflow concluído com sucesso e evidência persistida. Alvo: 1400000 ticks; obtidos: 757123. Todos os 14 símbolos tiveram shortfall. Eventos: 1018 em validação e 1006 em OOS. Melhora de log-loss: 3 símbolos na validação e 7 no OOS. Uma rejeição após Holm ocorreu em BOOM500, mas com aquisição severamente incompleta e massa de eventos insuficiente nesse símbolo, não satisfazendo o critério de robustez pré-registrado.",
+        "limitations": "A fonte/gateway apresentou paginação sem avanço e respostas 502 em múltiplos símbolos. Nenhum dos 14 atingiu 100000 ticks. O sinal estatístico isolado de BOOM500 não é evidência familiar robusta e não pode ser promovido post hoc.",
+        "decision": "HOLD — H0001 NÃO FOI CONFIRMADA PELO TESTE AMPLIADO; A EVIDÊNCIA É INSUFICIENTE PARA PROMOÇÃO. SEM SHADOW E SEM DEMO.",
+        "next_step": "No Dia 3C, auditar formalmente integridade da aquisição, shortfalls, resultado Holm e critérios de falsificação; decidir se H0001 merece reteste prospectivo adicional, revisão metodológica prospectiva ou arquivamento, sem alterar retrospectivamente o protocolo 3B.",
+        "summary": "O 3B aumentou fortemente a massa empírica, mas não produziu evidência robusta e reproduzível suficiente para confirmar H0001. A hipótese permanece HOLD e o executor continua Fail-Closed.",
+        "report": "research/2026-08-31-day-03B-validation.md",
+        "report_content": "# Dia 3B — Validação Adversarial ampliada de H0001\n\n## Pergunta\nA dependência entre idade desde o último spike e o próximo spike sobrevive ao teste ampliado pré-registrado de H0001?\n\n## Método\nForam mantidos sem tuning o universo dos 14 Crash/Boom, cutoff temporal congelado, paginação determinística para trás, detector de spike, bins de idade, split cronológico 60/20/20, baseline de hazard constante, alternativa condicionada à idade, 10.000 permutações e correção Holm.\n\n## Evidência\nO workflow `Research 3B Resilient` concluiu com sucesso e persistiu o dataset. O alvo era 1.400.000 ticks; foram obtidos 757.123. Todos os 14 símbolos tiveram shortfall. Houve 1.018 eventos em validação e 1.006 em OOS. O modelo de idade melhorou log-loss em 3 símbolos na validação e 7 no OOS. A correção Holm produziu uma rejeição em BOOM500, porém a aquisição desse símbolo foi severamente incompleta; o log operacional registrou 2.000 ticks, 0 eventos na validação e 2 no OOS. Esse resultado isolado não satisfaz o critério prospectivo de robustez e não pode ser promovido post hoc.\n\nO dataset bruto comprimido está em `data/acquisition/day-03b-large-2026-08-31.json.gz`; o resumo em `data/acquisition/day-03b-large-2026-08-31-summary.json`; SHA-256 gzip: `c96572ab8f1e66e2de0d21244c3acf0bd95620d337fb2521e119705ae2b8a5d7`.\n\n## Limitações\nOcorreram paginação sem avanço e erros HTTP 502. Nenhum símbolo atingiu 100.000 ticks. O resultado de BOOM500 é incompatível com uma conclusão familiar robusta devido ao shortfall extremo e à massa mínima de eventos.\n\n## Decisão\n**HOLD — H0001 NÃO FOI CONFIRMADA PELO TESTE AMPLIADO; A EVIDÊNCIA É INSUFICIENTE PARA PROMOÇÃO. SEM SHADOW E SEM DEMO.**\n\n## Próximo passo\nNo Dia 3C, auditar formalmente integridade, shortfalls, Holm e critérios de falsificação e decidir prospectivamente entre novo reteste, revisão metodológica futura ou arquivamento. O executor permanece Fail-Closed.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 3B concluído: aquisição ampliada materializada com 757123/1400000 ticks; H0001 permanece HOLD e não foi promovida.",
+        "research": {
+          "title": "Dia 3B — Validação adversarial ampliada de H0001",
+          "decision": "HOLD — H0001 NÃO FOI CONFIRMADA PELO TESTE AMPLIADO; SEM PROMOÇÃO.",
+          "summary": "757123 ticks materializados, 2024 eventos em validação+OOS, 1 rejeição Holm isolada sob shortfall severo; evidência insuficiente para confirmar memória reproduzível."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "next_step": "Dia 3C: auditoria formal da evidência ampliada e decisão prospectiva sobre H0001."
+        },
+        "signal": {
+          "state": "OFF",
+          "status": "Sem sinal executável"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION",
+          "execution_enabled": false,
+          "research_approved": false
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 3B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

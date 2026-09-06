@@ -1,0 +1,76 @@
+{
+  "id": "T000000024",
+  "applied_at": "2026-09-05T11:01:20+00:00",
+  "intent_digest": "bd35e38fbc38930e901dbc113782846111dccf88cdd92d911692d7b3126c2363",
+  "actor": "research-ai",
+  "cycle": "Day 8A",
+  "note": "Descoberta do Dia 8A: transformar o próximo passo do 7C em um protocolo de capacidade de aquisição/materialização verificável para H0004/E000002, sem observar outcomes, sem tuning e sem qualquer alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "BLOCKED_PRE_EXECUTION",
+          "decision": "CONTINUE_RESEARCH — ACQUISITION_CAPABILITY_PREREGISTERED; OUTCOMES FORBIDDEN UNTIL VERIFIED_SNAPSHOT_AND_DATASETS_EXIST",
+          "evidence": "Nenhum outcome científico foi observado no 8A. O 7C determinou que a próxima etapa trate aquisição/materialização como capacidade de infraestrutura separada. O protocolo de identidade permanece o do 7A: snapshot integral do catálogo público do provedor, filtro somente pela taxonomia/nome Drift Switching previamente declarada, zero seleção por performance; para cada símbolo exigir origem/provider, símbolo exato, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256 antes de qualquer fit.",
+          "next_step": "No 8B, executar somente o preflight adversarial de aquisição/materialização sob o protocolo congelado: materializar snapshot bruto verificável de active_symbols e datasets Drift Switching, registrar manifests/hashes, auditar identidade, cronologia, duplicatas, completude e embargo de 20 ticks. Se qualquer requisito não puder ser verificado, parar antes de outcomes e registrar FAILED_TECHNICAL/INSUFFICIENT_EVIDENCE."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 8,
+        "date": "2026-09-05",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Descoberta do Dia 8 — pré-registro da capacidade verificável de aquisição de E000002",
+        "question": "A infraestrutura disponível consegue materializar, sem observar outcomes, a enumeração completa e os datasets Drift Switching com identidade, período, contagens, manifests e SHA-256 suficientes para tornar E000002 executável no 8B?",
+        "markets": [
+          "Deriv / Drift Switching — universo científico histórico separado",
+          "OKX Demo / BTC-USDT — universo operacional separado"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Recuperação mínima pelo GitHub/main: protocolo de contexto, state/current.json, índice recente, run 7C, protocolo operacional V5 e plano OKX ativo. Preservado integralmente o pré-registro científico do 7A: snapshot integral do catálogo público do provedor no cutoff de aquisição; filtro exclusivamente pela taxonomia/nome Drift Switching previamente congelada; nenhum símbolo pode ser incluído ou removido por performance. Antes de qualquer fit/outcome, o 8B deverá preservar a resposta bruta do catálogo e, por símbolo, provider/origem, símbolo exato, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256. Features em t usam somente informação disponível até t; target permanece sinal do retorno agregado t+1..t+20; split cronológico permanece 60/20/20; embargo mínimo de 20 ticks nas fronteiras e descarte de amostras cujo target atravesse a fronteira; scaling e baseline somente no treino; regressão logística fixa; métrica primária log-loss OOS; orçamento de busca adicional zero. O 8A não executa fit, não observa outcome, não recalibra parâmetros e não altera a estratégia operacional.",
+        "evidence": "O último julgamento canônico, 7C, classificou a ausência de snapshot/datasets verificáveis como falha técnica de aquisição/materialização e manteve H0004 em INSUFFICIENT_EVIDENCE. Nenhuma evidência empírica nova foi produzida neste 8A. O plano operacional atual lido em runtime/okx/active_execution_plan.json está ACTIVE, DEMO_ONLY, provider OKX, BTC-USDT Spot, estratégia OKX-SPOT-SR-v6, BASELINE, NO_EDGE_CLAIM, Champion null; esta configuração permanece experimentalmente separada de H0004/E000002 e não recebe qualquer inferência científica Deriv.",
+        "limitations": "Este subciclo A não possui, dentro do mecanismo canônico de persistência, um snapshot bruto novo de active_symbols nem datasets Drift Switching materializados. Isso impede declarar a capacidade resolvida e impede qualquer outcome. O state/current.json e indexes/recent/manifest.json estão defasados em relação aos ciclos 7A-7C e ao plano operacional V5 atual; por isso foram tratados apenas como ponteiros legados, sem sobrescrever história nem transferir autoridade operacional.",
+        "audit": "PASS de governança prospectiva: nenhum outcome observado; nenhum símbolo escolhido por performance; nenhum tuning retrospectivo; target, modelo, split, embargo, métrica e orçamento de busca preservados; ciência Deriv separada do executor OKX; Champion não inventado; Baseline não tratada como edge; nenhuma mudança de Worker, plano, risco ou mercado; DEMO_ONLY e proibição de dinheiro real preservados.",
+        "decision": "CONTINUE_RESEARCH — PROTOCOLO DE CAPACIDADE DE AQUISIÇÃO/MATERIALIZAÇÃO CONGELADO PARA O 8B; E000002 PERMANECE BLOCKED_PRE_EXECUTION E H0004 INSUFFICIENT_EVIDENCE; SEM SHADOW, SEM PROMOÇÃO E SEM IMPACTO OPERACIONAL.",
+        "next_step": "No 8B, tentar materializar deterministicamente o snapshot canônico de active_symbols e os datasets Drift Switching sob o protocolo congelado. Antes de qualquer fit, auditar origem, símbolos exatos, período UTC, timestamps extremos, contagens, duplicatas, cronologia, completude, manifests, SHA-256 e embargo de 20 ticks. Se qualquer item não for verificável, parar antes de outcomes e registrar FAILED_TECHNICAL/INSUFFICIENT_EVIDENCE.",
+        "summary": "O 8A não repetiu inferência nem tentou salvar H0004. Ele converteu o próximo passo do 7C em um preflight prospectivo e reprodutível de aquisição/materialização para o 8B, mantendo E000002 bloqueado até existir identidade verificável dos dados.",
+        "report": "research/2026/09/2026-09-05/cycle-A/RUN-20260905-08A-R1/report.md",
+        "report_content": "# RUN-20260905-08A-R1 — Descoberta do Dia 8\n\n## Continuidade\nO 7C classificou a ausência de snapshot canônico de `active_symbols` e datasets Drift Switching com manifests/hashes como falha técnica de aquisição/materialização, não como evidência contra H0004. E000002 permanece bloqueado antes de outcomes.\n\n## Pergunta falsificável\nA infraestrutura disponível consegue materializar, sem observar outcomes, a enumeração completa e os datasets Drift Switching com identidade, período, contagens, manifests e SHA-256 suficientes para tornar E000002 executável no 8B?\n\n## Pré-registro de capacidade\nPreserva-se integralmente o protocolo congelado no 7A. O cutoff será o instante UTC de aquisição do 8B. Primeiro deve ser preservada a resposta bruta integral do catálogo público do provedor; somente depois aplica-se o filtro já congelado de taxonomia/nome Drift Switching. Nenhum símbolo poderá ser incluído ou removido por performance. Para cada símbolo devem existir provider/origem, símbolo exato, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256.\n\nNenhum outcome pode ser calculado enquanto esses artefatos não existirem. Features em t usam somente informação disponível até t. O target permanece o sinal do retorno agregado t+1..t+20. O split permanece cronológico 60/20/20. Em cada fronteira aplica-se embargo mínimo de 20 ticks e descartam-se amostras cujo horizonte do target atravesse o bloco seguinte. Scaling e baseline são estimados apenas no treino. Horizonte=20, regressão logística fixa, log-loss OOS primária e orçamento de busca adicional zero permanecem congelados.\n\n## Evidência observada\nNenhum outcome novo foi observado no 8A e nenhum dataset novo foi declarado. A única evidência admissível é a continuidade do bloqueio técnico documentado no 7C.\n\n## Separação operacional\nO plano operacional atual no GitHub/main é `OEP-20260905-006`, `ACTIVE`, `DEMO_ONLY`, provider OKX, BTC-USDT Spot, estratégia `OKX-SPOT-SR-v6`, `BASELINE`, `NO_EDGE_CLAIM`, Champion null. A ciência Deriv/Drift Switching permanece experimentalmente distinta; nenhuma estatística, parâmetro ou conclusão é transferida para OKX e nenhuma alteração operacional foi autorizada por este subciclo.\n\n## Decisão\nCONTINUE_RESEARCH — protocolo de capacidade de aquisição/materialização congelado para o 8B. E000002 permanece BLOCKED_PRE_EXECUTION e H0004 permanece INSUFFICIENT_EVIDENCE. Sem Shadow, promoção ou impacto operacional.\n\n## Próximo passo único\nNo 8B, executar somente o preflight adversarial de aquisição/materialização: tentar materializar snapshot bruto verificável de `active_symbols` e datasets Drift Switching; registrar origem, símbolos, período UTC, timestamps extremos, contagens, manifests e SHA-256; auditar cronologia, duplicatas, completude e embargo antes de qualquer fit. Se qualquer requisito não for verificável, parar antes de outcomes e registrar FAILED_TECHNICAL/INSUFFICIENT_EVIDENCE.\n\nDEMO_ONLY permanece absoluto; dinheiro real é permanentemente proibido.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "research": {
+          "decision": "CONTINUE_RESEARCH — 8A congelou o preflight verificável de aquisição/materialização; E000002 continua bloqueado antes de outcomes.",
+          "next_step": "8B: materializar e auditar snapshot/datasets/manifests/hashes Drift Switching antes de qualquer fit; falha => FAILED_TECHNICAL/INSUFFICIENT_EVIDENCE."
+        },
+        "signal": {
+          "scientific": "SEM NOVO OUTCOME NO 8A — AQUISIÇÃO/MATERIALIZAÇÃO PRÉ-REGISTRADA PARA TESTE ADVERSARIAL NO 8B"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 8A"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

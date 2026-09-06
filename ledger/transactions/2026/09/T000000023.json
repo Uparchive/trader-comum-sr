@@ -1,0 +1,76 @@
+{
+  "id": "T000000023",
+  "applied_at": "2026-09-04T22:59:14+00:00",
+  "intent_digest": "a45e546a02b7e702e22a11e41f158028b0abb7d76756998c641e2ffa3ab86f84",
+  "actor": "research-ai",
+  "cycle": "Day 7C",
+  "note": "Auditoria do Dia 7C: confirmar que a falha de materialização do 7B é técnica e não evidência contra H0004; manter E000002 bloqueado antes de outcomes, sem tuning, Shadow, promoção ou alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "stage": "FAILED_TECHNICAL",
+          "status": "BLOCKED_PRE_EXECUTION",
+          "decision": "FAILED_TECHNICAL — DATASET_MATERIALIZATION_UNVERIFIABLE",
+          "evidence": "O 7B parou antes de qualquer fit/outcome porque não materializou snapshot canônico verificável de active_symbols nem datasets Drift Switching com manifests/hashes. Nenhuma métrica científica foi calculada; a falha é de aquisição/materialização, não falsificação de H0004.",
+          "next_step": "No próximo A, tratar aquisição/materialização como capacidade de infraestrutura separada. Antes de qualquer outcome, materializar snapshot canônico verificável de active_symbols e datasets Drift Switching com origem, símbolos, período UTC, contagens, manifests e SHA-256, preservando integralmente o pré-registro existente."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 7,
+        "date": "2026-09-04",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 7 — falha técnica preservada sem inferência científica",
+        "question": "A evidência admissível do 7B autoriza rejeitar, promover ou alterar H0004/E000002, ou deve a falha permanecer estritamente técnica e bloqueada antes de outcomes?",
+        "markets": [
+          "Deriv / Drift Switching (universo científico histórico separado)",
+          "OKX Demo / BTC-USDT (universo operacional separado)"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Auditoria adversarial somente dos artefatos canônicos necessários: protocolo de contexto, estado corrente, índice recente, run 7B, protocolo operacional V5 e plano OKX ativo. Verificados separação ciência/infraestrutura, inexistência de outcomes no 7B, integridade do pré-registro, proibição de tuning retrospectivo, ausência dos Promotion Gates e separação experimental Deriv versus OKX. Nenhum novo dado de mercado foi inspecionado e nenhuma métrica foi inventada.",
+        "evidence": "O run 7B documenta stop rule antes do fit: não houve snapshot bruto verificável de active_symbols nem datasets tick-by-tick Drift Switching com manifests/hashes; portanto identidade, completude, cronologia, deduplicação e embargo não puderam ser auditados reprodutivelmente. Nenhum log-loss, OOS, Walk-Forward, bootstrap, IC ou multiple testing foi calculado. O plano operacional lido permanece OKX Demo/BTC-USDT, ACTIVE, estratégia OKX-SPOT-SR-v3, BASELINE, NO_EDGE_CLAIM, Champion null.",
+        "limitations": "Sem dataset experimental verificável, H0004 não recebeu teste empírico admissível. A falha técnica não permite inferência sobre a hipótese. Não existem Promotion Gates satisfeitos, Shadow prospectivo ou evidência que autorize transição operacional. O estado V4 compacto permanece historicamente defasado em relação ao plano operacional V5 e não deve ser usado para transferir ciência Deriv para OKX.",
+        "audit": "PASS de governança científica: falha técnica separada da ciência; nenhum tuning para esconder falha; nenhum resultado negativo apagado; nenhuma transferência de edge/parâmetros Deriv->OKX; nenhum Champion inventado; nenhuma alteração de Worker, mandato ou plano; dinheiro real permanece proibido.",
+        "decision": "FAILED_TECHNICAL — MANTER E000002 BLOQUEADO PRÉ-EXECUÇÃO; H0004 PERMANECE INSUFFICIENT_EVIDENCE; SEM SHADOW, SEM PROMOÇÃO E SEM IMPACTO OPERACIONAL.",
+        "next_step": "No próximo A, abrir uma frente estritamente de capacidade de aquisição/materialização: pré-especificar e materializar snapshot canônico verificável de active_symbols e datasets Drift Switching com origem, símbolos exatos, período UTC, timestamps extremos, contagens, manifests e SHA-256 antes de qualquer outcome; se essa capacidade continuar indisponível, preservar E000002 bloqueado sem repetir inferência.",
+        "summary": "O juiz do Dia 7 confirmou que o 7B falhou tecnicamente antes de outcomes. H0004 não foi rejeitada nem confirmada; E000002 permanece bloqueado. O executor OKX Demo/BTC-USDT continua separado, BASELINE e NO_EDGE_CLAIM, sem qualquer mudança operacional.",
+        "report": "research/2026/09/2026-09-04/cycle-C/RUN-20260904-07C-R1/report.md",
+        "report_content": "# RUN-20260904-07C-R1 — Auditoria do Dia 7\n\n## Continuidade\nO 7B tentou materializar os artefatos de aquisição e identidade congelados no 7A, mas acionou a stop rule antes de qualquer fit ou outcome porque não obteve snapshot canônico verificável de `active_symbols` nem datasets Drift Switching com manifests/hashes.\n\n## Evidência admissível\nA única evidência científica admissível deste julgamento é a ausência documentada dos pré-requisitos de reprodutibilidade. Nenhum log-loss, OOS, Walk-Forward, bootstrap, intervalo de confiança ou multiple testing foi calculado no 7B. Logo, não existe resultado empírico admissível capaz de confirmar ou rejeitar H0004.\n\n## Julgamento adversarial\nA falha é técnica, de aquisição/materialização. Transformá-la em rejeição científica seria erro de categoria; relaxar identidade, hashes, completude ou embargo para obter um resultado seria tuning retrospectivo proibido. E000002 deve permanecer bloqueado antes de outcomes.\n\n## Separação operacional\nO plano operacional vigente lido em `runtime/okx/active_execution_plan.json` permanece `ACTIVE`, `DEMO_ONLY`, provider OKX, BTC-USDT Spot, estratégia `OKX-SPOT-SR-v3`, `BASELINE`, `NO_EDGE_CLAIM`, Champion null. A ciência Deriv/Drift Switching permanece experimentalmente distinta e não transfere edge, parâmetros ou conclusões para OKX. Nenhuma alteração de Worker, mandato, estratégia operacional, Shadow ou promoção foi autorizada.\n\n## Decisão\nFAILED_TECHNICAL — manter E000002 bloqueado pré-execução. H0004 permanece INSUFFICIENT_EVIDENCE. Sem Shadow, sem promoção e sem impacto operacional.\n\n## Próximo passo único\nNo próximo A, tratar aquisição/materialização como capacidade de infraestrutura separada: pré-especificar e materializar snapshot canônico verificável de `active_symbols` e datasets Drift Switching com origem, símbolos exatos, período UTC, timestamps extremos, contagens, manifests e SHA-256 antes de qualquer outcome. Se a capacidade continuar indisponível, preservar E000002 bloqueado sem repetir inferência.\n\nDEMO_ONLY permanece absoluto; dinheiro real é permanentemente proibido.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "research": {
+          "decision": "FAILED_TECHNICAL — E000002 bloqueado pré-execução; H0004 INSUFFICIENT_EVIDENCE",
+          "next_step": "Próximo A: materializar capacidade verificável de aquisição/identidade Drift Switching antes de outcomes; sem isso, manter E000002 bloqueado."
+        },
+        "signal": {
+          "scientific": "SEM NOVA EVIDÊNCIA EMPÍRICA ADMISSÍVEL NO 7C"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 7C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

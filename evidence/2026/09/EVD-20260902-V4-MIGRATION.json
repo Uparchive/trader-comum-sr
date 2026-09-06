@@ -1,0 +1,18 @@
+{
+  "evidence_id": "EVD-20260902-V4-MIGRATION",
+  "title": "Início oficial da arquitetura V4",
+  "date": "2026-09-02",
+  "cycle": "MIGRATION",
+  "question": "Como manter operação prospectiva DEMO sem inventar Champion, saldo ou edge?",
+  "observation": "A V3 desligava o executor quando não havia Champion.",
+  "analysis": "A V4 separa classificação científica de autorização operacional. NO_CHAMPION seleciona a Baseline versionada; falhas técnicas e PLATFORM_REJECTED continuam fail-closed.",
+  "evidence": "Arquitetura, registros, testes e mandato versionados neste marco.",
+  "decision": "ATIVAR_BASELINE_APOS_SYNC_TECNICO",
+  "next_step": "Executar deploy do Worker com secrets existentes e confirmar saldo DEMO real.",
+  "market": "R_100",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": null,
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV",
+  "technical": {"no_edge_claim": true, "historical_evidence_preserved": true, "retroactive_trades_created": false}
+}

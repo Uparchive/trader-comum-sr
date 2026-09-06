@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "record_path": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/run.json",
+      "run_id": "RUN-20260902-05A-R1",
+      "text": "run-20260902-05a-r1 2026-09-02 descoberta do dia 5 — última janela prospectiva de aquisição o 5a não converteu uma limitação técnica local em evidência científica. preservou h0001 e pré-registrou uma única tentativa final no 5b, com stop rule explícita para impedir repetição indefinida. continue — autorizar uma única tentativa final de aquisição no 5b sob o protocolo congelado; h0001 permanece não confirmada e e000001 em hold. official ['h0001'] [] none"
+    },
+    {
+      "record_path": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/run.json",
+      "run_id": "RUN-20260901-04C-R1",
+      "text": "run-20260901-04c-r1 2026-09-01 auditoria do dia 4 — falha técnica separada da ciência o juiz do dia 4 classificou o 4b como falha técnica, não como resultado científico. e000001 permanece hold por uma janela operacional limitada porque falhas de aquisição anteriores já foram transitórias; h0001 segue sem confirmação e sem autorização de shadow/demo. hold — aguardar recuperação de aquisição em tentativa prospectiva limitada. h0001 permanece não confirmada; sem shadow, sem demo e champion none. official ['h0001'] [] none"
+    },
+    {
+      "record_path": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/run.json",
+      "run_id": "RUN-20260901-04B-R1",
+      "text": "run-20260901-04b-r1 2026-09-01 validação adversarial da aquisição corrigida de h0001 o 4b executou o reteste de aquisição pré-registrado, mas o gateway permaneceu indisponível com http 502. a falha é técnica e não altera a evidência científica de h0001. hold — technical_failure de aquisição; h0001 não foi rejeitada nem promovida. shadow e demo permanecem bloqueados. official ['h0001'] [] none"
+    },
+    {
+      "record_path": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/run.json",
+      "run_id": "RUN-20260901-04A-R1",
+      "text": "run-20260901-04a-r1 2026-09-01 diagnóstico prospectivo do shortfall de aquisição de h0001 o dia 4a isolou o problema do 3b na camada de aquisição: o plano assumia páginas de 5000, mas a evidência mostra respostas efetivas de 1000. foi pré-registrada uma correção operacional reproduzível para o 4b sem tuning de h0001. hold — correção de aquisição pré-registrada; h0001 permanece inalterada, sem shadow e sem demo. official ['h0001'] [] none"
+    }
+  ],
+  "month": "2026-09",
+  "schema_version": 3
+}

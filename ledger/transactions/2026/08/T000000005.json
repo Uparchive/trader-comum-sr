@@ -1,0 +1,65 @@
+{
+  "id": "T000000005",
+  "applied_at": "2026-08-29T22:59:01+00:00",
+  "intent_digest": "e0088764600563c80bec6958b6f36518f29980b74a5c7b87b83c8623f630072e",
+  "actor": "research-ai",
+  "cycle": "Day 1C",
+  "note": "Auditoria científica do Dia 1; sem nova evidência empírica e sem promoção.",
+  "operations": [
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 1,
+        "date": "2026-08-29",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 1: evidência empírica ainda insuficiente",
+        "question": "A evidência acumulada no Dia 1 justifica rejeitar, promover ou manter H0001-H0003?",
+        "markets": [
+          "Família Crash/Boom",
+          "Família Volatility Switch",
+          "Família Drift Switching"
+        ],
+        "hypotheses": [
+          "H0001",
+          "H0002",
+          "H0003"
+        ],
+        "method": "Auditoria consolidada somente do estado canônico registrado nos subciclos A e B. Nenhum novo backtest, dado histórico ou métrica foi introduzido. Foram revisadas admissibilidade da evidência, circularidade, leakage, multiple testing e a sequência científica obrigatória.",
+        "evidence": "O subciclo A catalogou 11 entradas ou famílias e pré-registrou 3 hipóteses. O subciclo B mostrou que H0001 ainda precisa de histórico reproduzível e rótulo de evento prospectivamente congelado; H0002 e H0003 ainda carecem de ground truth independente de regime. Não existe experimento empírico registrado, resultado OOS, Walk-Forward ou Shadow que sustente promoção ou rejeição estatística.",
+        "limitations": "A auditoria não acrescenta observações de mercado. Ausência de dados não constitui evidência contra ou a favor das hipóteses. A falta atual de um rótulo independente identificado também não prova que tal metadado não exista.",
+        "audit": "PASS: nenhuma hipótese foi promovida; nenhum parâmetro foi alterado após observar performance; nenhuma métrica foi inventada; o espaço de busca permanece em 3 variantes registradas; Shadow continua obrigatório antes de DEMO; Champion permanece NONE e dinheiro real permanece proibido.",
+        "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+        "next_step": "No próximo ciclo de Descoberta, obter e registrar de forma reproduzível active_symbols e histórico público de ticks; definir prospectivamente o rótulo observável de evento para H0001 antes de inspecionar outcomes; investigar se existe ground truth independente de regime para H0002/H0003. Se não existir, preservar essas hipóteses e abrir prospectivamente novas perguntas baseadas em outcomes observáveis.",
+        "summary": "Dia 1 encerrado sem edge demonstrado e sem promoção. H0001-H0003 permanecem em HOLD por insuficiência de evidência empírica admissível.",
+        "report": "research/2026-08-29-day-01C-audit.md",
+        "report_content": "# Kell Quant Lab v2 — Dia 1C — Auditoria & Decisão\n\n## Pergunta\nA evidência acumulada no Dia 1 justifica rejeitar, promover ou manter H0001-H0003?\n\n## Método\nAuditoria consolidada somente do estado canônico dos subciclos A e B, sem introduzir novos dados ou métricas.\n\n## Evidência\nH0001 ainda carece de histórico reproduzível e rótulo de evento congelado prospectivamente. H0002 e H0003 ainda carecem de ground truth independente de regime. Não há resultado OOS, Walk-Forward ou Shadow.\n\n## Limitações\nAusência de dados não é evidência de ausência de edge. A falta atual de ground truth identificado não prova inexistência desse metadado.\n\n## Decisão\nHOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE. H0001-H0003 permanecem congeladas.\n\n## Próximo passo\nObter snapshot reproduzível de active_symbols e histórico público de ticks; congelar o rótulo observável de evento da H0001 antes de inspecionar outcomes; investigar ground truth independente para H0002/H0003.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 1 encerrado sem edge demonstrado. H0001-H0003 permanecem em HOLD por insuficiência de evidência empírica admissível.",
+        "research": {
+          "title": "Auditoria do Dia 1: evidência empírica ainda insuficiente",
+          "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE"
+        },
+        "pipeline": {
+          "stage": "HYPOTHESIS",
+          "next_step": "Materializar dados públicos reproduzíveis e congelar alvos observáveis antes de qualquer backtest."
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 1C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

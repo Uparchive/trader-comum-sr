@@ -1,0 +1,98 @@
+{
+  "id": "T000000012",
+  "applied_at": "2026-08-31T23:04:16+00:00",
+  "intent_digest": "93cf73a0e4ac41d5db8e4824aea28ab5350b7e7f233326270b0ac080e0d3b478",
+  "actor": "research-ai",
+  "cycle": "Day 3C",
+  "note": "Auditoria formal do Dia 3B sob o protocolo V3, sem novo dado de mercado, sem tuning retrospectivo e preservando Fail-Closed.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "stage": "OPEN",
+          "status": "HOLD_AFTER_DAY3_AUDIT",
+          "decision": "HOLD",
+          "evidence": "Dia 3C — auditoria do teste ampliado E000001: o Dia 3B preservou o desenho congelado, mas obteve 757123 dos 1400000 ticks planejados e todos os 14 símbolos tiveram shortfall. Foram observados 1018 eventos na validação e 1006 no OOS. O modelo por idade melhorou log-loss em 3 símbolos na validação e 7 no OOS. Houve uma única rejeição após Holm, BOOM500, mas esse símbolo teve aquisição severamente incompleta, com 2000 ticks, 0 eventos na validação e 2 no OOS; portanto o achado isolado não satisfaz robustez prospectiva e não pode ser promovido post hoc. Como o próprio pré-registro do Dia 3A determinava que shortfall fosse registrado sem compensação e mantivesse HOLD, a auditoria não reclassifica ausência de confirmação como rejeição definitiva nem autoriza Shadow/DEMO. A hipótese permanece viva apenas para uma futura tentativa prospectiva que resolva a aquisição sem alterar detector, bins, split, universo ou regra Holm."
+        }
+      }
+    },
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "HOLD_AFTER_DAY3_AUDIT",
+          "decision": "HOLD",
+          "notes": "Auditoria 3C: integridade científica do 3B preservada, porém a meta de aquisição não foi atingida em nenhum dos 14 símbolos. O resultado BOOM500 corrigido por Holm não é robusto porque deriva de massa extremamente incompleta. Não repetir indefinidamente o mesmo teste nem ajustar parâmetros para salvar H0001. Antes de nova inferência, a aquisição deve ser corrigida prospectivamente e demonstrar que consegue cumprir o protocolo congelado; qualquer nova tentativa deve ser registrada como novo run, preservando 3B imutável. Sem Shadow e sem DEMO."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 3,
+        "date": "2026-08-31",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 3 — H0001 sobrevive apenas em HOLD",
+        "question": "A evidência ampliada do Dia 3B é íntegra e suficiente para rejeitar, promover ou manter H0001, considerando shortfalls, Holm e os critérios prospectivos congelados?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Auditoria sem nova aquisição, seguindo recuperação progressiva V3. Foram revisados state/current.json, os índices de E000001/H0001, o relatório canônico RUN-20260831-03B-R1 e o resumo materializado da aquisição 3B. Foram confrontados o alvo pré-registrado, shortfalls, massa de eventos, consistência validação/OOS, correção Holm, proibição de tuning post hoc, reprodutibilidade e invariantes Fail-Closed. Nenhum dataset bruto foi aberto e nenhuma métrica foi inventada.",
+        "evidence": "O 3B obteve 757123 de 1400000 ticks planejados; todos os 14 símbolos ficaram abaixo de 100000. Houve 1018 eventos na validação e 1006 no OOS. Melhorias de log-loss ocorreram em 3 símbolos na validação e 7 no OOS. Apenas BOOM500 rejeitou após Holm, porém com aquisição severamente incompleta: 2000 ticks, 0 eventos de validação e 2 OOS. Isso não sustenta memória de hazard reproduzível na família nem promoção. O protocolo anterior determinava explicitamente que shortfall fosse registrado sem compensação e mantivesse HOLD.",
+        "limitations": "A meta amostral pré-registrada falhou em todos os símbolos por paginação sem avanço/erros de aquisição. O resultado isolado de BOOM500 não é robusto. Não há evidência familiar reproduzível, Walk-Forward, Shadow, validação econômica, payout/custos ou autorização DEMO. Como o teste ampliado ficou incompleto, a auditoria não transforma automaticamente a não confirmação em rejeição definitiva da hipótese; também não permite novo tuning ou repetição oportunista.",
+        "audit": "PASS científico com ressalva operacional de aquisição: desenho congelado preservado, evidência 3B mantida imutável, nenhuma promoção post hoc, nenhuma alegação de manipulação da plataforma, Champion NONE e executor DEMO_ONLY Fail-Closed. A limitação dominante é aquisição incompleta, não falta de registro do resultado.",
+        "decision": "HOLD — H0001 SOBREVIVE À AUDITORIA APENAS COMO HIPÓTESE NÃO CONFIRMADA. O 3B NÃO AUTORIZA SHADOW NEM DEMO; A ÚNICA REJEIÇÃO HOLM NÃO É ROBUSTA DIANTE DO SHORTFALL EXTREMO DE BOOM500.",
+        "next_step": "No próximo subciclo A, investigar prospectivamente a causa da paginação incompleta e decidir se existe uma correção de aquisição que preserve integralmente o protocolo científico congelado. Só então pré-registrar uma nova tentativa de completar a amostra. Não alterar detector, bins, split 60/20/20, universo, limiar 1-1/N ou Holm com base nos outcomes já vistos. Se a aquisição completa não for tecnicamente viável, encerrar E000001 como inconclusivo por limitação de dados e redirecionar a pesquisa.",
+        "summary": "O juiz do Dia 3 não promoveu nem matou H0001: o teste ampliado trouxe muito mais evidência, mas ficou incompleto em todos os símbolos. O único sinal Holm veio do caso mais severamente incompleto. H0001 continua HOLD, sem Shadow/DEMO, e a próxima missão é resolver ou encerrar a limitação de aquisição.",
+        "report": "research/2026-08-31-day-03C-audit.md",
+        "report_content": "# Dia 3C — Auditoria & Decisão de H0001\n\n## Pergunta\nA evidência ampliada do Dia 3B é íntegra e suficiente para rejeitar, promover ou manter H0001, considerando shortfalls, Holm e os critérios prospectivos congelados?\n\n## Método\nAuditoria sem nova aquisição, seguindo recuperação progressiva V3. Foram revisados o estado atual, os índices de E000001/H0001, o relatório canônico do 3B e o resumo materializado da aquisição. O dataset bruto não foi aberto. O julgamento confrontou alvo pré-registrado, shortfalls, massa de eventos, validação/OOS, Holm, proibição de tuning post hoc, reprodutibilidade e Fail-Closed.\n\n## Evidência\nO 3B obteve 757.123 de 1.400.000 ticks planejados e nenhum dos 14 símbolos atingiu 100.000 ticks. Foram observados 1.018 eventos na validação e 1.006 no OOS. O modelo por idade melhorou log-loss em 3 símbolos na validação e 7 no OOS. Houve uma rejeição após Holm em BOOM500, porém esse símbolo teve apenas 2.000 ticks, 0 eventos na validação e 2 no OOS. O achado isolado não satisfaz robustez prospectiva.\n\n## Limitações\nA aquisição sofreu paginação sem avanço e erros técnicos, deixando shortfall em toda a família. Não há evidência familiar reproduzível, Walk-Forward, Shadow, validação econômica ou autorização DEMO. O protocolo do Dia 3A determinava que shortfall fosse registrado sem compensação e mantivesse HOLD.\n\n## Decisão\n**HOLD — H0001 SOBREVIVE À AUDITORIA APENAS COMO HIPÓTESE NÃO CONFIRMADA. O 3B NÃO AUTORIZA SHADOW NEM DEMO; A ÚNICA REJEIÇÃO HOLM NÃO É ROBUSTA DIANTE DO SHORTFALL EXTREMO DE BOOM500.**\n\n## Próximo passo\nNo próximo subciclo A, investigar prospectivamente a causa da paginação incompleta e decidir se uma correção de aquisição pode preservar integralmente o protocolo congelado. Não ajustar detector, bins, split, universo, limiar ou Holm com base nos outcomes já observados. Se a aquisição completa não for tecnicamente viável, encerrar E000001 como inconclusivo por limitação de dados e redirecionar a pesquisa. O executor permanece Fail-Closed.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "Dia 3C concluído — auditoria formal preserva H0001 em HOLD; sem promoção.",
+        "now_summary": "H0001 permanece não confirmada após o 3B incompleto. O próximo passo é resolver prospectivamente a aquisição ou encerrar E000001 como inconclusivo por limitação de dados.",
+        "research": {
+          "current_day": 3,
+          "current_cycle": "C",
+          "latest_decision": "HOLD — H0001 SOBREVIVE À AUDITORIA APENAS COMO HIPÓTESE NÃO CONFIRMADA. SEM SHADOW E SEM DEMO.",
+          "next_step": "Dia 4A: auditar a limitação de paginação e decidir se uma aquisição completa é tecnicamente viável sem alterar o protocolo congelado."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "HOLD_AFTER_DAY3_AUDIT"
+        },
+        "signal": {
+          "status": "UNCONFIRMED"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 3C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

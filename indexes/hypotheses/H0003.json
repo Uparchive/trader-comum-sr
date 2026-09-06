@@ -1,0 +1,170 @@
+{
+  "datasets": [],
+  "hypothesis": {
+    "created_at": "2026-08-29T08:00:00-03:00",
+    "decision": "HOLD",
+    "description": "Testar se retornos sinalizados de curto horizonte identificam estados bullish, bearish ou sideways documentados e predizem a próxima distribuição de retornos melhor que uma baseline incondicional OOS.",
+    "evidence": "Auditoria de desenho do Dia 1B: o alvo declarado de identificação de estado bullish/bearish/sideways é atualmente latente. Sem um rótulo de estado observável externamente, testar a acurácia do classificador seria circular se os rótulos fossem derivados dos mesmos retornos usados como features. Preservar a hipótese e não executar pseudo-validação; definir prospectivamente um alvo observável independente ou abrir nova hipótese de previsão de retornos antes da inspeção histórica.",
+    "family": "regime_persistence",
+    "frozen_parameters": {
+      "baseline": "unconditional next-return distribution",
+      "feature_family": "signed returns and rolling mean only",
+      "model_class": "three-state threshold classifier"
+    },
+    "id": "H0003",
+    "market": "Família Drift Switching",
+    "mechanism": "A documentação descreve regimes explícitos de drift; persistência e inferibilidade devem ser medidas de forma independente.",
+    "origin": "Dia 1A — documentação oficial",
+    "stage": "OPEN",
+    "status": "OPEN",
+    "tests": [
+      {
+        "cycle": "Dia 1B",
+        "notes": "Os endpoints públicos de ticks/histórico fornecem dados de mercado; nenhum ground truth independente do regime foi estabelecido neste ciclo.",
+        "result": "INCONCLUSIVE_CIRCULAR_LABEL_RISK",
+        "type": "adversarial_identifiability_audit"
+      }
+    ],
+    "title": "Persistência de regime no Drift Switching",
+    "updated_at": "2026-08-29T17:04:32+00:00",
+    "variants": 1,
+    "version": "1.0.0"
+  },
+  "runs": [
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-08-30",
+      "day": 2,
+      "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001",
+        "H0002",
+        "H0003"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-30/cycle-A/RUN-20260830-02A-R1/report.md",
+      "record_path": "research/2026/08/2026-08-30/cycle-A/RUN-20260830-02A-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260830-02A-R1",
+      "subcycle": "A",
+      "summary": "Detector e desenho cronológico de H0001 pré-registrados antes da inspeção de outcomes.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Pré-registro do detector de eventos Crash/Boom antes dos dados"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-08-29",
+      "day": 1,
+      "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001",
+        "H0002",
+        "H0003"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-29/cycle-C/RUN-20260829-01C-R1/report.md",
+      "record_path": "research/2026/08/2026-08-29/cycle-C/RUN-20260829-01C-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260829-01C-R1",
+      "subcycle": "C",
+      "summary": "Dia 1 encerrado sem edge demonstrado e sem promoção. H0001-H0003 permanecem em HOLD por insuficiência de evidência empírica admissível.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Auditoria do Dia 1: evidência empírica ainda insuficiente"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-08-29",
+      "day": 1,
+      "decision": "HOLD — EVIDÊNCIA INCONCLUSIVA",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001",
+        "H0002",
+        "H0003"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-29/cycle-B/RUN-20260829-01B-R1/report.md",
+      "record_path": "research/2026/08/2026-08-29/cycle-B/RUN-20260829-01B-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260829-01B-R1",
+      "subcycle": "B",
+      "summary": "O ataque mais forte foi metodológico, não estatístico: nenhuma das H0001-H0003 estava pronta para uma falsificação empírica limpa.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Falsificabilidade primeiro: auditoria adversarial de desenho e identificabilidade"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-08-29",
+      "day": 1,
+      "decision": "HOLD",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001",
+        "H0002",
+        "H0003"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/08/2026-08-29/cycle-A/RUN-20260829-01A-R1/report.md",
+      "record_path": "research/2026/08/2026-08-29/cycle-A/RUN-20260829-01A-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260829-01A-R1",
+      "subcycle": "A",
+      "summary": "11 entradas/famílias catalogadas; 3 hipóteses de alta prioridade pré-registradas; nenhuma alegação empírica de edge.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Inicialização do universo e triagem orientada por mecanismo"
+    }
+  ],
+  "schema_version": 3,
+  "timeline": [
+    {
+      "canonical": true,
+      "date": "2026-08-29",
+      "decision": "HOLD",
+      "run_id": "RUN-20260829-01A-R1",
+      "status": "OFFICIAL"
+    },
+    {
+      "canonical": true,
+      "date": "2026-08-29",
+      "decision": "HOLD — EVIDÊNCIA INCONCLUSIVA",
+      "run_id": "RUN-20260829-01B-R1",
+      "status": "OFFICIAL"
+    },
+    {
+      "canonical": true,
+      "date": "2026-08-29",
+      "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+      "run_id": "RUN-20260829-01C-R1",
+      "status": "OFFICIAL"
+    },
+    {
+      "canonical": true,
+      "date": "2026-08-30",
+      "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+      "run_id": "RUN-20260830-02A-R1",
+      "status": "OFFICIAL"
+    }
+  ]
+}

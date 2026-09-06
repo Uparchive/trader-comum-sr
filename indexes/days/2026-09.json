@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-09-02",
+      "day": 5,
+      "decision": "CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD.",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/report.md",
+      "record_path": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260902-05A-R1",
+      "subcycle": "A",
+      "summary": "O 5A não converteu uma limitação técnica local em evidência científica. Preservou H0001 e pré-registrou uma única tentativa final no 5B, com stop rule explícita para impedir repetição indefinida.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Descoberta do Dia 5 — última janela prospectiva de aquisição"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-09-01",
+      "day": 4,
+      "decision": "HOLD — AGUARDAR RECUPERAÇÃO DE AQUISIÇÃO EM TENTATIVA PROSPECTIVA LIMITADA. H0001 PERMANECE NÃO CONFIRMADA; SEM SHADOW, SEM DEMO E CHAMPION NONE.",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/report.md",
+      "record_path": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260901-04C-R1",
+      "subcycle": "C",
+      "summary": "O juiz do Dia 4 classificou o 4B como falha técnica, não como resultado científico. E000001 permanece HOLD por uma janela operacional limitada porque falhas de aquisição anteriores já foram transitórias; H0001 segue sem confirmação e sem autorização de Shadow/DEMO.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Auditoria do Dia 4 — falha técnica separada da ciência"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-09-01",
+      "day": 4,
+      "decision": "HOLD — TECHNICAL_FAILURE DE AQUISIÇÃO; H0001 NÃO FOI REJEITADA NEM PROMOVIDA. SHADOW E DEMO PERMANECEM BLOQUEADOS.",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/report.md",
+      "record_path": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260901-04B-R1",
+      "subcycle": "B",
+      "summary": "O 4B executou o reteste de aquisição pré-registrado, mas o gateway permaneceu indisponível com HTTP 502. A falha é técnica e não altera a evidência científica de H0001.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Validação adversarial da aquisição corrigida de H0001"
+    },
+    {
+      "canonical": true,
+      "dataset_manifest": null,
+      "date": "2026-09-01",
+      "day": 4,
+      "decision": "HOLD — CORREÇÃO DE AQUISIÇÃO PRÉ-REGISTRADA; H0001 PERMANECE INALTERADA, SEM SHADOW E SEM DEMO.",
+      "experiment_ids": [],
+      "failure_type": null,
+      "hypothesis_ids": [
+        "H0001"
+      ],
+      "legacy": false,
+      "partitioned_report": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/report.md",
+      "record_path": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/run.json",
+      "record_status": "OFFICIAL",
+      "revision": 1,
+      "run_id": "RUN-20260901-04A-R1",
+      "subcycle": "A",
+      "summary": "O Dia 4A isolou o problema do 3B na camada de aquisição: o plano assumia páginas de 5000, mas a evidência mostra respostas efetivas de 1000. Foi pré-registrada uma correção operacional reproduzível para o 4B sem tuning de H0001.",
+      "superseded_by": null,
+      "supersedes": null,
+      "temperature": "HOT",
+      "title": "Diagnóstico prospectivo do shortfall de aquisição de H0001"
+    }
+  ],
+  "month": "2026-09",
+  "schema_version": 3
+}

@@ -1,0 +1,75 @@
+{
+  "authorization": {
+    "authorizing_cycle": "OWNER_AUTHORIZED_PROGRESSIVE_5_PERCENT_EXPOSURE_20260905",
+    "champion": null,
+    "requires_promotion_gates_for_replacement": true
+  },
+  "capital_policy": {
+    "max_open_positions": 1,
+    "max_position_fraction": 0.05,
+    "policy_id": "OKX-CP-002",
+    "position_fraction": 0.05,
+    "risk_per_trade_fraction": 0.0005,
+    "version": "OKX-CP-003-v1"
+  },
+  "environment": "DEMO_ONLY",
+  "issued_at": "2026-09-05T21:10:00Z",
+  "market_selection": {
+    "active_instrument": "SOL-USDT",
+    "authorized_instruments": [
+      "BTC-USDT",
+      "ETH-USDT",
+      "SOL-USDT",
+      "XRP-USDT",
+      "DOGE-USDT",
+      "ADA-USDT",
+      "AVAX-USDT",
+      "LINK-USDT",
+      "SUI-USDT",
+      "LTC-USDT"
+    ],
+    "instrument_type": "SPOT",
+    "quote_ccy": "USDT",
+    "selection_id": "OKX-MS-002",
+    "version": "OKX-MS-002-v1",
+    "selection_mode": "HIGHEST_RECENT_ABSOLUTE_RETURN"
+  },
+  "operational_identity": "OKX_DEMO_2026_09_03",
+  "plan_id": "OEP-20260905-008",
+  "provider": "OKX",
+  "schema_version": 1,
+  "state": "ACTIVE",
+  "strategy": {
+    "engine": "SUPPORT_RESISTANCE_V1",
+    "entry": {
+      "require_bullish_candle": false,
+      "require_close_above_previous": false,
+      "side": "buy",
+      "type": "SUPPORT_TOUCH"
+    },
+    "exit": {
+      "estimated_round_trip_fee_bps": 20,
+      "max_stop_loss_pct": 0.008,
+      "min_net_target_bps": 3,
+      "min_reward_risk": 1,
+      "stop_atr_buffer": 0.25,
+      "stop_loss_pct": 0.003,
+      "take_profit_pct": 0.006,
+      "type": "STRUCTURAL_RESISTANCE_OR_PROTECTIVE"
+    },
+    "kind": "BASELINE",
+    "parameters": {
+      "lookback_candles": 120,
+      "max_entry_distance_atr": 2.5,
+      "min_touches": 2,
+      "pivot_window": 2,
+      "timeframe": "1m",
+      "zone_width_atr": 0.9,
+      "entry_mode": "SUPPORT_TOUCH"
+    },
+    "scientific_claim": "NO_EDGE_CLAIM",
+    "strategy_id": "OKX-SPOT-SR",
+    "version": "OKX-SPOT-SR-v8"
+  },
+  "plan_hash": "9a00b990d643b845a8de6067ee2d7ee8d2ece655ad3cec30965ce8b33d29777b"
+}

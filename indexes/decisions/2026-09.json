@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "canonical": true,
+      "decision": "CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD.",
+      "record_path": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/run.json",
+      "run_id": "RUN-20260902-05A-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — AGUARDAR RECUPERAÇÃO DE AQUISIÇÃO EM TENTATIVA PROSPECTIVA LIMITADA. H0001 PERMANECE NÃO CONFIRMADA; SEM SHADOW, SEM DEMO E CHAMPION NONE.",
+      "record_path": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/run.json",
+      "run_id": "RUN-20260901-04C-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — TECHNICAL_FAILURE DE AQUISIÇÃO; H0001 NÃO FOI REJEITADA NEM PROMOVIDA. SHADOW E DEMO PERMANECEM BLOQUEADOS.",
+      "record_path": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/run.json",
+      "run_id": "RUN-20260901-04B-R1"
+    },
+    {
+      "canonical": true,
+      "decision": "HOLD — CORREÇÃO DE AQUISIÇÃO PRÉ-REGISTRADA; H0001 PERMANECE INALTERADA, SEM SHADOW E SEM DEMO.",
+      "record_path": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/run.json",
+      "run_id": "RUN-20260901-04A-R1"
+    }
+  ],
+  "month": "2026-09",
+  "schema_version": 3
+}

@@ -1,0 +1,82 @@
+{
+  "id": "T000000016",
+  "applied_at": "2026-09-01T23:03:30+00:00",
+  "intent_digest": "458a9ca8284fe1b657f30b6ca4bbe8736de053cc2f458480ad7cd3a4c925accc",
+  "actor": "research-ai",
+  "cycle": "Day 4C",
+  "note": "Auditoria do Dia 4C: separar a falha técnica do 4B da evidência científica e manter E000001 em espera prospectiva limitada, sem tuning e sem promoção.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "WAITING_ACQUISITION_RECOVERY",
+          "decision": "HOLD",
+          "notes": "Dia 4C: a auditoria separou explicitamente a indisponibilidade HTTP 502 do 4B da validade científica de H0001. Como uma falha técnica anterior de aquisição no Dia 2B foi posteriormente resolvida sem alterar o protocolo, um único subciclo 4B indisponível não justifica encerrar E000001 como inconclusivo definitivo. O experimento permanece HOLD e aguardará uma verificação operacional prospectiva e limitada no próximo ciclo apropriado. Se a aquisição continuar indisponível, o laboratório deve reavaliar o encerramento por limitação operacional, sem tuning retrospectivo e sem converter falha técnica em evidência científica."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 4,
+        "date": "2026-09-01",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 4 — falha técnica separada da ciência",
+        "question": "A falha HTTP 502 do 4B justifica encerrar E000001 como inconclusivo por limitação operacional ou a evidência disponível favorece uma espera prospectiva limitada pela recuperação da aquisição?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Auditar apenas a evidência canônica recente de E000001 e H0001, separando falhas de infraestrutura de resultados científicos. Comparar o 4B com o precedente auditável do Dia 2B, quando uma falha técnica inicial de aquisição foi resolvida em reteste sem alteração do protocolo. Não executar nova aquisição, não recalibrar parâmetros, não produzir estatística nova e não reinterpretar outcomes passados.",
+        "evidence": "O 4B não produziu dataset utilizável nem inferência: active_symbols e ticks-history retornaram seis HTTP 502 consecutivos nas tentativas documentadas. Esse resultado é puramente técnico. O histórico canônico de E000001 mostra que uma falha técnica de aquisição anterior no Dia 2B foi posteriormente resolvida por um reteste oficial, demonstrando que indisponibilidade transitória não implica impossibilidade estrutural de aquisição. A evidência científica vigente de H0001 continua sendo a do 3B/3C: amostra ampliada incompleta, sem robustez suficiente para promoção ou rejeição definitiva.",
+        "limitations": "Não foi realizado health check novo no 4C, portanto não há evidência de que o gateway já tenha se recuperado. Também não há garantia de que uma próxima tentativa conseguirá completar 100000 ticks por símbolo. A decisão de espera é operacional e limitada; não acrescenta suporte a H0001.",
+        "decision": "HOLD — AGUARDAR RECUPERAÇÃO DE AQUISIÇÃO EM TENTATIVA PROSPECTIVA LIMITADA. H0001 PERMANECE NÃO CONFIRMADA; SEM SHADOW, SEM DEMO E CHAMPION NONE.",
+        "next_step": "Dia 5A: verificar prospectivamente a disponibilidade da rota de aquisição e definir, sem alterar H0001, se E000001 recebe uma última tentativa operacional sob o protocolo congelado ou se deve ser encerrado como inconclusivo por limitação de aquisição persistente. Não repetir indefinidamente.",
+        "summary": "O juiz do Dia 4 classificou o 4B como falha técnica, não como resultado científico. E000001 permanece HOLD por uma janela operacional limitada porque falhas de aquisição anteriores já foram transitórias; H0001 segue sem confirmação e sem autorização de Shadow/DEMO.",
+        "report": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/report.md",
+        "report_content": "# Dia 4C — Auditoria da falha técnica de aquisição\n\n## Pergunta\nA falha HTTP 502 do 4B justifica encerrar E000001 como inconclusivo por limitação operacional ou ainda cabe uma espera prospectiva limitada?\n\n## Método\nFoi auditada somente a evidência canônica recente de E000001/H0001. A falha de infraestrutura foi separada da hipótese científica e comparada ao precedente do Dia 2B, quando uma falha técnica de aquisição foi posteriormente resolvida sem alterar o protocolo. Não houve nova aquisição, tuning, recalibração ou nova inferência estatística.\n\n## Evidência\nO 4B terminou antes de produzir amostra utilizável: houve seis HTTP 502 consecutivos em `active_symbols` e, na tentativa que reutilizou o universo já congelado, seis HTTP 502 consecutivos em `ticks-history`. Portanto o 4B não informa a validade de H0001. O histórico canônico também mostra que a primeira falha técnica do Dia 2B foi transitória e terminou em reteste oficial com dados reais, o que torna prematuro classificar uma única indisponibilidade do 4B como impossibilidade estrutural de aquisição.\n\n## Limitações\nO 4C não executou novo health check, então não há evidência de recuperação atual do gateway. Também não há garantia de que 100000 ticks por símbolo possam ser completados. A espera autorizada é operacional, prospectiva e limitada; não adiciona evidência a favor de H0001.\n\n## Decisão\n**HOLD — aguardar recuperação de aquisição em tentativa prospectiva limitada.** H0001 permanece não confirmada. Sem Shadow, sem DEMO e Champion NONE. O executor continua Fail-Closed.\n\n## Próximo passo\nNo Dia 5A, verificar a disponibilidade da aquisição e decidir se E000001 recebe uma última tentativa operacional sob o protocolo congelado ou se é encerrado como inconclusivo por limitação persistente. Não repetir indefinidamente e não alterar parâmetros científicos.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 4C concluído: falha técnica do 4B foi separada da ciência; E000001 permanece HOLD aguardando uma verificação operacional prospectiva limitada.",
+        "research": {
+          "title": "Dia 4C — Auditoria da falha técnica",
+          "decision": "HOLD — aguardar recuperação de aquisição em janela limitada; H0001 não confirmada.",
+          "next_step": "5A: verificar aquisição e decidir entre uma última tentativa operacional congelada ou encerramento inconclusivo por limitação persistente."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "HOLD — AGUARDANDO VERIFICAÇÃO LIMITADA DE AQUISIÇÃO",
+          "next_step": "Dia 5A: verificar prospectivamente a disponibilidade da rota de aquisição e decidir, sem alterar H0001, se E000001 recebe uma última tentativa operacional sob o protocolo congelado ou se deve ser encerrado como inconclusivo por limitação de aquisição persistente. Não repetir indefinidamente."
+        },
+        "strategy": {
+          "status": "NO_CHAMPION",
+          "execution_enabled": false,
+          "research_approved": false
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 4C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "T000000007",
+  "applied_at": "2026-08-30T17:01:54+00:00",
+  "intent_digest": "aeab5dde931bf7b1bdf247e2d931af8422be5617dc6ca6cf68c3c5e50d70556a",
+  "actor": "research-ai",
+  "cycle": "Day 2B",
+  "note": "Validação adversarial do Dia 2: aquisição empírica via WebSocket foi tentada, mas o runtime não resolveu o host; nenhuma métrica foi inventada e H0001 permanece HOLD com protocolo congelado.",
+  "operations": [
+    {
+      "op": "update_hypothesis",
+      "payload": {
+        "id": "H0001",
+        "patch": {
+          "decision": "HOLD",
+          "stage": "OPEN",
+          "evidence": "Dia 2B: a aquisição empírica foi tentada sem alterar o protocolo pré-registrado. A documentação oficial vigente confirma que active_symbols e ticks_history são dados de mercado via WebSocket público sem autenticação, mas o runtime desta execução falhou antes de receber dados por erro de resolução DNS do host WebSocket. Isso é uma falha de aquisição, não evidência a favor ou contra memória de hazard. A atualização oficial de 10/08/2026 adicionou novos Crash/Boom na faixa 300–1000, reforçando que o universo deve ser congelado por snapshot de active_symbols em cada dataset e não presumido manualmente. Nenhum outcome, hazard, p-valor, backtest ou edge foi calculado."
+        }
+      }
+    },
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "DATA_ACQUISITION_BLOCKED",
+          "decision": "HOLD",
+          "notes": "Dia 2B tentou executar a aquisição pública pré-registrada. O ambiente de execução não conseguiu resolver api.derivws.com para abrir o WebSocket, portanto nenhum tick foi recebido e nenhum teste estatístico foi executado. O desenho 60/20/20, o detector, a correção Holm e a regra de não ajuste pós-hoc permanecem congelados. Limitação adicional auditada: o limiar quantílico 1-1/N fixa aproximadamente a taxa de eventos na calibração por construção, então a evidência primária deverá vir da dependência temporal/hazard em validação e OOS, não da frequência calibrada de eventos. Ties/discretização de preço também devem ser reportados sem reajuste de limiar."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 2,
+        "date": "2026-08-30",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Validação adversarial da H0001 — aquisição bloqueada sem contaminar o teste",
+        "question": "A H0001 pode ser falsificada hoje com dados públicos reproduzíveis sem alterar o detector pré-registrado?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Foi mantido integralmente o pré-registro do Dia 2A e tentada conexão ao WebSocket público oficial para obter active_symbols e ticks_history. A falha de aquisição foi separada de qualquer inferência científica. Em paralelo, o desenho foi auditado adversarialmente quanto a circularidade do detector, discretização/ties, estabilidade do universo de símbolos e multiple testing.",
+        "evidence": "Nenhum tick foi recebido: a tentativa de conexão falhou por resolução DNS antes da resposta do provedor. A documentação oficial vigente confirma que active_symbols e ticks_history são endpoints WebSocket públicos sem autenticação. A Deriv publicou em 10/08/2026 que novos Synthetic Indices, inclusive novos Crash/Boom na faixa 300–1000, foram adicionados, portanto o universo não deve ser hardcoded. O limiar quantílico pré-registrado impõe aproximadamente a frequência 1/N na calibração por construção; isso não invalida o teste de memória, mas impede usar a frequência calibrada como evidência independente. Nenhuma métrica empírica foi produzida.",
+        "limitations": "O runtime desta execução não conseguiu resolver o host WebSocket, logo não houve dataset, hash, split, hazard, controle, Holm ou OOS executado. Falha de infraestrutura não pode ser interpretada como falha da hipótese nem da plataforma. O rótulo operacional de spikes pode divergir do evento interno da Deriv e preços discretos podem gerar ties no quantil; ambos devem permanecer limitações explícitas em vez de receber tuning pós-hoc.",
+        "decision": "HOLD — AQUISIÇÃO BLOQUEADA; H0001 NÃO TESTADA EMPIRICAMENTE E SEM QUALQUER PROMOÇÃO",
+        "next_step": "No próximo ciclo de aquisição capaz de acessar WebSocket, congelar um snapshot de active_symbols com timestamp, identificar apenas Crash/Boom clássicos a partir da resposta vigente, coletar ticks_history de forma reproduzível, registrar tamanho/período/hash e executar exatamente E000001. Se a aquisição continuar impossível no ambiente do agente, criar prospectivamente uma rota de aquisição reprodutível em infraestrutura do projeto antes de qualquer inferência estatística.",
+        "summary": "A validação protegeu o experimento contra um falso resultado: a ausência de dados foi registrada como bloqueio de aquisição, sem inventar métricas nem relaxar o pré-registro.",
+        "report": "research/2026-08-30-day-02B-validation.md",
+        "report_content": "# Kell Quant Lab v2 — Dia 2B — Validação Adversarial\n\n## Pergunta\nA H0001 pode ser falsificada hoje com dados públicos reproduzíveis sem alterar o detector pré-registrado?\n\n## Método\nFoi preservado integralmente o pré-registro do Dia 2A: universo obtido por `active_symbols`, dados por `ticks_history`, split cronológico 60/20/20, limiar calibrado somente nos 60% iniciais, hazard por idade, correção Holm entre símbolos e proibição de tuning pós-hoc. Foi tentada conexão ao WebSocket público oficial para iniciar a aquisição. Também foi auditado o próprio desenho para procurar circularidade ou evidência artificial.\n\n## Evidência\nA tentativa de conexão falhou antes de qualquer resposta de mercado porque o runtime não conseguiu resolver o host WebSocket. Consequentemente, nenhum tick foi recebido e nenhuma métrica estatística foi calculada. A documentação oficial vigente confirma que `active_symbols` e `ticks_history` pertencem à interface pública de dados de mercado e não exigem autenticação. A Deriv informou em 10/08/2026 a inclusão de novos Synthetic Indices e novos Crash/Boom na faixa 300–1000; portanto, o universo empírico deve ser congelado a partir de um snapshot de `active_symbols`, e não de uma lista presumida.\n\nFontes oficiais consultadas:\n- https://developers.deriv.com/docs/data/active-symbols/\n- https://developers.deriv.com/docs/data/ticks-history/\n- https://developers.deriv.com/docs/options/ws-public/\n- https://developers.deriv.com/product-updates/\n\n## Auditoria adversarial do desenho\nO limiar empírico `1-1/N` força aproximadamente a taxa de eventos da calibração para `1/N` por construção. Por isso, a frequência de eventos no segmento de calibração não será tratada como evidência independente da descrição da Deriv. O teste primário deve depender da estrutura temporal do hazard em validação/OOS com o limiar já congelado. Discretização de preço e ties no quantil podem alterar a taxa efetiva de eventos; isso deverá ser reportado como limitação e nunca corrigido depois de observar OOS.\n\n## Limitações\nNão existe dataset materializado neste ciclo. Não foram executados split, teste de hazard, permutação, Holm, OOS, Walk-Forward, custos ou qualquer backtest. Uma falha de DNS do runtime é uma falha de aquisição e não constitui evidência a favor ou contra H0001, nem evidência de problema da plataforma.\n\n## Decisão\n**HOLD — AQUISIÇÃO BLOQUEADA; H0001 NÃO TESTADA EMPIRICAMENTE E SEM QUALQUER PROMOÇÃO.**\n\n## Próximo passo\nNa primeira execução com acesso WebSocket funcional, salvar metadados do snapshot de `active_symbols`, congelar os Crash/Boom clássicos realmente ativos, coletar `ticks_history`, registrar período/tamanho/hash e executar exatamente E000001. Se o ambiente do agente continuar incapaz de acessar WebSocket, deverá ser criada prospectivamente uma rota de aquisição reprodutível na infraestrutura do projeto antes de qualquer inferência estatística.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "system_status": "PESQUISA ATIVA — FAIL-CLOSED",
+        "now_summary": "Dia 2B preservou o pré-registro da H0001, mas a aquisição pública de ticks foi bloqueada por falha de resolução DNS no runtime. Nenhuma métrica foi inventada e nenhuma promoção ocorreu.",
+        "research": {
+          "date": "2026-08-30",
+          "title": "Dia 2B — Validação adversarial com aquisição bloqueada",
+          "decision": "HOLD — AQUISIÇÃO BLOQUEADA; H0001 NÃO TESTADA EMPIRICAMENTE",
+          "next_step": "Obter snapshot reproduzível de active_symbols e ticks_history em ambiente WebSocket funcional e executar E000001 sem modificar parâmetros."
+        },
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION"
+        },
+        "signal": {
+          "status": "OFF"
+        },
+        "strategy": {
+          "status": "NO_CHAMPION"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_hypothesis",
+      "updated_id": "H0001"
+    },
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 2B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

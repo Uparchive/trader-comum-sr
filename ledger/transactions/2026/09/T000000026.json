@@ -1,0 +1,76 @@
+{
+  "id": "T000000026",
+  "applied_at": "2026-09-06T02:53:46+00:00",
+  "intent_digest": "d4b414d544629c78dd14da803b4a8aeb19396aa3844863cb0ec85a53e8832396",
+  "actor": "research-ai",
+  "cycle": "Day 8C",
+  "note": "Auditoria do Dia 8C: julgar a repetição da falha técnica de aquisição/materialização de H0004/E000002 sem outcomes, tuning, promoção ou alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "BLOCKED_PRE_EXECUTION",
+          "decision": "HOLD — REPEATED TECHNICAL CAPABILITY GAP; H0004 REMAINS INSUFFICIENT_EVIDENCE",
+          "evidence": "O 8C auditou somente a evidência admissível produzida em 8A/8B. O 8B confirmou a existência conceitual do endpoint público active_symbols, mas não materializou snapshot bruto integral nem datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256. A stop rule pré-registrada foi respeitada antes de outcomes. A repetição é classificada como lacuna técnica/de capacidade e não como evidência científica contra H0004.",
+          "next_step": "No próximo ciclo A, especificar uma capacidade canônica de aquisição/materialização que produza snapshot bruto integral de active_symbols e datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256 antes de qualquer outcome. Se a capacidade canônica não existir, manter E000002 em HOLD/BLOCKED_PRE_EXECUTION sem criar fonte paralela."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 8,
+        "date": "2026-09-05",
+        "subcycle": "C",
+        "time": "20:00",
+        "title": "Auditoria do Dia 8 — repetição da lacuna técnica de materialização de E000002",
+        "question": "A evidência admissível de 8A/8B permite decisão científica sobre H0004 ou apenas demonstra uma lacuna repetida de capacidade técnica que deve manter E000002 bloqueado antes de outcomes?",
+        "markets": [
+          "Deriv / Drift Switching — universo científico histórico separado",
+          "OKX Demo / SOL-USDT — universo operacional separado"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Auditoria adversarial somente dos artefatos canônicos relevantes de 8A/8B e do plano operacional atual. Nenhum novo dado de mercado, outcome, fit, log-loss, OOS, walk-forward, bootstrap, multiple testing, custo, sensibilidade ou tuning foi executado. Foi verificado se a falha repetida de aquisição/materialização poderia ser reinterpretada como falha científica; não pode. A ausência dos artefatos exigidos impede inferência. Deriv/Drift Switching permanece universo científico histórico separado de OKX Demo/SOL-USDT.",
+        "evidence": "O 8B registrou FAILED_TECHNICAL porque snapshot bruto integral de active_symbols e datasets Drift Switching com identidade, período UTC, contagens, manifests e SHA-256 não foram materializados. A stop rule encerrou o teste antes de outcomes. Não existe evidência admissível nova a favor ou contra H0004. O plano operacional atual lido do GitHub/main é OEP-20260905-008, ACTIVE, DEMO_ONLY, provider OKX, SOL-USDT Spot, estratégia OKX-SPOT-SR-v8, BASELINE, NO_EDGE_CLAIM e Champion null.",
+        "limitations": "A infraestrutura/capacidade canônica necessária para materializar os datasets continua ausente ou não demonstrada. Portanto identidade, completude, cronologia, duplicatas, embargo e reprodutibilidade não podem ser auditados para E000002. A telemetria operacional não constitui evidência para H0004 e nenhuma estatística Deriv é transferida para OKX.",
+        "audit": "PASS científico da separação falha técnica != falha científica e PASS da stop rule. Nenhuma evidência foi inventada, nenhum tuning retrospectivo ocorreu, nenhuma promoção/Shadow foi iniciada e nenhum mandato, Worker, risco, mercado ou estratégia operacional foi alterado por este subciclo.",
+        "decision": "HOLD — REPEATED TECHNICAL CAPABILITY GAP. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL.",
+        "next_step": "No próximo A, especificar uma capacidade canônica de aquisição/materialização que produza snapshot bruto integral e datasets versionados com manifests/hashes antes de qualquer outcome. Se essa capacidade não puder existir pelo mecanismo canônico, manter E000002 em HOLD e não criar fonte paralela.",
+        "summary": "O juiz do 8C não rejeitou H0004: a repetição do bloqueio demonstra uma lacuna técnica/de capacidade, não falha científica. E000002 continua bloqueado antes de outcomes até existirem artefatos canônicos verificáveis.",
+        "report": "research/2026/09/2026-09-05/cycle-C/RUN-20260905-08C-R1/report.md",
+        "report_content": "# RUN-20260905-08C-R1 — Auditoria e decisão do Dia 8\n\n## Julgamento\nO 8C auditou a repetição da falha técnica registrada no 8B. O endpoint público `active_symbols` existe conceitualmente, mas isso não substitui os artefatos experimentais exigidos pelo pré-registro. Não foram materializados snapshot bruto integral nem datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256.\n\n## Classificação\nA repetição é uma lacuna técnica/de capacidade. Ela não constitui evidência científica contra H0004. H0004 permanece `INSUFFICIENT_EVIDENCE` e E000002 permanece `BLOCKED_PRE_EXECUTION`.\n\n## Evidência admissível\nSomente a evidência canônica de 8A/8B foi consolidada. Nenhum outcome foi observado neste 8C e nenhum fit, log-loss, OOS, walk-forward, bootstrap, multiple testing, custos, sensibilidade ou tuning foi executado.\n\n## Separação operacional\nO plano operacional atual lido de `runtime/okx/active_execution_plan.json` é `OEP-20260905-008`, ACTIVE, DEMO_ONLY, provider OKX, SOL-USDT Spot, estratégia `OKX-SPOT-SR-v8`, BASELINE, NO_EDGE_CLAIM e Champion null. O universo operacional OKX permanece experimentalmente separado do universo científico histórico Deriv/Drift Switching. Nenhuma evidência ou parâmetro foi transferido entre universos.\n\n## Decisão\n`HOLD — REPEATED TECHNICAL CAPABILITY GAP`. Sem Shadow, sem promoção e sem impacto operacional.\n\n## Próximo passo único\nNo próximo ciclo A, especificar uma capacidade canônica de aquisição/materialização que produza o snapshot bruto integral de `active_symbols` e datasets Drift Switching versionados com identidade, período UTC, contagens, manifests e SHA-256 antes de qualquer outcome. Se essa capacidade canônica não puder existir, E000002 deve permanecer em HOLD/BLOCKED_PRE_EXECUTION sem criar fonte paralela.\n\nDEMO_ONLY permanece absoluto; dinheiro real é permanentemente proibido.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "research": {
+          "decision": "HOLD — 8C classifica a repetição como lacuna técnica/de capacidade; H0004 continua INSUFFICIENT_EVIDENCE e E000002 bloqueado antes de outcomes.",
+          "next_step": "Próximo A: especificar capacidade canônica de aquisição/materialização com snapshot bruto e datasets versionados/manifests/hashes; sem outcomes enquanto isso não existir."
+        },
+        "signal": {
+          "scientific": "8C HOLD — REPEATED TECHNICAL CAPABILITY GAP"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 8C"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

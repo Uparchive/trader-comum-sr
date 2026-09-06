@@ -1,0 +1,6 @@
+{"event_id": "EVT-000016", "event_type": "RUN_COMPLETED", "occurred_at": "2026-09-01T08:00:00-03:00", "record_path": "research/2026/09/2026-09-01/cycle-A/RUN-20260901-04A-R1/run.json", "run_id": "RUN-20260901-04A-R1"}
+{"event_id": "EVT-000017", "event_type": "RUN_COMPLETED", "occurred_at": "2026-09-01T14:00:00-03:00", "record_path": "research/2026/09/2026-09-01/cycle-B/RUN-20260901-04B-R1/run.json", "run_id": "RUN-20260901-04B-R1"}
+{"event_id": "EVT-000018", "event_type": "RUN_COMPLETED", "occurred_at": "2026-09-01T20:00:00-03:00", "record_path": "research/2026/09/2026-09-01/cycle-C/RUN-20260901-04C-R1/run.json", "run_id": "RUN-20260901-04C-R1"}
+{"event_id": "EVT-000019", "event_type": "RUN_COMPLETED", "occurred_at": "2026-09-02T08:00:00-03:00", "record_path": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/run.json", "run_id": "RUN-20260902-05A-R1"}
+{"dataset_id": "DS-20260830-DERIV-CRASHBOOM-2B-R2", "event_id": "EVT-000020", "event_type": "DATASET_REGISTERED", "occurred_at": "2026-09-02T11:03:57+00:00"}
+{"event_id": "EVT-000021", "event_type": "SNAPSHOT_CREATED", "occurred_at": "2026-09-02T11:03:57+00:00", "snapshot": "snapshots/monthly/snapshot-month-2026-09.json"}

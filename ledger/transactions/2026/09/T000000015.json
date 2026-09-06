@@ -1,0 +1,32 @@
+{
+  "id": "T000000015",
+  "applied_at": "2026-09-01T17:14:23+00:00",
+  "intent_digest": "8136a97138b0d8bf3c3d58f5dc371713ebb0e0aca53055893bdf5aacd723141a",
+  "actor": "research-ai",
+  "cycle": "Day 4B",
+  "note": "Correção prospectiva mínima de projeção: alinhar pipeline.next_step ao run canônico 4B; nenhuma evidência científica alterada.",
+  "operations": [
+    {
+      "op": "set_status",
+      "payload": {
+        "now_summary": "Dia 4B concluído como TECHNICAL_FAILURE: gateway retornou HTTP 502 persistente; nenhuma nova inferência foi produzida.",
+        "pipeline": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "BLOQUEADO POR FALHA TÉCNICA DE AQUISIÇÃO",
+          "next_step": "Dia 4C: auditar a falha técnica do 4B separadamente da hipótese científica e decidir se E000001 aguarda recuperação do gateway ou é encerrado como inconclusivo por limitação operacional, sem tuning retrospectivo."
+        },
+        "research": {
+          "title": "Dia 4B — Validação adversarial da aquisição",
+          "decision": "HOLD — falha técnica de aquisição; H0001 inalterada.",
+          "next_step": "4C: auditar a falha técnica e decidir o destino prospectivo de E000001 sem tuning."
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

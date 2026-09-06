@@ -1,0 +1,115 @@
+{
+  "champion": {
+    "market": "Universo em descoberta",
+    "name": "Nenhuma estratégia promovida",
+    "status": "NO_CHAMPION",
+    "version": "—"
+  },
+  "counts": {
+    "canonical_runs": 9,
+    "experiments": 1,
+    "hypotheses": 3,
+    "markets": 11,
+    "runs": 10
+  },
+  "dataset_manifests": [
+    "DS-20260830-DERIV-CRASHBOOM-2B-R2"
+  ],
+  "decisions": [
+    {
+      "decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.",
+      "run_id": "RUN-20260830-02C-R1"
+    },
+    {
+      "decision": "HOLD — AQUISIÇÃO RESOLVIDA; EVIDÊNCIA EMPÍRICA INICIAL INSUFICIENTE PARA REJEITAR O HAZARD CONSTANTE OU ALEGAR MEMÓRIA REPRODUZÍVEL. SEM PROMOÇÃO",
+      "run_id": "RUN-20260830-02B-R2"
+    },
+    {
+      "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+      "run_id": "RUN-20260830-02A-R1"
+    },
+    {
+      "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+      "run_id": "RUN-20260829-01C-R1"
+    },
+    {
+      "decision": "HOLD — EVIDÊNCIA INCONCLUSIVA",
+      "run_id": "RUN-20260829-01B-R1"
+    },
+    {
+      "decision": "HOLD",
+      "run_id": "RUN-20260829-01A-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00C-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00B-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00A-R1"
+    }
+  ],
+  "failures": [
+    {
+      "failure_type": "DNS_ACQUISITION_FAILURE",
+      "run_id": "RUN-20260830-02B-R1",
+      "superseded_by": "RUN-20260830-02B-R2"
+    }
+  ],
+  "generated_at": "2026-08-30T23:01:35+00:00",
+  "period": "2026-W35",
+  "promotions": [],
+  "rejections": [],
+  "schema_version": 3,
+  "state": {
+    "active_experiments": [
+      "E000001"
+    ],
+    "active_hypotheses": [
+      "H0001",
+      "H0002",
+      "H0003"
+    ],
+    "blockers": [
+      "Massa de eventos ainda insuficiente para inferência familiar robusta"
+    ],
+    "current_champion": {
+      "market": "Universo em descoberta",
+      "name": "Nenhuma estratégia promovida",
+      "status": "NO_CHAMPION",
+      "version": "—"
+    },
+    "current_cycle": "C",
+    "current_date": "2026-08-30",
+    "current_day": 2,
+    "current_run_id": "RUN-20260830-02C-R1",
+    "environment": "DEMO_ONLY",
+    "executor_state": {
+      "execution_enabled": false,
+      "fail_closed": true,
+      "research_approved": false,
+      "state": "OFF",
+      "status": "Fail-Closed — DEMO bloqueado"
+    },
+    "generated_at": "2026-08-30T23:01:35+00:00",
+    "latest_dataset_manifest": "datasets/manifests/DS-20260830-DERIV-CRASHBOOM-2B-R2.json",
+    "latest_decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.",
+    "latest_report": "research/2026/08/2026-08-30/cycle-C/RUN-20260830-02C-R1/report.md",
+    "latest_snapshot": "snapshots/monthly/snapshot-month-2026-08.json",
+    "next_step": "Adquirir prospectivamente 100000 ticks por cada um dos mesmos 14 símbolos de R2, com paginação congelada, dataset durável e manifesto V3 completo; depois executar inferência primária e Holm sem tuning.",
+    "pipeline_stage": "HISTORICAL_VALIDATION",
+    "program_version": "3.0.0",
+    "relevant_pointers": {
+      "activity": "indexes/recent/activity-page-001.json",
+      "experiment_focus": "indexes/experiments/E000001.json",
+      "hypothesis_focus": "indexes/hypotheses/H0001.json",
+      "recent_runs": "indexes/recent/runs-page-001.json"
+    },
+    "schema_version": 3,
+    "what_changed": "A aquisição 2B foi corrigida e o reteste oficial substituiu a falha técnica como resultado vigente, sem apagar a primeira tentativa. H0001 continua HOLD por evidência insuficiente."
+  }
+}

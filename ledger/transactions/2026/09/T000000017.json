@@ -1,0 +1,56 @@
+{
+  "id": "T000000017",
+  "applied_at": "2026-09-02T11:03:57+00:00",
+  "intent_digest": "620a6f0bd3a1d740336e15e4d641e0ea53f31fe74c5311b85852d9b6da2f6236",
+  "actor": "research-ai",
+  "cycle": "Day 5A",
+  "note": "Descoberta do Dia 5A: preservar H0001/E000001 sem tuning e pré-registrar uma única tentativa final de aquisição no 5B, após a rota não poder ser verificada neste runtime por limitação técnica de DNS.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000001",
+        "patch": {
+          "status": "FINAL_ACQUISITION_ATTEMPT_PREREGISTERED",
+          "decision": "HOLD",
+          "notes": "Dia 5A: a continuidade canônica do 4C exige uma janela operacional limitada, não repetição indefinida. A verificação prospectiva da rota neste runtime não conseguiu resolver o host do gateway; isso é limitação técnica deste ambiente e não evidência contra H0001. Fica pré-registrada para o 5B exatamente uma tentativa final de aquisição sob o protocolo científico já congelado, sem alterar detector, universo, split, bins, regra Holm, alvo de 100000 ticks por símbolo, paginação efetiva de 1000 ticks, deduplicação, cursor cronológico, pacing, retry/backoff e checkpoints. Se a rota continuar indisponível ou a aquisição não produzir dados utilizáveis, E000001 deve ser encaminhado ao 5C como INSUFFICIENT_EVIDENCE/TECHNICAL_FAILURE para encerramento inconclusivo por limitação persistente de aquisição, sem novos retries automáticos e sem transformar falha técnica em rejeição científica."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 5,
+        "date": "2026-09-02",
+        "subcycle": "A",
+        "time": "08:00",
+        "title": "Descoberta do Dia 5 — última janela prospectiva de aquisição",
+        "question": "A rota de aquisição está disponível para uma última tentativa operacional congelada de E000001 sem alterar H0001, ou a limitação técnica deve encerrar o experimento como inconclusivo?",
+        "markets": [
+          "Família Crash/Boom"
+        ],
+        "hypotheses": [
+          "H0001"
+        ],
+        "method": "Recuperar a continuidade do 4C, validar mandato/configuração V4 sem alterá-los e tentar observar a disponibilidade da rota de aquisição sem executar a validação científica do subciclo B. Como o runtime atual não conseguiu resolver o host do gateway, classificar esse fato somente como limitação técnica local. Pré-registrar para o 5B uma única tentativa final de aquisição sob o protocolo já congelado, com stop rule explícita contra repetição indefinida. Nenhum parâmetro científico é recalibrado e nenhum outcome novo é interpretado no 5A.",
+        "evidence": "O 4C determinou uma espera prospectiva limitada e exigiu que o 5A decidisse entre uma última tentativa operacional e encerramento inconclusivo. O Active Mandate V4 permanece ACTIVE, DEMO_ONLY e válido, com Baseline operacional separada da pesquisa; isso não autoriza inferência científica sobre H0001. Nesta execução, a tentativa externa de observar o gateway de pesquisa falhou por resolução DNS do runtime, sem resposta HTTP do serviço. Portanto não há evidência de recuperação nem de falha persistente do gateway em si. A decisão metodologicamente conservadora é permitir exatamente uma tentativa final no ambiente de validação do 5B, onde a aquisição já é parte do experimento, mantendo protocolo e stop rule congelados.",
+        "limitations": "O endpoint operacional read-only e o gateway de pesquisa não puderam ser observados diretamente por este runtime; não foram inventados saldo, trades ou telemetria. O state/current.json V4 aponta H0002/H0003 em current_research enquanto o current_run_id e o próximo passo canônico do 4C apontam H0001/E000001; essa inconsistência de ponteiro da migração deve ser corrigida pela materialização/estado sem reescrever evidência histórica. Nenhum novo tick foi adquirido e nenhuma estatística científica foi calculada neste subciclo.",
+        "decision": "CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD.",
+        "next_step": "Dia 5B: executar exatamente uma tentativa final de aquisição/validação de E000001 com o protocolo congelado. Se houver dados utilizáveis, aplicar os testes pré-registrados sem tuning. Se a aquisição falhar novamente, registrar TECHNICAL_FAILURE/INSUFFICIENT_EVIDENCE e encaminhar ao 5C o encerramento inconclusivo de E000001 por limitação persistente, sem novos retries automáticos.",
+        "summary": "O 5A não converteu uma limitação técnica local em evidência científica. Preservou H0001 e pré-registrou uma única tentativa final no 5B, com stop rule explícita para impedir repetição indefinida.",
+        "report": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/report.md",
+        "report_content": "# Dia 5A — Última janela prospectiva de aquisição\n\n## Pergunta\nA rota de aquisição está disponível para uma última tentativa operacional congelada de E000001 sem alterar H0001, ou a limitação técnica deve encerrar o experimento como inconclusivo?\n\n## Método\nFoi recuperada a continuidade do 4C e validada a configuração V4 necessária sem alterar mandato, Strategy, Capital Policy, Market Selection ou Champion. O 5A não executou a validação científica reservada ao subciclo B. A disponibilidade externa da rota foi tentada apenas como observação técnica.\n\n## Evidência\nO 4C autorizou uma janela prospectiva limitada. Nesta execução, o runtime não conseguiu resolver o host do gateway de pesquisa, portanto não houve resposta HTTP que permita afirmar recuperação ou falha persistente do serviço. Isso é limitação técnica do ambiente atual, não evidência contra H0001. O mandato V4 segue DEMO_ONLY e separado da pesquisa científica.\n\n## Hipótese e falsificação\nH0001 mantém integralmente seu protocolo congelado: null de hazard constante versus hazard condicional à idade, split cronológico 60/20/20, limiar calibrado somente nos 60% iniciais, correção Holm entre símbolos e ausência de tuning pós-hoc. O 5A não altera detector, bins, universo nem parâmetros.\n\n## Limitações\nNenhum novo tick foi adquirido e nenhuma estatística foi produzida. O ponteiro current_research da migração V4 não inclui H0001 apesar de o current_run_id/next_step canônico do 4C apontar E000001/H0001; a divergência é tratada como inconsistência de ponteiro, não como mudança científica.\n\n## Decisão\n**CONTINUE — uma única tentativa final no 5B.** H0001 permanece não confirmada e E000001 continua HOLD. Se a aquisição falhar novamente, o 5B deve registrar TECHNICAL_FAILURE/INSUFFICIENT_EVIDENCE e o 5C deve decidir o encerramento inconclusivo por limitação persistente, sem novos retries automáticos.\n\n## Próximo passo\n5B executa exatamente uma tentativa final de aquisição e, somente se houver dados válidos, aplica os testes pré-registrados sem tuning.\n"
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000001"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 5A"
+    }
+  ]
+}

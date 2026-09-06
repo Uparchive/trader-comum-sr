@@ -1,0 +1,50 @@
+{
+  "evidence_id": "EVD-20260902-05B",
+  "title": "Dia 5B — validação adversarial da tentativa final de E000001",
+  "date": "2026-09-02",
+  "cycle": "B",
+  "run_id": "RUN-20260902-05B-R1",
+  "question": "A tentativa final pré-registrada de aquisição de E000001 produz dados utilizáveis suficientes para testar H0001 sem tuning, leakage ou seleção retrospectiva?",
+  "observation": "A única tentativa final autorizada pelo 5A foi executada em GitHub Actions com universo congelado de 14 índices Crash/Boom, alvo de 100000 ticks por símbolo, páginas de 1000, cursor end=min_epoch-1, deduplicação, pacing, retry/backoff e checkpoints. O processo terminou com exit code 0, mas os 14 símbolos retornaram zero ticks utilizáveis; todos ficaram com shortfall de 100000 e stop_reason EMPTY_OR_MALFORMED_PAGE. O agregado foi 0 de 1400000 ticks, 14/14 símbolos com shortfall e coverage_complete=false.",
+  "analysis": "Não há massa empírica nova sobre H0001. Como nenhum tick utilizável foi adquirido, não foram calculados thresholds, eventos de validação/OOS, log-loss comparativo, permutações ou Holm. A execução confirmou apenas uma limitação persistente na rota de aquisição nesta janela. Esse diagnóstico técnico não pode ser usado como evidência a favor ou contra memória de hazard.",
+  "adversarial_controls": {
+    "leakage": "SEM NOVOS DADOS; nenhum parâmetro foi recalibrado com validação/OOS.",
+    "look_ahead": "NÃO INTRODUZIDO; protocolo preserva cutoff e cursor cronológico.",
+    "selection_bias": "UNIVERSO CONGELADO; nenhum símbolo foi adicionado/removido após observar outcomes.",
+    "multiple_testing": "Holm permaneceu pré-registrado, mas não foi executado por ausência de p-values válidos.",
+    "dataset_drift": "Nenhum dataset científico utilizável foi materializado; não houve substituição silenciosa de dataset.",
+    "baseline_fairness": "Comparação hazard constante vs. condicional permaneceu congelada, porém não foi executável sem amostra.",
+    "oos_walkforward_shadow": "Nenhum gate avançou; não há base para OOS adicional, Walk-Forward ou Shadow nesta tentativa."
+  },
+  "classification": [
+    "TECHNICAL_FAILURE",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "falsification": "H0001 não foi falsificada nem confirmada porque a aquisição final não produziu observações utilizáveis. A stop rule do 5A foi atingida: não realizar novos retries automáticos de E000001.",
+  "limitations": "O endpoint operacional read-only não pôde ser consultado por este runtime e nenhuma telemetria operacional foi inferida. A falha de aquisição é separada do executor DEMO e da evidência científica.",
+  "decision": "INVESTIGATE — FORMAL_HANDOFF_TO_C. Encaminhar E000001 ao 5C para encerramento inconclusivo por limitação persistente de aquisição; H0001 permanece não confirmada e sem promoção.",
+  "next_step": "No 5C, auditar a stop rule e formalizar a disposição de E000001 sem novos retries automáticos. Manter H0001 em HOLD/INSUFFICIENT_EVIDENCE ou definir nova pergunta/experimento somente se houver mudança metodológica explicitamente versionada; não alterar Active Mandate, Champion ou executor por este resultado técnico.",
+  "market": "Família Crash/Boom",
+  "strategy": "BASELINE-SR-v1",
+  "hypothesis": "H0001",
+  "experiment": "E000001",
+  "capital_policy": "CP0001-v1",
+  "platform": "DERIV",
+  "inputs": {
+    "attempt_log": "data/acquisition/day-05b-final-attempt.log",
+    "attempt_exitcode": "data/acquisition/day-05b-final-attempt.exitcode",
+    "summary": "data/acquisition/day-05b-final-2026-09-02-summary.json",
+    "dataset": "data/acquisition/day-05b-final-2026-09-02.json.gz",
+    "dataset_sha256_gzip": "674828fe5060514c5380966842cde6bd419f46fe61373596555337d9afec15f6",
+    "dataset_sha256_uncompressed": "28aa3edd069d0d479aee1fb4bf9d30c8512673aedc2a412f979053befd840bd5"
+  },
+  "technical": {
+    "classification": "TECHNICAL_FAILURE",
+    "attempt_policy_exhausted": true,
+    "new_market_data": false,
+    "new_statistics": false,
+    "scientific_parameters_changed": false,
+    "operational_mandate_changed": false,
+    "demo_only_preserved": true
+  }
+}

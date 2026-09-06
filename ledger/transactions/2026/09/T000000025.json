@@ -1,0 +1,76 @@
+{
+  "id": "T000000025",
+  "applied_at": "2026-09-05T17:03:38+00:00",
+  "intent_digest": "bf688c150a2ec52bd9dbeea68a6c85c0adbcc121c63dfbbeb91fe161a0128bdb",
+  "actor": "research-ai",
+  "cycle": "Day 8B",
+  "note": "Validação adversarial do Dia 8B: executar somente o preflight congelado de aquisição/materialização de H0004/E000002; sem outcomes, sem tuning, sem alteração operacional; DEMO_ONLY absoluto.",
+  "operations": [
+    {
+      "op": "update_experiment",
+      "payload": {
+        "id": "E000002",
+        "patch": {
+          "stage": "HISTORICAL_VALIDATION",
+          "status": "BLOCKED_PRE_EXECUTION",
+          "decision": "FAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE; H0004 REMAINS INSUFFICIENT_EVIDENCE",
+          "evidence": "No 8B, a fonte oficial pública da Deriv foi verificada e confirma que active_symbols é o endpoint sem autenticação para recuperar todos os símbolos atualmente ativos. Porém este runtime não produziu nem materializou no repositório uma resposta bruta integral do catálogo no cutoff do 8B, nem datasets tick-by-tick Drift Switching específicos de E000002 com período UTC, timestamps extremos, contagens, manifests e SHA-256. A stop rule pré-registrada foi acionada antes de qualquer outcome ou fit.",
+          "next_step": "No 8C, auditar a repetição da falha técnica de aquisição/materialização e decidir a governança de E000002 sem reinterpretá-la como falha científica. Manter outcomes proibidos enquanto snapshot bruto e datasets verificáveis não existirem."
+        }
+      }
+    },
+    {
+      "op": "add_research_cycle",
+      "payload": {
+        "day": 8,
+        "date": "2026-09-05",
+        "subcycle": "B",
+        "time": "14:00",
+        "title": "Validação adversarial do Dia 8 — preflight verificável de aquisição de E000002",
+        "question": "A infraestrutura disponível consegue satisfazer integralmente o preflight congelado no 8A e tornar E000002 reproduzivelmente executável sem observar outcomes?",
+        "markets": [
+          "Deriv / Drift Switching — universo científico histórico separado",
+          "OKX Demo / BTC-USDT — universo operacional separado"
+        ],
+        "hypotheses": [
+          "H0004"
+        ],
+        "method": "Foi preservado o protocolo do 8A sem novos graus de liberdade. A documentação oficial pública da Deriv foi consultada para verificar a semântica de active_symbols; ela confirma que o endpoint recupera a lista de símbolos atualmente ativos e não requer autenticação. O gate científico, porém, exige artefato bruto materializado no cutoff e, para cada Drift Switching selecionado somente pela taxonomia/nome pré-congelada, provider/origem, símbolo exato, período UTC, timestamps extremos, contagem, dataset bruto, manifest e SHA-256. Como esses artefatos não foram materializados e verificáveis neste runtime/repositório, a stop rule foi acionada antes de outcomes. Portanto não foram executados fit, log-loss, OOS, walk-forward, bootstrap/IC, multiple testing, custos, sensibilidade ou qualquer tuning. O protocolo congelado de target t+1..t+20, split 60/20/20, embargo mínimo de 20 ticks, features causais, scaling/baseline somente no treino, regressão logística fixa e orçamento de busca adicional zero permanece inalterado.",
+        "evidence": "Evidência admissível: documentação oficial atual da Deriv confirma active_symbols como endpoint público de market data para todos os símbolos ativos. Ausência material: nenhuma resposta bruta integral do catálogo no cutoff do 8B foi persistida; nenhum dataset tick-by-tick Drift Switching específico de E000002 com identidade, período, contagens, manifests e hashes foi produzido. Logo identidade, completude, duplicatas, cronologia e embargo não podem ser auditados reproduzivelmente e nenhum outcome é admissível.",
+        "limitations": "Acesso documental público não equivale a aquisição/materialização canônica do dataset. Sem snapshot bruto e datasets versionados/hashes, qualquer lista de símbolos, contagem ou resultado seria inventado ou não reproduzível. state/current.json e indexes/recent/manifest.json continuam legados/defasados frente aos ciclos atuais e não foram editados manualmente. Nenhuma telemetria operacional foi inferida além do plano canônico GitHub.",
+        "audit": "PASS da stop rule e FAIL técnico de capacidade: look-ahead/leakage, OOS, walk-forward, multiple testing, custos, bootstrap e sensibilidade não foram executados porque o gate anterior de identidade/qualidade/completude/reprodutibilidade do dataset falhou. Isso não rejeita H0004. Nenhum tuning retrospectivo, seleção por performance, transferência Deriv→OKX, promoção, Shadow ou mudança operacional ocorreu.",
+        "decision": "FAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE. H0004 permanece INSUFFICIENT_EVIDENCE; E000002 permanece BLOCKED_PRE_EXECUTION; SEM SHADOW, SEM PROMOÇÃO, SEM IMPACTO OPERACIONAL.",
+        "next_step": "No 8C, julgar adversarialmente a repetição da falha técnica e definir um único próximo passo de governança/capacidade para E000002, preservando integralmente o pré-registro e proibindo outcomes até existir snapshot bruto e datasets verificáveis.",
+        "summary": "O 8B tentou destruir a prontidão de E000002 pelo primeiro gate: identidade e reprodutibilidade dos dados. O endpoint oficial existe, mas os artefatos canônicos exigidos não foram materializados; a stop rule encerrou o subciclo antes de qualquer fit. A falha é técnica, não científica.",
+        "report": "research/2026/09/2026-09-05/cycle-B/RUN-20260905-08B-R1/report.md",
+        "report_content": "# RUN-20260905-08B-R1 — Validação adversarial do Dia 8\n\n## Continuidade\nO 8A congelou o preflight de aquisição/materialização de E000002 e proibiu outcomes até existirem snapshot bruto verificável de `active_symbols` e datasets Drift Switching com identidade, período, contagens, manifests e SHA-256.\n\n## Ataque adversarial\nO primeiro gate foi identidade e reprodutibilidade dos dados. A documentação oficial pública atual da Deriv confirma que `active_symbols` recupera a lista de símbolos atualmente ativos e não requer autenticação. Isso confirma a capacidade conceitual do endpoint, mas não substitui o artefato experimental exigido.\n\nNeste runtime não foi materializada no repositório uma resposta bruta integral do catálogo no cutoff do 8B. Também não foram produzidos datasets tick-by-tick Drift Switching específicos de E000002 contendo provider/origem, símbolo exato, período UTC, timestamps extremos, contagem, arquivo bruto, manifest e SHA-256. Portanto identidade, completude, duplicatas, cronologia e embargo não puderam ser auditados reproduzivelmente.\n\n## Stop rule\nA stop rule pré-registrada foi acionada antes de qualquer outcome. Não foram calculados fit, log-loss, OOS, walk-forward, bootstrap/IC, multiple testing, custos ou sensibilidade. Target t+1..t+20, split 60/20/20, embargo mínimo de 20 ticks, features causais, scaling/baseline somente no treino, regressão logística fixa e orçamento de busca adicional zero permanecem congelados e não testados neste subciclo.\n\n## Classificação\nFAILED_TECHNICAL — E000002_DATASET_MATERIALIZATION_UNVERIFIABLE. H0004 permanece INSUFFICIENT_EVIDENCE; falha de aquisição/materialização não é rejeição da hipótese.\n\n## Separação operacional\nO plano canônico lido em `runtime/okx/active_execution_plan.json` é `OEP-20260905-006`, ACTIVE, DEMO_ONLY, provider OKX, BTC-USDT Spot, estratégia `OKX-SPOT-SR-v6`, BASELINE, NO_EDGE_CLAIM e Champion null. Nenhuma evidência Deriv foi transferida para OKX; nenhum mandato, Worker, risco, mercado ou estratégia operacional foi alterado.\n\n## Decisão\nE000002 permanece BLOCKED_PRE_EXECUTION. Sem Shadow, promoção ou impacto operacional.\n\n## Próximo passo único\nNo 8C, auditar adversarialmente a repetição da falha técnica e decidir a governança/capacidade de E000002, preservando o pré-registro e mantendo outcomes proibidos enquanto os artefatos verificáveis não existirem.\n\nDEMO_ONLY permanece absoluto; dinheiro real é permanentemente proibido.\n"
+      }
+    },
+    {
+      "op": "set_status",
+      "payload": {
+        "research": {
+          "decision": "FAILED_TECHNICAL — 8B não materializou snapshot/datasets verificáveis; E000002 continua bloqueado e H0004 permanece INSUFFICIENT_EVIDENCE.",
+          "next_step": "8C: auditar a repetição da falha técnica e decidir governança/capacidade sem executar outcomes."
+        },
+        "signal": {
+          "scientific": "8B STOPPED PRE-OUTCOME — DATASET MATERIALIZATION UNVERIFIABLE"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "op": "update_experiment",
+      "updated_id": "E000002"
+    },
+    {
+      "op": "add_research_cycle",
+      "cycle": "Day 8B"
+    },
+    {
+      "op": "set_status",
+      "status": "patched"
+    }
+  ]
+}

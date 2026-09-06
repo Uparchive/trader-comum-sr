@@ -1,0 +1,146 @@
+{
+  "champion": {
+    "execution_enabled": false,
+    "market": "Universo em descoberta",
+    "name": "Nenhuma estratégia promovida",
+    "research_approved": false,
+    "status": "NO_CHAMPION",
+    "version": "—"
+  },
+  "counts": {
+    "canonical_runs": 16,
+    "experiments": 1,
+    "hypotheses": 3,
+    "markets": 11,
+    "runs": 17
+  },
+  "dataset_manifests": [
+    "DS-20260830-DERIV-CRASHBOOM-2B-R2"
+  ],
+  "decisions": [
+    {
+      "decision": "CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD.",
+      "run_id": "RUN-20260902-05A-R1"
+    },
+    {
+      "decision": "HOLD — AGUARDAR RECUPERAÇÃO DE AQUISIÇÃO EM TENTATIVA PROSPECTIVA LIMITADA. H0001 PERMANECE NÃO CONFIRMADA; SEM SHADOW, SEM DEMO E CHAMPION NONE.",
+      "run_id": "RUN-20260901-04C-R1"
+    },
+    {
+      "decision": "HOLD — TECHNICAL_FAILURE DE AQUISIÇÃO; H0001 NÃO FOI REJEITADA NEM PROMOVIDA. SHADOW E DEMO PERMANECEM BLOQUEADOS.",
+      "run_id": "RUN-20260901-04B-R1"
+    },
+    {
+      "decision": "HOLD — CORREÇÃO DE AQUISIÇÃO PRÉ-REGISTRADA; H0001 PERMANECE INALTERADA, SEM SHADOW E SEM DEMO.",
+      "run_id": "RUN-20260901-04A-R1"
+    },
+    {
+      "decision": "HOLD — H0001 SOBREVIVE À AUDITORIA APENAS COMO HIPÓTESE NÃO CONFIRMADA. O 3B NÃO AUTORIZA SHADOW NEM DEMO; A ÚNICA REJEIÇÃO HOLM NÃO É ROBUSTA DIANTE DO SHORTFALL EXTREMO DE BOOM500.",
+      "run_id": "RUN-20260831-03C-R1"
+    },
+    {
+      "decision": "HOLD — H0001 NÃO FOI CONFIRMADA PELO TESTE AMPLIADO; A EVIDÊNCIA É INSUFICIENTE PARA PROMOÇÃO. SEM SHADOW E SEM DEMO.",
+      "run_id": "RUN-20260831-03B-R1"
+    },
+    {
+      "decision": "HOLD — E000001 ESTÁ PRONTO PARA A AQUISIÇÃO AMPLIADA PRÉ-REGISTRADA; H0001 CONTINUA NÃO CONFIRMADA E SEM PROMOÇÃO.",
+      "run_id": "RUN-20260831-03A-R1"
+    },
+    {
+      "decision": "HOLD — H0001 CONTINUA VIVA COMO HIPÓTESE, MAS NÃO CONFIRMADA; EVIDÊNCIA ATUAL INSUFICIENTE PARA REJEITAR HAZARD CONSTANTE OU PROMOVER. E000001 PODE CONTINUAR SOB PRÉ-REGISTRO AMPLIADO.",
+      "run_id": "RUN-20260830-02C-R1"
+    },
+    {
+      "decision": "HOLD — AQUISIÇÃO RESOLVIDA; EVIDÊNCIA EMPÍRICA INICIAL INSUFICIENTE PARA REJEITAR O HAZARD CONSTANTE OU ALEGAR MEMÓRIA REPRODUZÍVEL. SEM PROMOÇÃO",
+      "run_id": "RUN-20260830-02B-R2"
+    },
+    {
+      "decision": "HOLD — H0001 PRÉ-REGISTRADA PARA AQUISIÇÃO E TESTE; H0002/H0003 CONTINUAM INCONCLUSIVAS",
+      "run_id": "RUN-20260830-02A-R1"
+    },
+    {
+      "decision": "HOLD — EVIDÊNCIA EMPÍRICA INSUFICIENTE",
+      "run_id": "RUN-20260829-01C-R1"
+    },
+    {
+      "decision": "HOLD — EVIDÊNCIA INCONCLUSIVA",
+      "run_id": "RUN-20260829-01B-R1"
+    },
+    {
+      "decision": "HOLD",
+      "run_id": "RUN-20260829-01A-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00C-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00B-R1"
+    },
+    {
+      "decision": "HOLD — INCONCLUSIVE",
+      "run_id": "RUN-20260828-00A-R1"
+    }
+  ],
+  "failures": [
+    {
+      "failure_type": "DNS_ACQUISITION_FAILURE",
+      "run_id": "RUN-20260830-02B-R1",
+      "superseded_by": "RUN-20260830-02B-R2"
+    }
+  ],
+  "generated_at": "2026-09-02T11:03:57+00:00",
+  "period": "2026-09",
+  "promotions": [],
+  "rejections": [],
+  "schema_version": 3,
+  "state": {
+    "active_experiments": [
+      "E000001"
+    ],
+    "active_hypotheses": [
+      "H0002",
+      "H0003"
+    ],
+    "blockers": [
+      "Massa de eventos ainda insuficiente para inferência familiar robusta"
+    ],
+    "current_champion": {
+      "execution_enabled": false,
+      "market": "Universo em descoberta",
+      "name": "Nenhuma estratégia promovida",
+      "research_approved": false,
+      "status": "NO_CHAMPION",
+      "version": "—"
+    },
+    "current_cycle": "A",
+    "current_date": "2026-09-02",
+    "current_day": 5,
+    "current_run_id": "RUN-20260902-05A-R1",
+    "environment": "DEMO_ONLY",
+    "executor_state": {
+      "execution_enabled": false,
+      "fail_closed": true,
+      "research_approved": false,
+      "state": "OFF",
+      "status": "Fail-Closed — DEMO bloqueado"
+    },
+    "generated_at": "2026-09-02T11:03:57+00:00",
+    "latest_dataset_manifest": "datasets/manifests/DS-20260830-DERIV-CRASHBOOM-2B-R2.json",
+    "latest_decision": "CONTINUE — AUTORIZAR UMA ÚNICA TENTATIVA FINAL DE AQUISIÇÃO NO 5B SOB O PROTOCOLO CONGELADO; H0001 PERMANECE NÃO CONFIRMADA E E000001 EM HOLD.",
+    "latest_report": "research/2026/09/2026-09-02/cycle-A/RUN-20260902-05A-R1/report.md",
+    "latest_snapshot": "snapshots/monthly/snapshot-month-2026-09.json",
+    "next_step": "Dia 5A: verificar prospectivamente a disponibilidade da rota de aquisição e decidir, sem alterar H0001, se E000001 recebe uma última tentativa operacional sob o protocolo congelado ou se deve ser encerrado como inconclusivo por limitação de aquisição persistente. Não repetir indefinidamente.",
+    "pipeline_stage": "HISTORICAL_VALIDATION",
+    "program_version": "3.0.0",
+    "relevant_pointers": {
+      "activity": "indexes/recent/activity-page-001.json",
+      "experiment_focus": "indexes/experiments/E000001.json",
+      "hypothesis_focus": "indexes/hypotheses/H0001.json",
+      "recent_runs": "indexes/recent/runs-page-001.json"
+    },
+    "schema_version": 3,
+    "what_changed": "A aquisição 2B foi corrigida e o reteste oficial substituiu a falha técnica como resultado vigente, sem apagar a primeira tentativa. H0001 continua HOLD por evidência insuficiente."
+  }
+}
